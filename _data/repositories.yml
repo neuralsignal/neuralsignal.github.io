@@ -1,12 +1,9 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - gucky92
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - gucky92/dreye
+  - gucky92/puffbird
+  - gucky92/scidoggo
+  - gucky92/loris
+  - datajoint/datajoint-python

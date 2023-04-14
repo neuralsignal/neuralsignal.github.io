@@ -1,6 +1,11 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"Current Biology":
+  url: https://www.cell.com/current-biology/home
+  color: "#1F720A"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"CoSyNe":
+  url: https://www.cosyne.org/
+  color: "#0210A5"
+
+"Phil. R. Soc.":
+  url: https://royalsocietypublishing.org/journal/rstl
+  color: "#08C1C8"
