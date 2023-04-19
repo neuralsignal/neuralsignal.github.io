@@ -20,4 +20,8 @@ Sensory circuits are complex systems that process information through feedforwar
     Results for a set of simulated recurrent circuits with 5-9 recurrent units and 4 different types of inputs. Given an appropriate noise level, we are able to accurately predict the responses of up to two unobserved neurons in the circuit without a strong prior on the weight matrix.
 </div>
 
+## Presentation
+
+Columbia Neurotheory Meeting (2020 and 2021)
+
 ## [WIP] Code

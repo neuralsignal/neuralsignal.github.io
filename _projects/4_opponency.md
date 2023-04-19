@@ -22,3 +22,7 @@ Spectral information is commonly processed in the brain through generation of an
 [**Circuit Mechanisms Underlying Chromatic Encoding in Drosophila Photoreceptors**](https://www.sciencedirect.com/science/article/pii/S0960982219315775?dgcid=api_sd_search-api-endpoint) \
 Sarah L Heath\*, Matthias P Christenson\*, Elie Oriol, Maia Saavedra-Weisenhaus, Jessica R. Kohn, Rudy Behnia \
 *Current Biology, 2020*
+
+## Presentation
+
+Columbia Neurotheory Meeting (2019)
