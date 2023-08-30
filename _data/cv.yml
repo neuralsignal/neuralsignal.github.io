@@ -33,6 +33,8 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Machine Learning Engineer
+      year: 2023-present
     - title: Postdoctoral Research Scientist
       institution: Columbia University, New York, USA
       year: 2022-present
