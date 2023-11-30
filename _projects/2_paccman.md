@@ -25,3 +25,5 @@ Sensory circuits are complex systems that process information through feedforwar
 Columbia Neurotheory Meeting (2020 and 2021)
 
 ## [WIP] Code
+
+Some of the code related to this project can be found in the *scidoggo* repository.

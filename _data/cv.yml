@@ -16,19 +16,9 @@
     - title: PhD
       institution: Columbia University, New York, USA
       year: 2023
-      # description:
-      #   - Description 1.
-      #   - Description 2.
-      #   - title: Description 3.
-      #     contents:
-      #       - Sub-description 1.
-      #       - Sub-description 2.
     - title: MSci/BSc
       institution: University College London, London, UK
       year: 2016
-      # description:
-      #   - Description 1.
-      #   - Description 2.
 
 - title: Experience
   type: time_table
@@ -39,13 +29,6 @@
     - title: Postdoctoral Research Scientist
       institution: Columbia University, New York, USA
       year: 2022-present
-      # description:
-      #   - Description 1.
-      #   - Description 2.
-      #   - title: Description 3.
-      #     contents:
-      #       - Sub-description 1.
-      #       - Sub-description 2.
     - title: Doctoral Research Scientist
       institution: Columbia University, New York, USA
       year: 2016-2022
@@ -61,13 +44,6 @@
     - title: Market Research Intern
       institution: The Medicines Company, Munich, Germany
       year: 2013
-
-# - title: Open Source Projects
-#   type: time_table
-#   contents:
-#     - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-#       year: 2015-now
-#       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
 - title: Honors and Awards
   type: time_table
@@ -97,18 +73,6 @@
     - year : 2011
       items:
         - Deutscher Mathematiker Verein Award
-
-# - title: Academic Interests
-#   type: nested_list
-#   contents:
-#     - title: Topic 1.
-#       items: 
-#         - Description 1.
-#         - Description 2.
-#     - title: Topic 2.
-#       items:
-#         - Description 1.
-#         - Description 2.
 
 - title: Interests
   type: list
