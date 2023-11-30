@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>projects | Matthias Christenson</title>
+    <title>LLM-focused side projects | Matthias Christenson</title>
     <meta name="author" content="Matthias Christenson">
-    <meta name="description" content="A growing collection of my projects.">
+    <meta name="description" content="Proof-of-concepts for projects utilizing LLMs">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -33,7 +33,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://gucky92.github.io/projects/">
+    <link rel="canonical" href="https://gucky92.github.io/projects/10_llms/">
     
     <!-- Dark Mode -->
     
@@ -76,8 +76,8 @@
               <li class="nav-item ">
                 <a class="nav-link" href="/publications/">publications</a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="/projects/">projects<span class="sr-only">(current)</span></a>
+              <li class="nav-item ">
+                <a class="nav-link" href="/projects/">projects</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="/code/">code</a>
@@ -113,250 +113,44 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">projects</h1>
-            <p class="post-description">A growing collection of my projects.</p>
+            <h1 class="post-title">LLM-focused side projects</h1>
+            <p class="post-description">Proof-of-concepts for projects utilizing LLMs</p>
           </header>
 
           <article>
-            <!-- pages/projects.md -->
-<div class="projects">
-  <!-- Display categorized projects -->
-  <h2 class="category">neuroscience</h2>
-  <!-- Generate cards for each project -->
-  <div class="grid">
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/1_hue/">
-      <div class="card hoverable">
-<figure>
+            <h2 id="llm-playground">LLM Playground</h2>
 
-  <picture>
-    
+<h3 id="wikipedia-article-of-the-day-to-youtube-short">Wikipedia article of the day to youtube short</h3>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/hue.svg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p>In this proof of concept, I am scraping the Wikipedia article of the day to create youtube shorts from start to finish using OpenAI’s GPT model and various open-source HuggingFace models to convert text to audio, text to images, and text to video. The video encoding needs to be improved and the images aren’t nicely cut into a smooth sequence.</p>
 
-  </picture>
-
-</figure>
-
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">Recurrence and color selectivity</h2>
-          <p class="card-text">Emergence of color selectivity in an early sensory and highly recurrent circuit</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
+<div class="repo p-2 text-center">
+  <a href="https://github.com/gucky92/wikioftheday" rel="external nofollow noopener" target="_blank">
+    <img class="repo-img-light w-100" alt="gucky92/wikioftheday" src="https://github-readme-stats.vercel.app/api/pin/?username=gucky92&amp;repo=wikioftheday&amp;theme=default&amp;show_owner=">
+    <img class="repo-img-dark w-100" alt="gucky92/wikioftheday" src="https://github-readme-stats.vercel.app/api/pin/?username=gucky92&amp;repo=wikioftheday&amp;theme=dark&amp;show_owner=">
+  </a>
 </div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/4_opponency/">
-      <div class="card hoverable">
-<figure>
 
-  <picture>
-    
+<h3 id="movie-database-querying">Movie database querying</h3>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/reccircuit.svg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p>In this proof of concept, I am trying to play around with various LLM APIs, including langchain and llamaindex, to build a semantic search over a movie database.</p>
 
-  </picture>
-
-</figure>
-
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">Mechanisms of color opponency</h2>
-          <p class="card-text">A dual circuit mechanism achieves color opponency in fruit flies</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
+<div class="repo p-2 text-center">
+  <a href="https://github.com/gucky92/movie_playground" rel="external nofollow noopener" target="_blank">
+    <img class="repo-img-light w-100" alt="gucky92/movie_playground" src="https://github-readme-stats.vercel.app/api/pin/?username=gucky92&amp;repo=movie_playground&amp;theme=default&amp;show_owner=">
+    <img class="repo-img-dark w-100" alt="gucky92/movie_playground" src="https://github-readme-stats.vercel.app/api/pin/?username=gucky92&amp;repo=movie_playground&amp;theme=dark&amp;show_owner=">
+  </a>
 </div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/5_normative/">
-      <div class="card hoverable">
-<figure>
 
-  <picture>
-    
+<h3 id="auto-gpt">Auto-GPT</h3>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/normative_clip.svg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p>I contributed a couple of features for this project, mainly an audio-to-text converter and image summarizer.</p>
 
-  </picture>
-
-</figure>
-
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">Normative models of spatio-spectral decorrelation</h2>
-          <p class="card-text">A normative approach to link natural statistics to photoreceptor type distributions</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-  </div>
-  <h2 class="category">machine learning</h2>
-  <!-- Generate cards for each project -->
-  <div class="grid">
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/10_llms/">
-      <div class="card hoverable">
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">LLM-focused side projects</h2>
-          <p class="card-text">Proof-of-concepts for projects utilizing LLMs</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/2_paccman/">
-      <div class="card hoverable">
-<figure>
-
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/paccman.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">Probabilistic circuit model analysis</h2>
-          <p class="card-text">Predicting responses of unobserved neurons in anatomically-constraint networks</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/3_geometry/">
-      <div class="card hoverable">
-<figure>
-
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/dreye.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">Geometry of color spaces</h2>
-          <p class="card-text">Optimal stimulus design for color vision experiments in animals</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/9_biometric/">
-      <div class="card hoverable">
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">Foundational model for biophysical data</h2>
-          <p class="card-text">Building models to make long-term predictions on biophysical time-series data</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/8_scidoggo/">
-      <div class="card hoverable">
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">A collection of encoding models</h2>
-          <p class="card-text">The scidoggo Python package</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-  </div>
-  <h2 class="category">data tools</h2>
-  <!-- Generate cards for each project -->
-  <div class="grid">
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/6_loris/">
-      <div class="card hoverable">
-<figure>
-
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/loris_icon.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">Data management and analysis platform</h2>
-          <p class="card-text">The loris Python project</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/7_puffbird/">
-      <div class="card hoverable">
-<figure>
-
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/logo.svg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">Fast and simple dataframe manipulation</h2>
-          <p class="card-text">The puffbird Python package</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-  </div>
+<div class="repo p-2 text-center">
+  <a href="https://github.com/Significant-Gravitas/Auto-GPT" rel="external nofollow noopener" target="_blank">
+    <img class="repo-img-light w-100" alt="Significant-Gravitas/Auto-GPT" src="https://github-readme-stats.vercel.app/api/pin/?username=Significant-Gravitas&amp;repo=Auto-GPT&amp;theme=default&amp;show_owner=">
+    <img class="repo-img-dark w-100" alt="Significant-Gravitas/Auto-GPT" src="https://github-readme-stats.vercel.app/api/pin/?username=Significant-Gravitas&amp;repo=Auto-GPT&amp;theme=dark&amp;show_owner=">
+  </a>
 </div>
 
           </article>
