@@ -20,8 +20,8 @@ Matthias P. Christenson, S. Navid Mousavi, Elie Oriol, Sarah L. Heath, Rudy Behn
 ## Code
 
 <div class="repo p-2 text-center">
-  <a href="https://github.com/gucky92/dreye">
-    <img class="repo-img-light w-100" alt="gucky92/dreye" src="https://github-readme-stats.vercel.app/api/pin/?username=gucky92&repo=dreye&theme={{ site.repo_theme_light }}&show_owner={{ show_owner }}">
-    <img class="repo-img-dark w-100" alt="gucky92/dreye" src="https://github-readme-stats.vercel.app/api/pin/?username=gucky92&repo=dreye&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
+  <a href="https://github.com/neuralsignal/dreye">
+    <img class="repo-img-light w-100" alt="neuralsignal/dreye" src="https://github-readme-stats.vercel.app/api/pin/?username=neuralsignal&repo=dreye&theme={{ site.repo_theme_light }}&show_owner={{ show_owner }}">
+    <img class="repo-img-dark w-100" alt="neuralsignal/dreye" src="https://github-readme-stats.vercel.app/api/pin/?username=neuralsignal&repo=dreye&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
   </a>
 </div>

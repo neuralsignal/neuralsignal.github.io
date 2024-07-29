@@ -14,8 +14,8 @@ This coding project is a collection of different models and data tools that I ha
 ## Code
 
 <div class="repo p-2 text-center">
-  <a href="https://github.com/gucky92/scidoggo">
-    <img class="repo-img-light w-100" alt="gucky92/scidoggo" src="https://github-readme-stats.vercel.app/api/pin/?username=gucky92&repo=scidoggo&theme={{ site.repo_theme_light }}&show_owner={{ show_owner }}">
-    <img class="repo-img-dark w-100" alt="gucky92/scidoggo" src="https://github-readme-stats.vercel.app/api/pin/?username=gucky92&repo=scidoggo&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
+  <a href="https://github.com/neuralsignal/scidoggo">
+    <img class="repo-img-light w-100" alt="neuralsignal/scidoggo" src="https://github-readme-stats.vercel.app/api/pin/?username=neuralsignal&repo=scidoggo&theme={{ site.repo_theme_light }}&show_owner={{ show_owner }}">
+    <img class="repo-img-dark w-100" alt="neuralsignal/scidoggo" src="https://github-readme-stats.vercel.app/api/pin/?username=neuralsignal&repo=scidoggo&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
   </a>
 </div>

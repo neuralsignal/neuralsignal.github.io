@@ -15,7 +15,7 @@ The perception of color involves a transformation from the spectral properties o
 
 **Hue selectivity from recurrent circuitry** \
 Matthias Christenson\*, Alvaro Sanz-Diez\*, Sarah L Heath, Maia Saavedra-Weisenhaus, Atsuko Adachi, Larry Abbott, Rudy Behnia \
-*bioRxiv, 2023*
+*Nature Neuroscience, 2024*
 
 ## Presentation
 

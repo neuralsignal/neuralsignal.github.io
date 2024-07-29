@@ -13,3 +13,15 @@
 "Neurotheory":
   url: https://neurotheory.columbia.edu/
   color: "#F2A900"
+
+"DefenseTech":
+  url: https://events.techconnect.org/
+  color: "#0210A5"
+
+"AIME":
+  url: https://aime24.aimedicine.info/
+  color: "#228b22"
+
+"Nature Neuro.":
+  url: https://www.nature.com/neuro/
+  color: "#1F720A"

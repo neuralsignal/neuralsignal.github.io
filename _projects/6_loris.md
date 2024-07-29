@@ -14,8 +14,8 @@ Loris is a database and analysis application that is currently under development
 ## Code
 
 <div class="repo p-2 text-center">
-  <a href="https://github.com/gucky92/loris">
-    <img class="repo-img-light w-100" alt="gucky92/loris" src="https://github-readme-stats.vercel.app/api/pin/?username=gucky92&repo=loris&theme={{ site.repo_theme_light }}&show_owner={{ show_owner }}">
-    <img class="repo-img-dark w-100" alt="gucky92/loris" src="https://github-readme-stats.vercel.app/api/pin/?username=gucky92&repo=loris&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
+  <a href="https://github.com/neuralsignal/loris">
+    <img class="repo-img-light w-100" alt="neuralsignal/loris" src="https://github-readme-stats.vercel.app/api/pin/?username=neuralsignal&repo=loris&theme={{ site.repo_theme_light }}&show_owner={{ show_owner }}">
+    <img class="repo-img-dark w-100" alt="neuralsignal/loris" src="https://github-readme-stats.vercel.app/api/pin/?username=neuralsignal&repo=loris&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
   </a>
 </div>

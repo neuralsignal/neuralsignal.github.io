@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Foundational model for biophysical data
+title: AI for biophysical data
 description: Building models to make long-term predictions on biophysical time-series data
 img:
 importance: 3
@@ -17,4 +17,5 @@ In a near-peer conflict, warfighters may be in the field without support for day
 
 ### Presentation
 
-**Field casualty management AI**, W.W. Pettine, M. Christenson, P. Koirala, Defence TechConnect (2023)
+**Field casualty management AI**, W.W. Pettine, M. Christenson, P. Koirala, Defense TechConnect (2023)
+**Assessing Foundation Models' Transferability to Physiological Signals in Precision Medicine**, M. Christenson, C. Geary, B. Locke, P. Koirala, W.W. Pettine, Defense AI in Medicine (2024)

@@ -14,8 +14,8 @@ Puffbird is an open-source library that extends the functionality of pandas Data
 ## Code
 
 <div class="repo p-2 text-center">
-  <a href="https://github.com/gucky92/puffbird">
-    <img class="repo-img-light w-100" alt="gucky92/puffbird" src="https://github-readme-stats.vercel.app/api/pin/?username=gucky92&repo=puffbird&theme={{ site.repo_theme_light }}&show_owner={{ show_owner }}">
-    <img class="repo-img-dark w-100" alt="gucky92/puffbird" src="https://github-readme-stats.vercel.app/api/pin/?username=gucky92&repo=puffbird&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
+  <a href="https://github.com/neuralsignal/puffbird">
+    <img class="repo-img-light w-100" alt="neuralsignal/puffbird" src="https://github-readme-stats.vercel.app/api/pin/?username=neuralsignal&repo=puffbird&theme={{ site.repo_theme_light }}&show_owner={{ show_owner }}">
+    <img class="repo-img-dark w-100" alt="neuralsignal/puffbird" src="https://github-readme-stats.vercel.app/api/pin/?username=neuralsignal&repo=puffbird&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
   </a>
 </div>

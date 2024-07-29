@@ -3,12 +3,14 @@
   contents:
     - name: Full Name
       value: Matthias Paul Christenson
+    - name: Skills
+      value: Quantitative Research, Machine Learning, MLOps, Statistical Analysis, Experimental Design, Project Management, Software Development and DevOps, Cloud technologies (AWS, GCP, Scaleway), Technical Writing, Science Teaching and Communication
     - name: Languages
       value: English (fluent), German (fluent), Spanish (working proficiency), French (basics)
     - name: Programming
-      value: Python (7+ YEX), SQL, Javascript, C++, Git, Bash, Unix, Docker
+      value: Python (8+ YEX), SQL, Javascript, C++, Git, Bash, Unix, Docker
     - name: Python Stack 
-      value: sklearn, scipy, pandas, pytorch, pyro, cvxpy, Flask, Dask, streamlit
+      value: scikit-learn, numpy, scipy, pandas, matplotlib, seaborn, dask, xarray, pytorch, transformers, lightning, pyro, cvxpy, Flask, Dask, streamlit, dash
 
 - title: Education
   type: time_table
@@ -23,9 +25,13 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Deep Learning Research Engineer
+      institution: DeepLife
+      year: 2024-present
+
     - title: Postdoctoral Research Scientist
       institution: Columbia University, New York, USA
-      year: 2022-present
+      year: 2022-2023
       
     - title: Doctoral Research Scientist
       institution: Columbia University, New York, USA
@@ -42,6 +48,9 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2024
+      items:
+        - NIH A2 Collective Award
     - year: 2020
       items: 
         - NIH T32 Vision Research Grant

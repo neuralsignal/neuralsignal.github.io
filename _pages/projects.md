@@ -5,7 +5,7 @@ permalink: /projects/
 description: A growing collection of my projects.
 nav: true
 nav_order: 2
-display_categories: [neuroscience, machine learning, data tools]
+display_categories: [machine learning, neuroscience, data tools]
 horizontal: false
 ---
 
