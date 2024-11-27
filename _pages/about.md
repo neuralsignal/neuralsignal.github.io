@@ -19,7 +19,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I'm a computational neuroscientist and data scientist who's passionate about developing cutting-edge models and software tools to solve complex problems in both academia and industry. My doctoral research at Columbia University focused on the fascinating area of color information processing in insect brains, and I used a combination of machine learning techniques and biological experiments to explore this topic in depth. Recently, I have been working on various projects related to LLMs and building foundational models for biophysical timeseries data.
+Healthcare AI researcher and innovator bridging the gap between cutting-edge machine learning and real-world medical care. As Principal Machine Learning Scientist at Mountain Biometrics and Adjunct Professor at University of Utah, I'm passionate about developing AI systems that enhance patient care and clinical decision-making. My journey from computational neuroscience at Columbia to healthcare AI has been driven by a commitment to making complex technology accessible and impactful in healthcare settings. I specialize in time-series analysis and medical AI, focusing on creating robust, practical solutions that serve both clinicians and patients.
 
 When I'm not working on my data and software projects, I enjoy exploring the great outdoors via gradient descent, playing board games with friends, and dancing salsa and the waltz.
 My long-term goal is to apply my skills in data and mathematical modeling to automate complex processes and gain a deeper understanding of how we interpret the world around us.

@@ -2,13 +2,13 @@
   type: map
   contents:
     - name: Full Name
-      value: Matthias Paul Christenson
+      value: Matthias Christenson
     - name: Skills
       value: Quantitative Research, Machine Learning, MLOps, Statistical Analysis, Experimental Design, Project Management, Software Development and DevOps, Cloud technologies (AWS, GCP, Scaleway), Technical Writing, Science Teaching and Communication
     - name: Languages
       value: English (fluent), German (fluent), Spanish (working proficiency), French (basics)
     - name: Programming
-      value: Python (8+ YEX), SQL, Javascript, C++, Git, Bash, Unix, Docker
+      value: Python (Expert), SQL, Javascript, C++, Git, Bash, Unix, Docker
     - name: Python Stack 
       value: scikit-learn, numpy, scipy, pandas, matplotlib, seaborn, dask, xarray, pytorch, transformers, lightning, pyro, cvxpy, Flask, Dask, streamlit, dash
 
@@ -25,9 +25,17 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Deep Learning Research Engineer
-      institution: DeepLife
+    - title: Principal Machine Learning Scientist
+      institution: MTN, Salt Lake City, USA (remote)
       year: 2024-present
+
+    - title: Adjunct Faculty
+      institution: University of Utah, Salt Lake City, USA (remote)
+      year: 2024-present
+
+    - title: Deep Learning Research Engineer
+      institution: DeepLife, Paris, France (remote)
+      year: 2024-2024
 
     - title: Postdoctoral Research Scientist
       institution: Columbia University, New York, USA
