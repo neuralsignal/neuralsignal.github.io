@@ -4,11 +4,11 @@
     - name: Full Name
       value: Matthias Christenson
     - name: Skills
-      value: Quantitative Research, Machine Learning, MLOps, Statistical Analysis, Experimental Design, Project Management, Software Development and DevOps, Cloud technologies (AWS, GCP, Scaleway), Technical Writing, Science Teaching and Communication
+      value: Self-Supervised Learning, Time-Series Modeling, Foundation Models, Transfer Learning, On-Device/Edge ML, MLOps, Quantitative Research, Statistical Analysis, Experimental Design, Cloud technologies (AWS, GCP), Technical Writing
     - name: Languages
       value: English (fluent), German (fluent), Spanish (working proficiency), French (basics)
     - name: Programming
-      value: Python (Expert), SQL, Javascript, C++, Git, Bash, Unix, Docker
+      value: Python, SQL, Javascript, C++, Git, Bash, Unix, Docker
     - name: Python Stack 
       value: scikit-learn, numpy, scipy, pandas, matplotlib, seaborn, dask, xarray, pytorch, transformers, lightning, pyro, cvxpy, Flask, Dask, streamlit, dash
 
@@ -17,7 +17,7 @@
   contents:
     - title: PhD
       institution: Columbia University, New York, USA
-      year: 2023
+      year: 2022
     - title: MSci/BSc
       institution: University College London, London, UK
       year: 2016
@@ -25,7 +25,7 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Principal Machine Learning Scientist
+    - title: Chief AI Architect & Scientist
       institution: MTN, Salt Lake City, USA (remote)
       year: 2024-present
 

@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href=https://zuckermaninstitute.columbia.edu/>Affiliations</a>. Zuckerman Institute, Columbia University
+subtitle: <a href=https://themtn.ai>Mountain Biometrics</a> & <a href=https://www.utah.edu/>University of Utah</a>
 
 profile:
   align: right
