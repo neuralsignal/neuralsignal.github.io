@@ -1,13 +1,19 @@
 ---
 layout: page
-title: LLM-focused side projects
-description: Proof-of-concepts for projects utilizing LLMs
+title: AI engineering & LLM projects
+description: Proof-of-concepts and tools for AI-assisted development
 img:
-order: 60
+order: 40
 category: machine learning
 ---
 
-### Wikipedia article of the day to youtube short
+### Agentic engineering kit
+
+A composable library of engineering standards, automated workflows, and reusable components for AI-assisted software development. Includes principles, on-demand skills, and autonomous GitHub Actions that can be integrated via AI assistant rules, git subtree, or individual files. Designed as a governance framework that teams can adapt to their specific workflows.
+
+[neuralsignal/agentic-engineering-kit](https://github.com/neuralsignal/agentic-engineering-kit)
+
+### Wikipedia to YouTube shorts
 
 In this proof of concept, I am scraping the Wikipedia article of the day to create youtube shorts from start to finish using OpenAI's GPT model and various open-source HuggingFace models to convert text to audio, text to images, and text to video. The video encoding needs to be improved and the images aren't nicely cut into a smooth sequence.
 
@@ -19,7 +25,7 @@ In this proof of concept, I am trying to play around with various LLM APIs, incl
 
 [neuralsignal/movie_playground](https://github.com/neuralsignal/movie_playground)
 
-### Auto-GPT
+### Auto-GPT contributions
 
 I contributed a couple of features for this project, mainly an audio-to-text converter and image summarizer.
 
