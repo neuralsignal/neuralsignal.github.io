@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AI for biophysical data | Matthias Christenson</title>
+    <title>Color vision neuroscience | Matthias Christenson</title>
     <meta name="author" content="Matthias Christenson">
-    <meta name="description" content="Building models to make long-term predictions on biophysical time-series data">
+    <meta name="description" content="Circuit mechanisms of color processing in Drosophila">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -35,7 +35,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://neuralsignal.github.io/projects/9_biometric/">
+    <link rel="canonical" href="https://neuralsignal.github.io/projects/1_color_vision/">
     
     <!-- Dark Mode -->
     
@@ -48,7 +48,7 @@
   </head>
 
   <!-- Body -->
-  <body class="fixed-top-nav sticky-bottom-footer">
+  <body class="fixed-top-nav">
 
     <!-- Header -->
     <header>
@@ -80,26 +80,71 @@
 
 
     <!-- Content -->
-    <div class="container mt-5">
+    <div class="container mt-5 site-content">
       <!-- page.html -->
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">AI for biophysical data</h1>
-            <p class="post-description">Building models to make long-term predictions on biophysical time-series data</p>
+            <h1 class="post-title">Color vision neuroscience</h1>
+            <p class="post-description">Circuit mechanisms of color processing in Drosophila</p>
           </header>
 
           <article>
-            <h3 id="biometric-time-series-models-for-healthcare-monitoring">Biometric time-series models for healthcare monitoring</h3>
+            <h3 id="hue-selectivity-from-recurrent-circuitry">Hue selectivity from recurrent circuitry</h3>
 
-<p>In underserved communities, elderly individuals often lack access to advanced health monitoring that could detect early signs of common issues like infections, pneumonia, and constipation. These conditions can be identified through multi-day patterns in data from wearable devices. While machine learning can enable analysis of such long-term biometric data, typical models struggle with very long input sequences. Recently developed deep state-space models overcome this limitation and scale linearly with sequence length. This project will develop a tailored deep state-space model architecture to learn individual “biometric profiles” and detect healthcare events. It will also build software tools to enable training and deployment of the models to expand access to sophisticated healthcare monitoring.</p>
+<p>The perception of color involves a transformation from the spectral properties of visual stimuli to derived perceptual quantities such as brightness, saturation and hue.  Although hue selective neurons, which respond to narrow regions in color space, have been reported in primates, they have not been identified in other species including more accessible organisms, which would facilitate circuit level analyses. Here we show that neurons in the <em>Drosophila</em> optic lobe have hue selective properties, with narrow tuning for both spectral and non-spectral colors. We construct a connectomics constrained circuit model that accounts for this hue selectivity. Our model, combined with genetic manipulations, shows that recurrent connections in the circuit are critical for the tuning properties of <em>Drosophila</em> hue selective neurons. Our findings reveal the circuit basis for a transition from physical detection to sensory perception in color vision.</p>
 
-<h3 id="field-casualty-management-ai">Field Casualty Management AI</h3>
+<p><strong>Hue selectivity from recurrent circuitry</strong>, <em>Nature Neuroscience</em>, 2024</p>
 
-<p>In a near-peer conflict, warfighters may be in the field without support for days to weeks. This is especially problematic for managing casualties. In such scenarios, rationing limited quantities of blood or antibiotics requires predicting the individual progression of blood loss, or the likelihood of sepsis. While military medics are highly skilled at initial treatment of traumatic injuries, they are not trained to track the health trends of wounded warfighters over extended periods. Blood loss and sepsis produce typified patterns in heart rate, blood oxygen and other biometrics commonly collected from wearable devices. These patterns are individual-specific and emerge over hours to days. Recent advances in machine learning methods are only now making detecting such patterns possible. We are developing a generalized artificial intelligence (AI) for interpreting individual-specific, long-timescale biophysical data from wearable devices. While the AI can be used to detect and track a wide variety of health conditions, we are particularly focused on managing warfighter casualties in the field. The AI integrates into commonly used hardware and software, acting as a “force multiplier,” for existing equipment. Our AI will aid medics manage field casualties, saving lives when warfighters are cut off from advanced medical care.</p>
+<p>Presented at Columbia Neurotheory Meeting, 2022</p>
 
-<p>Field casualty management AI, W.W. Pettine, M. Christenson, P. Koirala, <em>Defense TechConnect</em>, 2023 <br>
-Assessing Foundation Models’ Transferability to Physiological Signals in Precision Medicine, M. Christenson, C. Geary, B. Locke, P. Koirala, W.W. Pettine, <em>Defense AI in Medicine</em>, 2024</p>
+<h3 id="circuit-mechanisms-of-chromatic-encoding">Circuit mechanisms of chromatic encoding</h3>
+
+<p>Spectral information is commonly processed in the brain through generation of antagonistic responses to different wavelengths. In many species, these color opponent signals arise as early as photoreceptor terminals. Here, we measure the spectral tuning of photoreceptors in Drosophila. In addition to a previously described pathway comparing wavelengths at each point in space, we find a horizontal-cell-mediated pathway similar to that found in mammals. This pathway enables additional spectral comparisons through lateral inhibition, expanding the range of chromatic encoding in the fly. Together, these two pathways enable efficient decorrelation and dimensionality reduction of photoreceptor signals while retaining maximal chromatic information. A biologically constrained model accounts for our findings and predicts a spatio-chromatic receptive field for fly photoreceptor outputs, with a color opponent center and broadband surround. This dual mechanism combines motifs of both an insect-specific visual circuit and an evolutionarily convergent circuit architecture, endowing flies with the ability to extract chromatic information at distinct spatial resolutions.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/opponency.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p><a href="https://www.sciencedirect.com/science/article/pii/S0960982219315775?dgcid=api_sd_search-api-endpoint" rel="external nofollow noopener" target="_blank">Circuit Mechanisms Underlying Chromatic Encoding in Drosophila Photoreceptors</a>, <em>Current Biology</em>, 2020</p>
+
+<p>Presented at Columbia Neurotheory Meeting, 2019</p>
+
+<h3 id="normative-models-of-spatio-spectral-decorrelation">Normative models of spatio-spectral decorrelation</h3>
+
+<p>In line with the efficient coding hypothesis, the early visual system aims to minimize spectral and spatial redundancies arising from overlapping opsin sensitivities in retinal photoreceptors (PRs) and highly correlated structure in natural scenes. Encoding color information, or spectral information independent of intensity, requires comparing activities across different types of PRs. Mounting evidence shows that several species across the animal kingdom, such as the fruit fly <em>Drosophila Melanogaster</em>, have an uneven proportion of PR types in their retinas. However, it is unknown whether this uneven proportion is optimized for objectives relevant to the early color processing of natural scenes, as previous studies have modeled spectral and spatial processing in the early fly visual system independently. We built a collection of models incorporating both spatial and spectral information to solve tasks relevant to the fly’s early visual system, such as predictive coding at the level of PR inputs for spatial decorrelation in the retina as well as spatial and spectral decorrelation at the level of PR outputs via color opponency mechanisms. Using this framework, we asked how varying the ratio of the fly’s two main PR types changed performance accuracy on these tasks. From this normative approach, we were able to conclude that the optimal ratio of PR types to best solve these tasks aligns with the experimentally observed distribution and showed this for multiple opsin sensitivity profiles determined within and across labs. Moreover, shuffling either spatial or spectral information in the input natural scene predicted an even PR type ratio, suggesting that biologically observed PR type ratios are optimized for spectral and spatial decorrelation. Altogether, these results suggest that natural scene statistics may have shaped the ratio of PR types in the fly retina through evolutionary mechanisms, providing important implications for understanding sensory systems in an ecologically relevant context.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/normative.svg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Normative models of spatio-spectral decorrelation predict observed receptor distributions, <em>CoSyNe</em>, 2022</p>
 
           </article>
 
@@ -107,12 +152,15 @@ Assessing Foundation Models’ Transferability to Physiological Signals in Preci
 
     </div>
 
-    <!-- Footer -->    <footer class="sticky-bottom mt-5">
+    <!-- Footer -->    <footer class="site-footer">
       <div class="container">
-        © Copyright 2026 Matthias Christenson. Last updated in March 2026.
-
+        <span>© 2026 Matthias Christenson</span>
+        <span class="footer-sep">·</span>
+        <span>Last updated in March 2026.
+</span>
       </div>
     </footer>
+
 
     <!-- JavaScripts -->
     <!-- jQuery -->

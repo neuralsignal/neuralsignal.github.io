@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>A collection of encoding models | Matthias Christenson</title>
+    <title>Computational neuroscience methods | Matthias Christenson</title>
     <meta name="author" content="Matthias Christenson">
-    <meta name="description" content="The scidoggo Python package">
+    <meta name="description" content="Tools and models for analyzing neural circuits and designing visual stimuli">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -35,7 +35,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://neuralsignal.github.io/projects/8_scidoggo/">
+    <link rel="canonical" href="https://neuralsignal.github.io/projects/2_comp_neuro_tools/">
     
     <!-- Dark Mode -->
     
@@ -48,7 +48,7 @@
   </head>
 
   <!-- Body -->
-  <body class="fixed-top-nav sticky-bottom-footer">
+  <body class="fixed-top-nav">
 
     <!-- Header -->
     <header>
@@ -80,17 +80,55 @@
 
 
     <!-- Content -->
-    <div class="container mt-5">
+    <div class="container mt-5 site-content">
       <!-- page.html -->
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">A collection of encoding models</h1>
-            <p class="post-description">The scidoggo Python package</p>
+            <h1 class="post-title">Computational neuroscience methods</h1>
+            <p class="post-description">Tools and models for analyzing neural circuits and designing visual stimuli</p>
           </header>
 
           <article>
-            <p>This coding project is a collection of different models and data tools that I have created, modified, and used for my various research projects. Included in the package are various types of constraint convex optimization procedures, interpolation models, nonlinear encoding models, and probabilistic models for circuit model analysis. The project is still under development and can be found on GitHub.</p>
+            <h3 id="geometry-of-color-spaces-dreye">Geometry of color spaces (dreye)</h3>
+
+<p>Color vision represents a vital aspect of perception that ultimately enables a wide variety of species to thrive in the natural world. However, unified methods for constructing  chromatic visual stimuli in a laboratory setting are lacking. Here, we present stimulus design methods and an accompanying programming package to efficiently probe the color space of any species in which the photoreceptor spectral sensitivities are known. Our hardware-agnostic approach incorporates photoreceptor models within the framework of the principle of univariance. This enables experimenters to identify the most effective way to combine multiple light sources to create desired distributions of light, and thus easily construct relevant stimuli for mapping the color space of an organism. We include methodology to handle uncertainty of photoreceptor spectral sensitivity as well as to optimally reconstruct hyperspectral images given recent hardware advances. Our methods support broad applications in color vision science and provide a framework for uniform stimulus designs across experimental systems.</p>
+
+<p><a href="https://royalsocietypublishing.org/doi/10.1098/rstb.2021.0280" rel="external nofollow noopener" target="_blank">Exploiting colour space geometry for visual stimulus design across animals</a>, <em>Phil. Trans. R. Soc. B</em>, 2022</p>
+
+<p><a href="https://github.com/neuralsignal/dreye" rel="external nofollow noopener" target="_blank">neuralsignal/dreye</a></p>
+
+<h3 id="probabilistic-circuit-model-analysis">Probabilistic circuit model analysis</h3>
+
+<p>Sensory circuits are complex systems that process information through feedforward and recurrent interactions among a set of neurons. While these circuits have been studied extensively, modeling their underlying mechanisms and computations can be challenging when not all neurons in the circuit are recorded from and when synapse information is incomplete or inaccurate. In this study, we propose a probabilistic framework that predicts the responses of unobserved neurons using anatomical constraints. We demonstrate the effectiveness of our approach on both simulated data using randomly generated connectomes with varying complexities and real neural data from the fruit fly optic lobe. Our approach accurately predicts the responses of unobserved neurons in simulated and real data. Given our probabilistic framework, we are also able to infer what types of experiments are optimal for subsequent experiments. Overall, our method provides a useful tool for modeling the complex mechanisms underlying sensory information processing in biological circuits.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/Results_simulation.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    Results for a set of simulated recurrent circuits with 5-9 recurrent units and 4 different types of inputs. Given an appropriate noise level, we are able to accurately predict the responses of up to two unobserved neurons in the circuit without a strong prior on the weight matrix.
+</div>
+
+<p>Presented at Columbia Neurotheory Meeting, 2020 and 2021</p>
+
+<p><a href="https://github.com/neuralsignal/scidoggo" rel="external nofollow noopener" target="_blank">neuralsignal/scidoggo</a></p>
+
+<h3 id="encoding-models-scidoggo">Encoding models (scidoggo)</h3>
+
+<p>This coding project is a collection of different models and data tools that I have created, modified, and used for my various research projects. Included in the package are various types of constraint convex optimization procedures, interpolation models, nonlinear encoding models, and probabilistic models for circuit model analysis. The project is still under development and can be found on GitHub.</p>
 
 <p><a href="https://github.com/neuralsignal/scidoggo" rel="external nofollow noopener" target="_blank">neuralsignal/scidoggo</a></p>
 
@@ -100,12 +138,15 @@
 
     </div>
 
-    <!-- Footer -->    <footer class="sticky-bottom mt-5">
+    <!-- Footer -->    <footer class="site-footer">
       <div class="container">
-        © Copyright 2026 Matthias Christenson. Last updated in March 2026.
-
+        <span>© 2026 Matthias Christenson</span>
+        <span class="footer-sep">·</span>
+        <span>Last updated in March 2026.
+</span>
       </div>
     </footer>
+
 
     <!-- JavaScripts -->
     <!-- jQuery -->

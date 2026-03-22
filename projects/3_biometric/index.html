@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Fast and simple dataframe manipulation | Matthias Christenson</title>
+    <title>AI for biophysical data | Matthias Christenson</title>
     <meta name="author" content="Matthias Christenson">
-    <meta name="description" content="The puffbird Python package">
+    <meta name="description" content="Building models to make long-term predictions on biophysical time-series data">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -35,7 +35,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://neuralsignal.github.io/projects/7_puffbird/">
+    <link rel="canonical" href="https://neuralsignal.github.io/projects/3_biometric/">
     
     <!-- Dark Mode -->
     
@@ -48,7 +48,7 @@
   </head>
 
   <!-- Body -->
-  <body class="fixed-top-nav sticky-bottom-footer">
+  <body class="fixed-top-nav">
 
     <!-- Header -->
     <header>
@@ -80,19 +80,26 @@
 
 
     <!-- Content -->
-    <div class="container mt-5">
+    <div class="container mt-5 site-content">
       <!-- page.html -->
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Fast and simple dataframe manipulation</h1>
-            <p class="post-description">The puffbird Python package</p>
+            <h1 class="post-title">AI for biophysical data</h1>
+            <p class="post-description">Building models to make long-term predictions on biophysical time-series data</p>
           </header>
 
           <article>
-            <p>Puffbird is an open-source library that extends the functionality of pandas DataFrames by providing a user-friendly interface for handling complex data structures with multiple nested cells. The library has been developed with a focus on ease of use and follows the documentation style of pandas. While some of the features in puffbird have become redundant with the addition of new functionalities such as the <code class="language-plaintext highlighter-rouge">explode</code> method in pandas, the library continues to provide a valuable extension to pandas. The project is actively maintained, albeit at an irregular rate, and welcomes contributions from the community.</p>
+            <h3 id="biometric-time-series-models-for-healthcare-monitoring">Biometric time-series models for healthcare monitoring</h3>
 
-<p><a href="https://github.com/neuralsignal/puffbird" rel="external nofollow noopener" target="_blank">neuralsignal/puffbird</a></p>
+<p>In underserved communities, elderly individuals often lack access to advanced health monitoring that could detect early signs of common issues like infections, pneumonia, and constipation. These conditions can be identified through multi-day patterns in data from wearable devices. While machine learning can enable analysis of such long-term biometric data, typical models struggle with very long input sequences. Recently developed deep state-space models overcome this limitation and scale linearly with sequence length. This project will develop a tailored deep state-space model architecture to learn individual “biometric profiles” and detect healthcare events. It will also build software tools to enable training and deployment of the models to expand access to sophisticated healthcare monitoring.</p>
+
+<h3 id="field-casualty-management-ai">Field Casualty Management AI</h3>
+
+<p>In a near-peer conflict, warfighters may be in the field without support for days to weeks. This is especially problematic for managing casualties. In such scenarios, rationing limited quantities of blood or antibiotics requires predicting the individual progression of blood loss, or the likelihood of sepsis. While military medics are highly skilled at initial treatment of traumatic injuries, they are not trained to track the health trends of wounded warfighters over extended periods. Blood loss and sepsis produce typified patterns in heart rate, blood oxygen and other biometrics commonly collected from wearable devices. These patterns are individual-specific and emerge over hours to days. Recent advances in machine learning methods are only now making detecting such patterns possible. We are developing a generalized artificial intelligence (AI) for interpreting individual-specific, long-timescale biophysical data from wearable devices. While the AI can be used to detect and track a wide variety of health conditions, we are particularly focused on managing warfighter casualties in the field. The AI integrates into commonly used hardware and software, acting as a “force multiplier,” for existing equipment. Our AI will aid medics manage field casualties, saving lives when warfighters are cut off from advanced medical care.</p>
+
+<p>Field casualty management AI, W.W. Pettine, M. Christenson, P. Koirala, <em>Defense TechConnect</em>, 2023 <br>
+Assessing Foundation Models’ Transferability to Physiological Signals in Precision Medicine, M. Christenson, C. Geary, B. Locke, P. Koirala, W.W. Pettine, <em>Defense AI in Medicine</em>, 2024</p>
 
           </article>
 
@@ -100,12 +107,15 @@
 
     </div>
 
-    <!-- Footer -->    <footer class="sticky-bottom mt-5">
+    <!-- Footer -->    <footer class="site-footer">
       <div class="container">
-        © Copyright 2026 Matthias Christenson. Last updated in March 2026.
-
+        <span>© 2026 Matthias Christenson</span>
+        <span class="footer-sep">·</span>
+        <span>Last updated in March 2026.
+</span>
       </div>
     </footer>
+
 
     <!-- JavaScripts -->
     <!-- jQuery -->
