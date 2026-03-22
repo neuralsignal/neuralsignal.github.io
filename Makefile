@@ -1,16 +1,13 @@
-.PHONY: serve build clean local local-build
+.PHONY: install serve build clean
+
+install:
+	mise exec -- bundle install
 
 serve:
-	docker-compose up
+	mise exec -- bundle exec jekyll serve --port 8080 --livereload
 
 build:
-	docker-compose run --rm jekyll bundle exec jekyll build
-
-local:
-	bundle exec jekyll serve --port 8080 --livereload
-
-local-build:
-	bundle exec jekyll build
+	mise exec -- bundle exec jekyll build
 
 clean:
 	rm -rf _site .jekyll-cache .sass-cache

@@ -1,5 +1,5 @@
 <!-- _includes/homepage_projects.html -->
-{%- assign sorted_projects = site.projects | sort: "importance" -%}
+{%- assign sorted_projects = site.projects | sort: "order" -%}
 <div class="homepage-projects">
   {%- for project in sorted_projects %}
   <div class="accordion-item">
