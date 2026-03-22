@@ -4,6 +4,21 @@
 
 // Typography
 
+$font-family-serif: 'Cormorant Garamond', Georgia, serif;
+$font-family-sans: 'DM Sans', -apple-system, 'Segoe UI', sans-serif;
+
+body {
+  font-family: $font-family-sans !important;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-serif !important;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
 p,
 h1,
 h2,
@@ -38,6 +53,7 @@ table {
 a,
 table.table a {
   color: var(--global-theme-color);
+  transition: color 0.2s ease;
 
   &:hover {
     color: var(--global-theme-color);
@@ -117,7 +133,7 @@ blockquote {
   .address {
     margin-bottom: 5px;
     margin-top: 5px;
-    font-family: monospace;
+    font-family: $font-family-sans;
 
     p {
       display: inline-block;
@@ -165,7 +181,7 @@ blockquote {
 
 .navbar {
   box-shadow: none;
-  border-bottom: 1px solid var(--global-divider-color);
+  border-bottom: 1px solid rgba(0,0,0,0.04);
   background-color: var(--global-bg-color);
   opacity: 0.95;
 }
@@ -209,6 +225,7 @@ blockquote {
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    letter-spacing: 0.02em;
 
     &:hover {
       color: var(--global-hover-color);
@@ -347,8 +364,8 @@ footer.fixed-bottom {
 
 footer.sticky-bottom {
   border-top: 1px solid var(--global-divider-color);
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 48px;
+  padding-bottom: 48px;
   font-size: 0.9rem;
 }
 

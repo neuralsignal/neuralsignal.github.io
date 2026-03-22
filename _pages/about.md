@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href=https://themtn.ai>Mountain Biometrics</a> & <a href=https://www.utah.edu/>University of Utah</a>
+subtitle: <a href="https://www.sanoptis.com">Sanoptis</a>
 
 profile:
   align: right
@@ -14,14 +14,13 @@ profile:
   #   <p>Your City, State 12345</p>
 
 news: false  # includes a list of news items
-latest_posts: false  # includes a list of the newest posts
+latest_posts: true  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a healthcare AI researcher and innovator focused on connecting advanced machine learning with real-world medical care. As Chief AI Architect and Scientist at Mountain Biometrics (MTN) and Adjunct Faculty at the University of Utah, I am dedicated to developing AI systems that improve patient care and help clinicians make better decisions. My background in computational neuroscience at Columbia University led me to healthcare AI, where I work to make complex technology useful and accessible in clinical settings. I specialize in time-series analysis and medical AI, aiming to create reliable solutions for both clinicians and patients.
+I lead medical data and AI efforts at [Sanoptis](https://www.sanoptis.com), where I work on bringing machine learning closer to everyday clinical care — particularly in ophthalmology. I also teach part-time as Adjunct Faculty at the University of Utah. Before that, I spent time building healthcare AI systems at Mountain Biometrics and studied computational neuroscience at Columbia University. Most of what I do sits at the intersection of time-series analysis, medical imaging, and making models that clinicians can actually trust and use.
 
-When I am not working on my data and software projects, I enjoy exploring the great outdoors via gradient descent, playing board games with friends, and dancing salsa and the waltz.
-My long-term goal is to apply my skills in data and mathematical modeling to automate complex processes and gain a deeper understanding of how we interpret the world around us.
+When I am not working on my data and software projects, I enjoy exploring the great outdoors via gradient descent, playing board games with friends, and dancing salsa and the waltz. My long-term goal is to apply my skills in data and mathematical modeling to automate complex processes and gain a deeper understanding of how we interpret the world around us.
 
-**Gucky** [’ɡʊki] is my nickname and is derived from the colloquial German verb "gucken", which means "to look".
+**Gucky** [‘ɡʊki] is my nickname and is derived from the colloquial German verb "gucken", which means "to look".

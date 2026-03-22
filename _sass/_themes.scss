@@ -1,20 +1,20 @@
 /*******************************************************************************
  * Themes
  ******************************************************************************/
- 
+
 :root {
-  --global-bg-color: #{$white-color};
+  --global-bg-color: #FAFAF5;
   --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: #{$black-color};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$purple-color};
-  --global-hover-color: #{$purple-color};
-  --global-footer-bg-color: #{$grey-color-dark};
-  --global-footer-text-color: #{$grey-color-light};
-  --global-footer-link-color: #{$white-color};
+  --global-text-color: #2D2D2D;
+  --global-text-color-light: #6B7280;
+  --global-theme-color: #{$accent-color};
+  --global-hover-color: #{$accent-color};
+  --global-footer-bg-color: #F0EFE9;
+  --global-footer-text-color: #6B7280;
+  --global-footer-link-color: #{$accent-color};
   --global-distill-app-color: #{$grey-color};
   --global-divider-color: rgba(0,0,0,.1);
-  --global-card-bg-color: #{$white-color};
+  --global-card-bg-color: #FAFAF5;
 
   .fa-sun {
     display : none;
@@ -34,18 +34,18 @@
 }
 
 html[data-theme='dark'] {
-  --global-bg-color: #{$grey-color-dark};
+  --global-bg-color: #1A1D1A;
   --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color-light};
-  --global-theme-color: #{$cyan-color};
-  --global-hover-color: #{$cyan-color};
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{$grey-color-dark};
-  --global-footer-link-color: #{$black-color};
+  --global-text-color: #E0E0E0;
+  --global-text-color-light: #A0A0A0;
+  --global-theme-color: #{$accent-color-dark};
+  --global-hover-color: #{$accent-color-dark};
+  --global-footer-bg-color: #151815;
+  --global-footer-text-color: #A0A0A0;
+  --global-footer-link-color: #{$accent-color-dark};
   --global-distill-app-color: #{$grey-color-light};
   --global-divider-color: #424246;
-  --global-card-bg-color: #{$grey-900};
+  --global-card-bg-color: #1E211E;
 
   .fa-sun {
     padding-left: 10px;

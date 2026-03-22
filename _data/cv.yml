@@ -25,9 +25,13 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Head of Medical Data and AI
+      institution: Sanoptis
+      year: 2026-present
+
     - title: Chief AI Architect & Scientist
       institution: MTN, Salt Lake City, USA (remote)
-      year: 2024-present
+      year: 2024-2026
 
     - title: Adjunct Faculty
       institution: University of Utah, Salt Lake City, USA (remote)
