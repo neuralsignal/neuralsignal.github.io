@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Computational neuroscience methods
-description: Tools and models for analyzing neural circuits and designing visual stimuli
+description: Tools for analyzing neural circuits and designing experiments
 img: assets/img/dreye.png
 order: 20
 category: machine learning
@@ -34,6 +34,6 @@ Presented at Columbia Neurotheory Meeting, 2020 and 2021
 
 ### Encoding models (scidoggo)
 
-This coding project is a collection of different models and data tools that I have created, modified, and used for my various research projects. Included in the package are various types of constraint convex optimization procedures, interpolation models, nonlinear encoding models, and probabilistic models for circuit model analysis. The project is still under development and can be found on GitHub.
+A collection of models and data tools I built and used across my research projects. Includes constrained convex optimization procedures, interpolation models, nonlinear encoding models, and the probabilistic circuit models described above. Still under development.
 
 [neuralsignal/scidoggo](https://github.com/neuralsignal/scidoggo)

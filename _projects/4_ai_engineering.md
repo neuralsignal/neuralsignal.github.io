@@ -9,7 +9,7 @@ category: machine learning
 
 ### Agentic engineering kit
 
-A composable library of engineering standards, automated workflows, and reusable components for AI-assisted software development. Includes principles, on-demand skills, and autonomous GitHub Actions that can be integrated via AI assistant rules, git subtree, or individual files. Designed as a governance framework that teams can adapt to their specific workflows.
+A collection of engineering standards, automated workflows, and reusable components I put together for AI-assisted software development. Includes coding principles, on-demand skills, and GitHub Actions that can be pulled in via AI assistant rules, git subtree, or individual files. Meant as a starting point that teams can adapt to how they actually work.
 
 [neuralsignal/agentic-engineering-kit](https://github.com/neuralsignal/agentic-engineering-kit)
 
