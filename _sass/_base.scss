@@ -221,6 +221,7 @@ blockquote {
 
   .navbar-brand {
     color: var(--global-text-color);
+    text-transform: lowercase;
   }
 
   .navbar-nav .nav-item .nav-link {
@@ -319,9 +320,11 @@ blockquote {
   text-align: center;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 1.8rem;
 
     a {
+      margin: 0 0.4rem;
+
       i::before {
         color: var(--global-text-color);
         transition-property: all 0.2s ease-in-out;
@@ -557,21 +560,8 @@ footer.sticky-bottom {
     margin-bottom: 1em;
   }
 
-  h2 {
-    margin-bottom: 1rem;
-
-    span {
-      font-size: 1.5rem;
-    }
-  }
-
   h2.year {
-    color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
-    margin-top: 2rem;
-    margin-bottom: -2rem;
-    text-align: right;
+    display: none;
   }
 
   ol.bibliography {
@@ -580,142 +570,104 @@ footer.sticky-bottom {
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 0;
 
-      .preview {
-        width: 100%;
-        min-width: 80px;
-        max-width: 200px;
-      }
+      // Hide the old 2-column row wrapper if still rendered
+      > .row { display: contents; }
+      .col-sm-2 { display: none; }
+      .col-sm-8 { max-width: 100%; flex: none; padding: 0; }
+    }
+  }
+}
 
-      .abbr {
-        height: 2rem;
-        margin-bottom: 0.5rem;
+// Paper accordion entries
+.paper-item {
+  .paper-year {
+    flex-shrink: 0;
+    min-width: 2.5rem;
+  }
 
-        abbr {
-          display: inline-block;
-          background-color: var(--global-theme-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
+  .paper-authors {
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
 
-          a {
-            color: white;
-
-            &:hover {
-              text-decoration: none;
-            }
-          }
-        }
-
-        .award {
-          color: var(--global-theme-color) !important;
-          border: 1px solid var(--global-theme-color);
-        }
-      }
-
-      .title {
-        font-weight: bolder;
-      }
-
-      .author {
-        a {
-          border-bottom: 1px dashed var(--global-theme-color);
-
-          &:hover {
-            border-bottom-style: solid;
-            text-decoration: none;
-          }
-        }
-
-        >em {
-          border-bottom: 1px solid;
-          font-style: normal;
-        }
-
-        >span.more-authors {
-          color: var(--global-text-color-light);
-          border-bottom: 1px dashed var(--global-text-color-light);
-          cursor: pointer;
-
-          &:hover {
-            color: var(--global-text-color);
-            border-bottom: 1px dashed var(--global-text-color);
-          }
-        }
-      }
-
-      .links {
-        a.btn {
-          color: var(--global-text-color);
-          border: 1px solid var(--global-text-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
-          margin-left: 0;
-
-          &:hover {
-            color: var(--global-theme-color);
-            border-color: var(--global-theme-color);
-          }
-        }
-      }
-
-      .badges {
-        padding-bottom: 0.5rem;
-        span {
-          display: inline-block;
-          color: $black-color;
-          height: 100%;
-          padding-right: 0.5rem;
-          vertical-align: middle;
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-
-      .hidden {
-        font-size: 0.875rem;
-        max-height: 0px;
-        overflow: hidden;
-        text-align: justify;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
-        transition: all 0.15s ease;
-
-        p {
-          line-height: 1.4em;
-          margin: 10px;
-        }
-
-        pre {
-          font-size: 1em;
-          line-height: 1.4em;
-          padding: 10px;
-        }
-      }
-
-      .hidden.open {
-        max-height: 100em;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
-        transition: all 0.15s ease;
-      }
-
-      div.abstract.hidden {
-        border: dashed 1px var(--global-bg-color);
-      }
-
-      div.abstract.hidden.open {
-        border-color: var(--global-text-color);
+    a {
+      border-bottom: 1px dashed var(--global-theme-color);
+      &:hover {
+        border-bottom-style: solid;
+        text-decoration: none;
       }
     }
+
+    > em {
+      border-bottom: 1px solid;
+      font-style: normal;
+    }
+
+    > span.more-authors {
+      color: var(--global-text-color-light);
+      border-bottom: 1px dashed var(--global-text-color-light);
+      cursor: pointer;
+      &:hover {
+        color: var(--global-text-color);
+        border-bottom: 1px dashed var(--global-text-color);
+      }
+    }
+  }
+
+  .paper-venue {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+    margin-bottom: 0.3rem;
+  }
+
+  .paper-links {
+    margin-top: 0.3rem;
+
+    a.btn {
+      font-size: 0.75rem;
+      color: var(--global-text-color);
+      border: 1px solid var(--global-text-color);
+      padding: 0.15rem 0.5rem;
+      margin-right: 0.25rem;
+
+      &:hover {
+        color: var(--global-theme-color);
+        border-color: var(--global-theme-color);
+      }
+    }
+  }
+
+  .hidden {
+    font-size: 0.85rem;
+    max-height: 0px;
+    overflow: hidden;
+    text-align: justify;
+    transition: all 0.15s ease;
+
+    p {
+      line-height: 1.4em;
+      margin: 10px;
+    }
+
+    pre {
+      font-size: 1em;
+      line-height: 1.4em;
+      padding: 10px;
+    }
+  }
+
+  .hidden.open {
+    max-height: 100em;
+    transition: all 0.15s ease;
+  }
+
+  div.abstract.hidden {
+    border: dashed 1px var(--global-bg-color);
+  }
+
+  div.abstract.hidden.open {
+    border-color: var(--global-text-color);
   }
 }
 
@@ -873,5 +825,252 @@ pre {
   &:hover .copy {
     color: var(--global-hover-color);
     opacity: 1;
+  }
+}
+
+// Side navigation dots
+.side-nav {
+  position: fixed;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+
+  &:hover { opacity: 1; }
+
+  .side-nav-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--global-text-color-light);
+    transition: all 0.3s ease;
+    position: relative;
+    display: block;
+
+    &.active {
+      background: var(--global-theme-color);
+      transform: scale(1.4);
+    }
+
+    &::before {
+      content: attr(data-label);
+      position: absolute;
+      right: 1.2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.7rem;
+      color: var(--global-text-color-light);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      white-space: nowrap;
+    }
+  }
+
+  &:hover .side-nav-dot::before { opacity: 1; }
+
+  @media (max-width: 768px) { display: none; }
+}
+
+// Scroll sections
+.scroll-section {
+  padding: 5rem 0;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  > h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-family: $font-family-sans !important;
+    text-transform: lowercase;
+    letter-spacing: 0.08em;
+    color: var(--global-text-color-light);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    &::after {
+      content: '';
+      flex: 0 0 2rem;
+      height: 1px;
+      background: var(--global-text-color-light);
+    }
+  }
+}
+
+#hero.scroll-section {
+  padding-top: 2rem;
+}
+
+// Hero section
+.hero-section {
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-photo {
+    max-width: 180px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.2rem;
+    color: var(--global-text-color);
+    margin-bottom: 0.3rem;
+  }
+
+}
+
+// Unified accordion system (used by blog, projects, papers, CV)
+
+.accordion-item {
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.accordion-header {
+  padding: 0.6rem 0;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  transition: color 0.2s ease;
+
+  &:hover { color: var(--global-theme-color); }
+}
+
+.accordion-toggle {
+  font-family: monospace;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  width: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.expanded > .accordion-header > .accordion-toggle {
+  transform: rotate(45deg);
+}
+
+.accordion-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.accordion-meta {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+}
+
+.accordion-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+
+  > div {
+    overflow: hidden;
+    padding: 0 0 0 1.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+.expanded > .accordion-body {
+  grid-template-rows: 1fr;
+
+  > div {
+    padding-bottom: 1.2rem;
+  }
+}
+
+// Blog date column
+.blog-date {
+  flex-shrink: 0;
+  min-width: 4.5rem;
+  text-align: right;
+}
+
+// CV section-specific styles
+
+.cv-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cv-entry {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+}
+
+.cv-year {
+  flex-shrink: 0;
+  width: 7rem;
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  text-align: right;
+}
+
+.cv-detail {
+  font-size: 0.9rem;
+}
+
+.cv-award-item {
+  display: block;
+}
+
+.cv-map {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cv-map-entry {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+}
+
+.cv-map-key {
+  flex-shrink: 0;
+  width: 7rem;
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  text-align: right;
+  font-weight: 600;
+}
+
+.cv-map-value {
+  font-size: 0.9rem;
+}
+
+.cv-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+}
+
+// About me section
+.about-content {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 38em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

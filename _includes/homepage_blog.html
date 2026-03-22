@@ -1,0 +1,25 @@
+<!-- _includes/homepage_blog.html -->
+<div class="homepage-blog">
+  {%- assign all_posts = site.posts -%}
+  {%- if all_posts.size > 0 -%}
+  <div class="blog-accordion">
+    {%- for post in all_posts %}
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+        <span class="accordion-toggle">+</span>
+        <span class="accordion-meta blog-date">{{ post.date | date: "%b %Y" }}</span>
+        <span class="accordion-title">{{ post.title }}</span>
+        {%- if post.description %}
+        <span class="accordion-meta">{{ post.description }}</span>
+        {%- endif %}
+      </div>
+      <div class="accordion-body"><div>
+        {{ post.content }}
+      </div></div>
+    </div>
+    {%- endfor %}
+  </div>
+  {%- else -%}
+  <p>No posts yet.</p>
+  {%- endif %}
+</div>

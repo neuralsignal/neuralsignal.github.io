@@ -4,7 +4,7 @@
     - name: Full Name
       value: Matthias Christenson
     - name: Skills
-      value: Self-Supervised Learning, Time-Series Modeling, Foundation Models, Transfer Learning, On-Device/Edge ML, MLOps, Quantitative Research, Statistical Analysis, Experimental Design, Cloud technologies (AWS, GCP), Technical Writing
+      value: Machine Learning, Time-Series Modeling, MLOps, Statistical Analysis, Cloud (AWS, GCP)
     - name: Languages
       value: English (fluent), German (fluent), Spanish (working proficiency), French (basics)
     - name: Programming
@@ -18,7 +18,7 @@
     - title: PhD
       institution: Columbia University, New York, USA
       year: 2022
-    - title: MSci/BSc
+    - title: MSci
       institution: University College London, London, UK
       year: 2016
 
@@ -26,7 +26,7 @@
   type: time_table
   contents:
     - title: Head of Medical Data and AI
-      institution: Sanoptis
+      institution: Sanoptis, Zurich, Switzerland
       year: 2026-present
 
     - title: Chief AI Architect & Scientist
@@ -48,10 +48,6 @@
     - title: Doctoral Research Scientist
       institution: Columbia University, New York, USA
       year: 2016-2022
-
-    - title: Data Scientist (part-time)
-      institution: House of Crops Unamera, Remote
-      year: 2020-2021
 
     - title: Undergraduate Research Assistant (part-time)
       institution: University College London, London, UK
@@ -92,4 +88,4 @@
 - title: Interests
   type: list
   contents:
-    - Skiing, Strategic Board Games, Financial Modeling, Ballroom Dancing
+    - Skiing, board games, dancing, markets

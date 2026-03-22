@@ -1,0 +1,16 @@
+<!-- _includes/homepage_projects.html -->
+{%- assign sorted_projects = site.projects | sort: "importance" -%}
+<div class="homepage-projects">
+  {%- for project in sorted_projects %}
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">{{ project.title }}</span>
+      <span class="accordion-meta">{{ project.description }}</span>
+    </div>
+    <div class="accordion-body"><div>
+      {{ project.content }}
+    </div></div>
+  </div>
+  {%- endfor %}
+</div>

@@ -1,0 +1,68 @@
+<!-- _includes/homepage_cv.html -->
+<div class="homepage-cv">
+  {%- for entry in site.data.cv %}
+
+  {%- if entry.type == "time_table" %}
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">{{ entry.title }}</span>
+    </div>
+    <div class="accordion-body"><div>
+      <div class="cv-timeline">
+        {%- for item in entry.contents %}
+        <div class="cv-entry">
+          <span class="cv-year">{{ item.year }}</span>
+          <span class="cv-detail">
+            {%- if item.title %}
+            <strong>{{ item.title }}</strong>
+            {%- if item.institution %}, {{ item.institution }}{%- endif %}
+            {%- endif %}
+            {%- if item.items %}
+            {%- for award in item.items %}
+            <span class="cv-award-item">{{ award }}</span>
+            {%- endfor %}
+            {%- endif %}
+          </span>
+        </div>
+        {%- endfor %}
+      </div>
+    </div></div>
+  </div>
+
+  {%- elsif entry.type == "map" %}
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">{{ entry.title }}</span>
+    </div>
+    <div class="accordion-body"><div>
+      <div class="cv-map">
+        {%- for item in entry.contents %}
+        <div class="cv-map-entry">
+          <span class="cv-map-key">{{ item.name }}</span>
+          <span class="cv-map-value">{{ item.value }}</span>
+        </div>
+        {%- endfor %}
+      </div>
+    </div></div>
+  </div>
+
+  {%- elsif entry.type == "list" %}
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">{{ entry.title }}</span>
+    </div>
+    <div class="accordion-body"><div>
+      <ul class="cv-list">
+        {%- for item in entry.contents %}
+        <li>{{ item }}</li>
+        {%- endfor %}
+      </ul>
+    </div></div>
+  </div>
+  {%- endif %}
+
+  {%- endfor %}
+</div>

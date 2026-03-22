@@ -3,7 +3,7 @@ layout: page
 title: projects
 permalink: /projects/
 description: A growing collection of my projects.
-nav: true
+nav: false
 nav_order: 2
 display_categories: [machine learning, neuroscience, data tools]
 horizontal: false
