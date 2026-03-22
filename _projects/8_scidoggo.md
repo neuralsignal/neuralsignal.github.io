@@ -3,7 +3,7 @@ layout: page
 title: A collection of encoding models
 description: The scidoggo Python package
 img:
-order: 13
+order: 130
 category: machine learning
 ---
 

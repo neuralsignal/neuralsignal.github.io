@@ -3,7 +3,7 @@ layout: page
 title: Data management and analysis platform
 description: The loris Python project
 img: assets/img/loris_icon.jpg
-order: 11
+order: 110
 category: data tools
 ---
 

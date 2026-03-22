@@ -13,30 +13,33 @@ layout: default
 </style>
 {% endif %}
 
-<div class="post">
+<div class="blog-page">
 
   <header class="post-header">
+    <div class="post-nav">
+      <a href="{{ '/blog' | relative_url }}">&larr; all posts</a>
+    </div>
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}{%- if page.author -%} • {{ page.author }}{%- endif -%}{%- if page.meta -%} • {{ page.meta }}{%- endif -%}</p>
-    <p class="post-tags">
-      <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}"> <i class="fas fa-calendar fa-sm"></i> {{ year }} </a>
-      {%- if tags != "" %}
-      &nbsp; &middot; &nbsp;
-        {% for tag in page.tags -%}
-        <a href="{{ tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl}}">
-          <i class="fas fa-hashtag fa-sm"></i> {{ tag }}</a> &nbsp;
-          {% endfor -%}
-      {% endif %}
-
-      {%- if categories != "" %}
-      &nbsp; &middot; &nbsp;
-        {% for category in page.categories -%}
-        <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}">
-          <i class="fas fa-tag fa-sm"></i> {{ category }}</a> &nbsp;
-          {% endfor -%}
-      {% endif %}
-
+    <p class="post-meta">
+      {{ page.date | date: "%B %-d, %Y" }}
+      {%- if page.author %} · {{ page.author }}{%- endif -%}
+      {%- if page.meta %} · {{ page.meta }}{%- endif -%}
     </p>
+    {%- if tags != "" or categories != "" %}
+    <p class="post-tags">
+      <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}">{{ year }}</a>
+      {%- if tags != "" %}
+        {% for tag in page.tags -%}
+        <a href="{{ tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl}}">#{{ tag }}</a>
+        {% endfor -%}
+      {% endif %}
+      {%- if categories != "" %}
+        {% for category in page.categories -%}
+        <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}">{{ category }}</a>
+        {% endfor -%}
+      {% endif %}
+    </p>
+    {%- endif %}
   </header>
 
   <article class="post-content">
@@ -48,6 +51,5 @@ layout: default
       {% include related_posts.html %}
     {%- endif %}
   {%- endif %}
-
 
 </div>

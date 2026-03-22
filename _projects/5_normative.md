@@ -3,7 +3,7 @@ layout: page
 title: Normative models of spatio-spectral decorrelation
 description: A normative approach to link natural statistics to photoreceptor type distributions
 img: assets/img/normative_clip.svg
-order: 10
+order: 100
 category: neuroscience
 ---
 

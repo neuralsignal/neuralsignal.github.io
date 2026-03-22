@@ -3,7 +3,7 @@ layout: page
 title: Probabilistic circuit model analysis
 description: Predicting responses of unobserved neurons in anatomically-constraint networks
 img: assets/img/paccman.png
-order: 5
+order: 50
 category: machine learning
 ---
 

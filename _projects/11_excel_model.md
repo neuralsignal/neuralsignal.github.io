@@ -3,7 +3,7 @@ layout: page
 title: Excel financial model tooling
 description: Generate professional Excel workbooks from declarative YAML specifications
 img:
-order: 2
+order: 20
 category: data tools
 ---
 

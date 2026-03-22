@@ -3,7 +3,7 @@ layout: page
 title: AI for biophysical data
 description: Building models to make long-term predictions on biophysical time-series data
 img:
-order: 1
+order: 10
 category: machine learning
 ---
 

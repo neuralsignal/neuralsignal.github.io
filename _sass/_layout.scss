@@ -7,7 +7,10 @@ html {
 }
 
 body {
-  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 0;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
 
@@ -21,9 +24,8 @@ body.fixed-top-nav {
   padding-top: 56px;
 }
 
-body.sticky-bottom-footer {
-  // Remove padding below footer.
-  padding-bottom: 0;
+.site-content {
+  flex: 1;
 }
 
 .container {

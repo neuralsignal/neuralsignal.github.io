@@ -3,7 +3,7 @@ layout: page
 title: Fast and simple dataframe manipulation
 description: The puffbird Python package
 img: assets/img/logo.svg
-order: 12
+order: 120
 category: data tools
 ---
 

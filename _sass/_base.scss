@@ -345,31 +345,22 @@ blockquote {
 
 
 // Footer
-footer.fixed-bottom {
-  background-color: var(--global-footer-bg-color);
-  font-size: 0.75rem;
+.site-footer {
+  padding: 2rem 0;
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+  letter-spacing: 0.03em;
 
   .container {
-    color: var(--global-footer-text-color);
-    padding-top: 9px;
-    padding-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
   }
 
-  a {
-    color: var(--global-footer-link-color);
-
-    &:hover {
-      color: var(--global-theme-color);
-      text-decoration: none;
-    }
+  .footer-sep {
+    opacity: 0.4;
   }
-}
-
-footer.sticky-bottom {
-  border-top: 1px solid var(--global-divider-color);
-  padding-top: 48px;
-  padding-bottom: 48px;
-  font-size: 0.9rem;
 }
 
 // CV
@@ -403,89 +394,81 @@ footer.sticky-bottom {
 
 // Blog
 
-.header-bar {
-  border-bottom: 1px solid var(--global-divider-color);
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 3rem;
+.blog-page {
+  padding: 3rem 0;
+}
 
-  h1 {
-    color: var(--global-theme-color);
-    font-size: 5rem;
+.section-heading {
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-family: $font-family-sans !important;
+  text-transform: lowercase;
+  letter-spacing: 0.08em;
+  color: var(--global-text-color-light);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  &::after {
+    content: '';
+    flex: 0 0 2rem;
+    height: 1px;
+    background: var(--global-text-color-light);
   }
 }
 
-.tag-list {
-  border-bottom: 1px solid var(--global-divider-color);
-  text-align: center;
-  padding-top: 1rem;
+.blog-tags {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
 
-  ul {
-    justify-content: center;
-    display: flow-root;
+  a {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+    text-decoration: none;
 
-    p,
-    li {
-      list-style: none;
-      display: inline-block;
-      padding: 1rem 0.5rem;
-      color: var(--global-text-color-light);
+    &:hover {
+      color: var(--global-theme-color);
     }
   }
 }
 
-.post-list {
-  margin: 0;
-  margin-bottom: 40px;
-  padding: 0;
-
-  li {
+.blog-list {
+  .blog-list-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 0.6rem 0;
     border-bottom: 1px solid var(--global-divider-color);
-    list-style: none;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    text-decoration: none;
+    color: var(--global-text-color);
+    transition: color 0.2s ease;
 
-    .post-meta {
-      color: var(--global-text-color-light);
-      font-size: 0.875rem;
-      margin-bottom: 0;
-    }
-
-    .post-tags {
-      color: var(--global-text-color-light);
-      font-size: 0.875rem;
-      padding-top: 0.25rem;
-      padding-bottom: 0;
-    }
-
-    a {
-      color: var(--global-text-color);
-      text-decoration: none;
-
-      &:hover {
-        color: var(--global-theme-color);
-      }
+    &:hover {
+      color: var(--global-theme-color);
     }
   }
 }
 
-.pagination {
-  .page-item {
-    .page-link {
-      color: var(--global-text-color);
+.archive-list {
+  .archive-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
 
-      &:hover {
-        color: $black-color;
-      }
-    }
+  .archive-link {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--global-text-color);
+    text-decoration: none;
 
-    &.active .page-link {
-      color: $white-color;
-      background-color: var(--global-theme-color);
-
-      &:hover {
-        background-color: var(--global-theme-color);
-      }
+    &:hover {
+      color: var(--global-theme-color);
     }
   }
 }
@@ -709,18 +692,43 @@ html.transition *:after {
 }
 
 // Extra Markdown style (post Customization)
-.post {
+
+.post-header {
+  margin-bottom: 2.5rem;
+
+  .post-nav {
+    margin-bottom: 1.5rem;
+
+    a {
+      font-size: 0.85rem;
+      color: var(--global-text-color-light);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+
+  .post-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+
   .post-meta {
     color: var(--global-text-color-light);
-    font-size: 0.875rem;
-    margin-bottom: 0;
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
   }
 
   .post-tags {
-    color: var(--global-text-color-light);
-    font-size: 0.875rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.85rem;
     padding-top: 0.25rem;
-    padding-bottom: 1rem;
 
     a {
       color: var(--global-text-color-light);
@@ -731,12 +739,12 @@ html.transition *:after {
       }
     }
   }
+}
 
-  .post-content {
-    blockquote {
-      border-left: 5px solid var(--global-theme-color);
-      padding: 8px;
-    }
+.post-content {
+  blockquote {
+    border-left: 5px solid var(--global-theme-color);
+    padding: 8px;
   }
 }
 
@@ -997,6 +1005,12 @@ pre {
   flex-shrink: 0;
   min-width: 4.5rem;
   text-align: right;
+}
+
+.blog-view-all {
+  padding: 0.8rem 0;
+  text-align: right;
+  font-size: 0.9rem;
 }
 
 // CV section-specific styles

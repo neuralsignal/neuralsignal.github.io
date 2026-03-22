@@ -3,7 +3,7 @@ layout: page
 title: Geometry of color spaces
 description: Optimal stimulus design for color vision experiments in animals
 img: assets/img/dreye.png
-order: 8
+order: 80
 category: machine learning
 ---
 

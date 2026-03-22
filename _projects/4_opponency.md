@@ -3,7 +3,7 @@ layout: page
 title: Mechanisms of color opponency
 description: A dual circuit mechanism achieves color opponency in fruit flies
 img: assets/img/reccircuit.svg
-order: 9
+order: 90
 category: neuroscience
 ---
 

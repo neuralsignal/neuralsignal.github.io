@@ -3,7 +3,7 @@ layout: page
 title: Recurrence and color selectivity
 description: Emergence of color selectivity in an early sensory and highly recurrent circuit
 img: assets/img/hue.svg
-order: 4
+order: 40
 category: neuroscience
 ---
 

@@ -3,7 +3,7 @@ layout: page
 title: LLM-focused side projects
 description: Proof-of-concepts for projects utilizing LLMs
 img:
-order: 6
+order: 60
 category: machine learning
 ---
 

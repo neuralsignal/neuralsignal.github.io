@@ -3,7 +3,7 @@
   {%- assign all_posts = site.posts -%}
   {%- if all_posts.size > 0 -%}
   <div class="blog-accordion">
-    {%- for post in all_posts %}
+    {%- for post in all_posts limit:5 %}
     <div class="accordion-item">
       <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
         <span class="accordion-toggle">+</span>
@@ -19,6 +19,11 @@
     </div>
     {%- endfor %}
   </div>
+  {%- if all_posts.size > 5 %}
+  <div class="blog-view-all">
+    <a href="{{ '/blog' | relative_url }}">View all posts →</a>
+  </div>
+  {%- endif %}
   {%- else -%}
   <p>No posts yet.</p>
   {%- endif %}

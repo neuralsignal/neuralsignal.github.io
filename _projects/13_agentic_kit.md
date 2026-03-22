@@ -3,7 +3,7 @@ layout: page
 title: Agentic engineering kit
 description: Composable engineering principles, skills, and subagents for AI-assisted development
 img:
-order: 7
+order: 70
 category: machine learning
 ---
 
