@@ -23,7 +23,9 @@
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=Material+Icons&amp;display=swap">
 
     <!-- Code Syntax Highlighting -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
@@ -46,7 +48,7 @@
   </head>
 
   <!-- Body -->
-  <body class="fixed-top-nav ">
+  <body class="fixed-top-nav sticky-bottom-footer">
 
     <!-- Header -->
     <header>
@@ -54,36 +56,9 @@
       <!-- Nav Bar -->
       <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
         <div class="container">
-          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Matthias </span> Christenson</a>
-          <!-- Navbar Toggle -->
-          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar top-bar"></span>
-            <span class="icon-bar middle-bar"></span>
-            <span class="icon-bar bottom-bar"></span>
-          </button>
-
-          <div class="collapse navbar-collapse text-right" id="navbarNav">
-            <ul class="navbar-nav ml-auto flex-nowrap">
-
-              <!-- About -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/">about</a>
-              </li>
-              
-
-              <!-- Other pages -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/publications/">publications&amp;presentations</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/projects/">projects</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/cv/">cv</a>
-              </li>
-
-              <!-- Toogle theme mode -->
+          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Matthias </span>Christenson</a>
+          <div class="ml-auto">
+            <ul class="navbar-nav flex-nowrap">
               <li class="toggle-container">
                 <button id="light-toggle" title="Change theme">
                   <i class="fas fa-moon"></i>
@@ -115,18 +90,16 @@
           </header>
 
           <article>
-            <h2 id="biometric-time-series-models-for-healthcare-monitoring">Biometric time-series models for healthcare monitoring</h2>
+            <h3 id="biometric-time-series-models-for-healthcare-monitoring">Biometric time-series models for healthcare monitoring</h3>
 
 <p>In underserved communities, elderly individuals often lack access to advanced health monitoring that could detect early signs of common issues like infections, pneumonia, and constipation. These conditions can be identified through multi-day patterns in data from wearable devices. While machine learning can enable analysis of such long-term biometric data, typical models struggle with very long input sequences. Recently developed deep state-space models overcome this limitation and scale linearly with sequence length. This project will develop a tailored deep state-space model architecture to learn individual “biometric profiles” and detect healthcare events. It will also build software tools to enable training and deployment of the models to expand access to sophisticated healthcare monitoring.</p>
 
-<h2 id="field-casualty-management-ai">Field Casualty Management AI</h2>
+<h3 id="field-casualty-management-ai">Field Casualty Management AI</h3>
 
 <p>In a near-peer conflict, warfighters may be in the field without support for days to weeks. This is especially problematic for managing casualties. In such scenarios, rationing limited quantities of blood or antibiotics requires predicting the individual progression of blood loss, or the likelihood of sepsis. While military medics are highly skilled at initial treatment of traumatic injuries, they are not trained to track the health trends of wounded warfighters over extended periods. Blood loss and sepsis produce typified patterns in heart rate, blood oxygen and other biometrics commonly collected from wearable devices. These patterns are individual-specific and emerge over hours to days. Recent advances in machine learning methods are only now making detecting such patterns possible. We are developing a generalized artificial intelligence (AI) for interpreting individual-specific, long-timescale biophysical data from wearable devices. While the AI can be used to detect and track a wide variety of health conditions, we are particularly focused on managing warfighter casualties in the field. The AI integrates into commonly used hardware and software, acting as a “force multiplier,” for existing equipment. Our AI will aid medics manage field casualties, saving lives when warfighters are cut off from advanced medical care.</p>
 
-<h3 id="presentation">Presentation</h3>
-
-<p><strong>Field casualty management AI</strong>, W.W. Pettine, M. Christenson, P. Koirala, Defense TechConnect (2023)
-<strong>Assessing Foundation Models’ Transferability to Physiological Signals in Precision Medicine</strong>, M. Christenson, C. Geary, B. Locke, P. Koirala, W.W. Pettine, Defense AI in Medicine (2024)</p>
+<p>Field casualty management AI, W.W. Pettine, M. Christenson, P. Koirala, <em>Defense TechConnect</em>, 2023 <br>
+Assessing Foundation Models’ Transferability to Physiological Signals in Precision Medicine, M. Christenson, C. Geary, B. Locke, P. Koirala, W.W. Pettine, <em>Defense AI in Medicine</em>, 2024</p>
 
           </article>
 
@@ -134,10 +107,9 @@
 
     </div>
 
-    <!-- Footer -->    
-    <footer class="fixed-bottom">
-      <div class="container mt-0">
-        © Copyright 2025 Matthias Christenson. Last updated in December 2025.
+    <!-- Footer -->    <footer class="sticky-bottom mt-5">
+      <div class="container">
+        © Copyright 2026 Matthias Christenson. Last updated in March 2026.
 
       </div>
     </footer>
@@ -161,10 +133,6 @@
   <script defer src="/assets/js/common.js"></script>
   <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
 
-    
-  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
-  <script async src="https://badge.dimensions.ai/badge.js"></script>
-
     <!-- MathJax -->
   <script type="text/javascript">
     window.MathJax = {
@@ -176,7 +144,6 @@
   <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
   <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
-    
     
 
 <!-- Scrolling Progress Bar -->

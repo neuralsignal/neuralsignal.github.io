@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>LLM-focused side projects | Matthias Christenson</title>
+    <title>Obsidian document tools | Matthias Christenson</title>
     <meta name="author" content="Matthias Christenson">
-    <meta name="description" content="Proof-of-concepts for projects utilizing LLMs">
+    <meta name="description" content="Bidirectional conversion between Obsidian Markdown and professional documents">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -35,7 +35,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://neuralsignal.github.io/projects/10_llms/">
+    <link rel="canonical" href="https://neuralsignal.github.io/projects/12_obsidian_tools/">
     
     <!-- Dark Mode -->
     
@@ -85,28 +85,22 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">LLM-focused side projects</h1>
-            <p class="post-description">Proof-of-concepts for projects utilizing LLMs</p>
+            <h1 class="post-title">Obsidian document tools</h1>
+            <p class="post-description">Bidirectional conversion between Obsidian Markdown and professional documents</p>
           </header>
 
           <article>
-            <h3 id="wikipedia-article-of-the-day-to-youtube-short">Wikipedia article of the day to youtube short</h3>
+            <h3 id="obsidian-export">obsidian-export</h3>
 
-<p>In this proof of concept, I am scraping the Wikipedia article of the day to create youtube shorts from start to finish using OpenAI’s GPT model and various open-source HuggingFace models to convert text to audio, text to images, and text to video. The video encoding needs to be improved and the images aren’t nicely cut into a smooth sequence.</p>
+<p>Converts Obsidian-flavored Markdown into professional PDF and DOCX documents through a 5-stage processing pipeline. Handles wikilinks, embeds, Mermaid diagrams, and callouts. Supports customizable profiles for branded styling.</p>
 
-<p><a href="https://github.com/neuralsignal/wikioftheday" rel="external nofollow noopener" target="_blank">neuralsignal/wikioftheday</a></p>
+<p><a href="https://github.com/neuralsignal/obsidian-export" rel="external nofollow noopener" target="_blank">neuralsignal/obsidian-export</a></p>
 
-<h3 id="movie-database-querying">Movie database querying</h3>
+<h3 id="obsidian-import">obsidian-import</h3>
 
-<p>In this proof of concept, I am trying to play around with various LLM APIs, including langchain and llamaindex, to build a semantic search over a movie database.</p>
+<p>The inverse — extracts content from PDFs, Word documents, PowerPoint, spreadsheets, and other formats into Obsidian-ready Markdown with YAML frontmatter. Supports batch processing with multiple extraction backends.</p>
 
-<p><a href="https://github.com/neuralsignal/movie_playground" rel="external nofollow noopener" target="_blank">neuralsignal/movie_playground</a></p>
-
-<h3 id="auto-gpt">Auto-GPT</h3>
-
-<p>I contributed a couple of features for this project, mainly an audio-to-text converter and image summarizer.</p>
-
-<p><a href="https://github.com/Significant-Gravitas/Auto-GPT" rel="external nofollow noopener" target="_blank">Significant-Gravitas/Auto-GPT</a></p>
+<p><a href="https://github.com/neuralsignal/obsidian-import" rel="external nofollow noopener" target="_blank">neuralsignal/obsidian-import</a></p>
 
           </article>
 

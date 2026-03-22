@@ -24,7 +24,9 @@
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=Material+Icons&amp;display=swap">
 
     <!-- Code Syntax Highlighting -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
@@ -47,7 +49,7 @@
   </head>
 
   <!-- Body -->
-  <body class="fixed-top-nav ">
+  <body class="fixed-top-nav sticky-bottom-footer">
 
     <!-- Header -->
     <header>
@@ -55,36 +57,9 @@
       <!-- Nav Bar -->
       <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
         <div class="container">
-          
-          <!-- Navbar Toggle -->
-          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar top-bar"></span>
-            <span class="icon-bar middle-bar"></span>
-            <span class="icon-bar bottom-bar"></span>
-          </button>
-
-          <div class="collapse navbar-collapse text-right" id="navbarNav">
-            <ul class="navbar-nav ml-auto flex-nowrap">
-
-              <!-- About -->
-              <li class="nav-item active">
-                <a class="nav-link" href="/">about<span class="sr-only">(current)</span></a>
-              </li>
-              
-
-              <!-- Other pages -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/publications/">publications&amp;presentations</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/projects/">projects</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/cv/">cv</a>
-              </li>
-
-              <!-- Toogle theme mode -->
+          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Matthias </span>Christenson</a>
+          <div class="ml-auto">
+            <ul class="navbar-nav flex-nowrap">
               <li class="toggle-container">
                 <button id="light-toggle" title="Change theme">
                   <i class="fas fa-moon"></i>
@@ -109,77 +84,1004 @@
     <div class="container mt-5">
       <!-- about.html -->
       <div class="post">
-        <header class="post-header">
-          <h1 class="post-title">
-           <span class="font-weight-bold">Matthias</span> <q>Gucky</q> Christenson
-          </h1>
-          <p class="desc"><a href="https://themtn.ai" rel="external nofollow noopener" target="_blank">Mountain Biometrics</a> &amp; <a href="https://www.utah.edu/" rel="external nofollow noopener" target="_blank">University of Utah</a></p>
-        </header>
 
         <article>
-          <div class="profile float-right">
-
-              <figure>
+          <section id="hero" class="scroll-section visible hero-section">
+            <div class="hero-content">
+              
+                
+                <div class="hero-photo">
+                  <figure>
 
   <picture>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/profile.jpeg" class="img-fluid z-depth-1 rounded-circle" width="auto" height="auto" alt="profile.jpeg" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/MatthiasProfile.jpeg" class="img-fluid z-depth-1 rounded-circle" width="auto" height="auto" alt="MatthiasProfile.jpeg" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
 </figure>
 
-          </div>
-
-          <div class="clearfix">
-            <p>I am a healthcare AI researcher and innovator focused on connecting advanced machine learning with real-world medical care. As Chief AI Architect and Scientist at Mountain Biometrics (MTN) and Adjunct Faculty at the University of Utah, I am dedicated to developing AI systems that improve patient care and help clinicians make better decisions. My background in computational neuroscience at Columbia University led me to healthcare AI, where I work to make complex technology useful and accessible in clinical settings. I specialize in time-series analysis and medical AI, aiming to create reliable solutions for both clinicians and patients.</p>
-
-<p>When I am not working on my data and software projects, I enjoy exploring the great outdoors via gradient descent, playing board games with friends, and dancing salsa and the waltz.
-My long-term goal is to apply my skills in data and mathematical modeling to automate complex processes and gain a deeper understanding of how we interpret the world around us.</p>
-
-<p><strong>Gucky</strong> [’ɡʊki] is my nickname and is derived from the colloquial German verb “gucken”, which means “to look”.</p>
-
-          </div>
-
-          <!-- News -->
-          
-
-          <!-- Latest posts -->
-          
-
-          <!-- Selected papers -->
-          
-
-          <!-- Social -->
-            <div class="social">
-              <div class="contact-icons">
-                <a href="mailto:%6D.%63%68%72%69%73%74%65%6E%73%6F%6E@%70%6D.%6D%65" title="email"><i class="fas fa-envelope"></i></a>
-            <a href="https://orcid.org/0000-0003-4858-6541" title="ORCID" rel="external nofollow noopener" target="_blank"><i class="ai ai-orcid"></i></a>
+                </div>
+              
+              <p class="hero-tagline">medical AI · data · neuroML</p>
+              
+              <div class="social">
+                <div class="contact-icons">
+<a href="mailto:%6D.%63%68%72%69%73%74%65%6E%73%6F%6E@%70%6D.%6D%65" title="email"><i class="fas fa-envelope"></i></a>
             <a href="https://github.com/neuralsignal" title="GitHub" rel="external nofollow noopener" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/neuralsignal" title="LinkedIn" rel="external nofollow noopener" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/neuralsignal" title="Twitter" rel="external nofollow noopener" target="_blank"><i class="fab fa-twitter"></i></a>
             
-
+</div>
               </div>
+              
+            </div>
+          </section>
 
-              <div class="contact-note">
-                You can also reach me under my personal e-mail <a href="mailto:gucky@gucky.eu" target="_blank">[anything]@gucky.eu</a>.
+          <section id="blog" class="scroll-section">
+            <h2>blog</h2>
+            <!-- _includes/homepage_blog.html -->
+<div class="homepage-blog">
+<div class="blog-accordion">
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+        <span class="accordion-toggle">+</span>
+        <span class="accordion-meta blog-date">Mar 2026</span>
+        <span class="accordion-title">Welcome</span>
+        <span class="accordion-meta">Blog is live.</span>
+      </div>
+      <div class="accordion-body"><div>
+        <p>I hope to share about healthcare data and AI, technical exporations and ideas, and other things I find interesting and am thinking about. Do not expect any good reads!</p>
 
-              </div>
+<p>Thanks for stopping by.</p>
+
+      </div></div>
+    </div>
+  </div>
+</div>
+
+          </section>
+
+          <section id="projects" class="scroll-section">
+            <h2>projects</h2>
+            <!-- _includes/homepage_projects.html --><div class="homepage-projects">
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">AI for biophysical data</span>
+      <span class="accordion-meta">Building models to make long-term predictions on biophysical time-series data</span>
+    </div>
+    <div class="accordion-body"><div>
+      <h3 id="biometric-time-series-models-for-healthcare-monitoring">Biometric time-series models for healthcare monitoring</h3>
+
+<p>In underserved communities, elderly individuals often lack access to advanced health monitoring that could detect early signs of common issues like infections, pneumonia, and constipation. These conditions can be identified through multi-day patterns in data from wearable devices. While machine learning can enable analysis of such long-term biometric data, typical models struggle with very long input sequences. Recently developed deep state-space models overcome this limitation and scale linearly with sequence length. This project will develop a tailored deep state-space model architecture to learn individual “biometric profiles” and detect healthcare events. It will also build software tools to enable training and deployment of the models to expand access to sophisticated healthcare monitoring.</p>
+
+<h3 id="field-casualty-management-ai">Field Casualty Management AI</h3>
+
+<p>In a near-peer conflict, warfighters may be in the field without support for days to weeks. This is especially problematic for managing casualties. In such scenarios, rationing limited quantities of blood or antibiotics requires predicting the individual progression of blood loss, or the likelihood of sepsis. While military medics are highly skilled at initial treatment of traumatic injuries, they are not trained to track the health trends of wounded warfighters over extended periods. Blood loss and sepsis produce typified patterns in heart rate, blood oxygen and other biometrics commonly collected from wearable devices. These patterns are individual-specific and emerge over hours to days. Recent advances in machine learning methods are only now making detecting such patterns possible. We are developing a generalized artificial intelligence (AI) for interpreting individual-specific, long-timescale biophysical data from wearable devices. While the AI can be used to detect and track a wide variety of health conditions, we are particularly focused on managing warfighter casualties in the field. The AI integrates into commonly used hardware and software, acting as a “force multiplier,” for existing equipment. Our AI will aid medics manage field casualties, saving lives when warfighters are cut off from advanced medical care.</p>
+
+<p>Field casualty management AI, W.W. Pettine, M. Christenson, P. Koirala, <em>Defense TechConnect</em>, 2023 <br>
+Assessing Foundation Models’ Transferability to Physiological Signals in Precision Medicine, M. Christenson, C. Geary, B. Locke, P. Koirala, W.W. Pettine, <em>Defense AI in Medicine</em>, 2024</p>
+
+    </div></div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">Excel financial model tooling</span>
+      <span class="accordion-meta">Generate professional Excel workbooks from declarative YAML specifications</span>
+    </div>
+    <div class="accordion-body"><div>
+      <p>excel-model converts YAML specifications into professional Excel workbooks with formulas, styling, and named ranges. It supports multiple model types including P&amp;L statements, DCF analyses, budgets, and scenario comparisons with 21 built-in formula types for financial calculations. Available as both a CLI tool and Python API.</p>
+
+<p><a href="https://github.com/neuralsignal/excel-model" rel="external nofollow noopener" target="_blank">neuralsignal/excel-model</a></p>
+
+    </div></div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">Obsidian document tools</span>
+      <span class="accordion-meta">Bidirectional conversion between Obsidian Markdown and professional documents</span>
+    </div>
+    <div class="accordion-body"><div>
+      <h3 id="obsidian-export">obsidian-export</h3>
+
+<p>Converts Obsidian-flavored Markdown into professional PDF and DOCX documents through a 5-stage processing pipeline. Handles wikilinks, embeds, Mermaid diagrams, and callouts. Supports customizable profiles for branded styling.</p>
+
+<p><a href="https://github.com/neuralsignal/obsidian-export" rel="external nofollow noopener" target="_blank">neuralsignal/obsidian-export</a></p>
+
+<h3 id="obsidian-import">obsidian-import</h3>
+
+<p>The inverse — extracts content from PDFs, Word documents, PowerPoint, spreadsheets, and other formats into Obsidian-ready Markdown with YAML frontmatter. Supports batch processing with multiple extraction backends.</p>
+
+<p><a href="https://github.com/neuralsignal/obsidian-import" rel="external nofollow noopener" target="_blank">neuralsignal/obsidian-import</a></p>
+
+    </div></div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">Recurrence and color selectivity</span>
+      <span class="accordion-meta">Emergence of color selectivity in an early sensory and highly recurrent circuit</span>
+    </div>
+    <div class="accordion-body"><div>
+      <p>The perception of color involves a transformation from the spectral properties of visual stimuli to derived perceptual quantities such as brightness, saturation and hue.  Although hue selective neurons, which respond to narrow regions in color space, have been reported in primates, they have not been identified in other species including more accessible organisms, which would facilitate circuit level analyses. Here we show that neurons in the <em>Drosophila</em> optic lobe have hue selective properties, with narrow tuning for both spectral and non-spectral colors. We construct a connectomics constrained circuit model that accounts for this hue selectivity. Our model, combined with genetic manipulations, shows that recurrent connections in the circuit are critical for the tuning properties of <em>Drosophila</em> hue selective neurons. Our findings reveal the circuit basis for a transition from physical detection to sensory perception in color vision.</p>
+
+<p><strong>Hue selectivity from recurrent circuitry</strong>, <em>Nature Neuroscience</em>, 2024</p>
+
+<p>Presented at Columbia Neurotheory Meeting, 2022</p>
+
+    </div></div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">Probabilistic circuit model analysis</span>
+      <span class="accordion-meta">Predicting responses of unobserved neurons in anatomically-constraint networks</span>
+    </div>
+    <div class="accordion-body"><div>
+      <p>Sensory circuits are complex systems that process information through feedforward and recurrent interactions among a set of neurons. While these circuits have been studied extensively, modeling their underlying mechanisms and computations can be challenging when not all neurons in the circuit are recorded from and when synapse information is incomplete or inaccurate. In this study, we propose a probabilistic framework that predicts the responses of unobserved neurons using anatomical constraints. We demonstrate the effectiveness of our approach on both simulated data using randomly generated connectomes with varying complexities and real neural data from the fruit fly optic lobe. Our approach accurately predicts the responses of unobserved neurons in simulated and real data. Given our probabilistic framework, we are also able to infer what types of experiments are optimal for subsequent experiments. Overall, our method provides a useful tool for modeling the complex mechanisms underlying sensory information processing in biological circuits.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/Results_simulation.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    Results for a set of simulated recurrent circuits with 5-9 recurrent units and 4 different types of inputs. Given an appropriate noise level, we are able to accurately predict the responses of up to two unobserved neurons in the circuit without a strong prior on the weight matrix.
+</div>
+
+<p>Presented at Columbia Neurotheory Meeting, 2020 and 2021</p>
+
+<p><a href="https://github.com/neuralsignal/scidoggo" rel="external nofollow noopener" target="_blank">neuralsignal/scidoggo</a></p>
+
+    </div></div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">LLM-focused side projects</span>
+      <span class="accordion-meta">Proof-of-concepts for projects utilizing LLMs</span>
+    </div>
+    <div class="accordion-body"><div>
+      <h3 id="wikipedia-article-of-the-day-to-youtube-short">Wikipedia article of the day to youtube short</h3>
+
+<p>In this proof of concept, I am scraping the Wikipedia article of the day to create youtube shorts from start to finish using OpenAI’s GPT model and various open-source HuggingFace models to convert text to audio, text to images, and text to video. The video encoding needs to be improved and the images aren’t nicely cut into a smooth sequence.</p>
+
+<p><a href="https://github.com/neuralsignal/wikioftheday" rel="external nofollow noopener" target="_blank">neuralsignal/wikioftheday</a></p>
+
+<h3 id="movie-database-querying">Movie database querying</h3>
+
+<p>In this proof of concept, I am trying to play around with various LLM APIs, including langchain and llamaindex, to build a semantic search over a movie database.</p>
+
+<p><a href="https://github.com/neuralsignal/movie_playground" rel="external nofollow noopener" target="_blank">neuralsignal/movie_playground</a></p>
+
+<h3 id="auto-gpt">Auto-GPT</h3>
+
+<p>I contributed a couple of features for this project, mainly an audio-to-text converter and image summarizer.</p>
+
+<p><a href="https://github.com/Significant-Gravitas/Auto-GPT" rel="external nofollow noopener" target="_blank">Significant-Gravitas/Auto-GPT</a></p>
+
+    </div></div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">Agentic engineering kit</span>
+      <span class="accordion-meta">Composable engineering principles, skills, and subagents for AI-assisted development</span>
+    </div>
+    <div class="accordion-body"><div>
+      <p>A composable library of engineering standards, automated workflows, and reusable components for AI-assisted software development. Includes principles, on-demand skills, and autonomous GitHub Actions that can be integrated via AI assistant rules, git subtree, or individual files. Designed as a governance framework that teams can adapt to their specific workflows.</p>
+
+<p><a href="https://github.com/neuralsignal/agentic-engineering-kit" rel="external nofollow noopener" target="_blank">neuralsignal/agentic-engineering-kit</a></p>
+
+    </div></div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">Geometry of color spaces</span>
+      <span class="accordion-meta">Optimal stimulus design for color vision experiments in animals</span>
+    </div>
+    <div class="accordion-body"><div>
+      <p>Color vision represents a vital aspect of perception that ultimately enables a wide variety of species to thrive in the natural world. However, unified methods for constructing  chromatic visual stimuli in a laboratory setting are lacking. Here, we present stimulus design methods and an accompanying programming package to efficiently probe the color space of any species in which the photoreceptor spectral sensitivities are known. Our hardware-agnostic approach incorporates photoreceptor models within the framework of the principle of univariance. This enables experimenters to identify the most effective way to combine multiple light sources to create desired distributions of light, and thus easily construct relevant stimuli for mapping the color space of an organism. We include methodology to handle uncertainty of photoreceptor spectral sensitivity as well as to optimally reconstruct hyperspectral images given recent hardware advances. Our methods support broad applications in color vision science and provide a framework for uniform stimulus designs across experimental systems.</p>
+
+<p><a href="https://royalsocietypublishing.org/doi/10.1098/rstb.2021.0280" rel="external nofollow noopener" target="_blank">Exploiting colour space geometry for visual stimulus design across animals</a>, <em>Phil. Trans. R. Soc. B</em>, 2022</p>
+
+<p><a href="https://github.com/neuralsignal/dreye" rel="external nofollow noopener" target="_blank">neuralsignal/dreye</a></p>
+
+    </div></div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">Mechanisms of color opponency</span>
+      <span class="accordion-meta">A dual circuit mechanism achieves color opponency in fruit flies</span>
+    </div>
+    <div class="accordion-body"><div>
+      <p>Spectral information is commonly processed in the brain through generation of antagonistic responses to different wavelengths. In many species, these color opponent signals arise as early as photoreceptor terminals. Here, we measure the spectral tuning of photoreceptors in Drosophila. In addition to a previously described pathway comparing wavelengths at each point in space, we find a horizontal-cell-mediated pathway similar to that found in mammals. This pathway enables additional spectral comparisons through lateral inhibition, expanding the range of chromatic encoding in the fly. Together, these two pathways enable efficient decorrelation and dimensionality reduction of photoreceptor signals while retaining maximal chromatic information. A biologically constrained model accounts for our findings and predicts a spatio-chromatic receptive field for fly photoreceptor outputs, with a color opponent center and broadband surround. This dual mechanism combines motifs of both an insect-specific visual circuit and an evolutionarily convergent circuit architecture, endowing flies with the ability to extract chromatic information at distinct spatial resolutions.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/opponency.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p><a href="https://www.sciencedirect.com/science/article/pii/S0960982219315775?dgcid=api_sd_search-api-endpoint" rel="external nofollow noopener" target="_blank">Circuit Mechanisms Underlying Chromatic Encoding in Drosophila Photoreceptors</a>, <em>Current Biology</em>, 2020</p>
+
+<p>Presented at Columbia Neurotheory Meeting, 2019</p>
+
+    </div></div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">Normative models of spatio-spectral decorrelation</span>
+      <span class="accordion-meta">A normative approach to link natural statistics to photoreceptor type distributions</span>
+    </div>
+    <div class="accordion-body"><div>
+      <p>In line with the efficient coding hypothesis, the early visual system aims to minimize spectral and spatial redundancies arising from overlapping opsin sensitivities in retinal photoreceptors (PRs) and highly correlated structure in natural scenes. Encoding color information, or spectral information independent of intensity, requires comparing activities across different types of PRs. Mounting evidence shows that several species across the animal kingdom, such as the fruit fly <em>Drosophila Melanogaster</em>, have an uneven proportion of PR types in their retinas. However, it is unknown whether this uneven proportion is optimized for objectives relevant to the early color processing of natural scenes, as previous studies have modeled spectral and spatial processing in the early fly visual system independently. We built a collection of models incorporating both spatial and spectral information to solve tasks relevant to the fly’s early visual system, such as predictive coding at the level of PR inputs for spatial decorrelation in the retina as well as spatial and spectral decorrelation at the level of PR outputs via color opponency mechanisms. Using this framework, we asked how varying the ratio of the fly’s two main PR types changed performance accuracy on these tasks. From this normative approach, we were able to conclude that the optimal ratio of PR types to best solve these tasks aligns with the experimentally observed distribution and showed this for multiple opsin sensitivity profiles determined within and across labs. Moreover, shuffling either spatial or spectral information in the input natural scene predicted an even PR type ratio, suggesting that biologically observed PR type ratios are optimized for spectral and spatial decorrelation. Altogether, these results suggest that natural scene statistics may have shaped the ratio of PR types in the fly retina through evolutionary mechanisms, providing important implications for understanding sensory systems in an ecologically relevant context.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/normative.svg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Normative models of spatio-spectral decorrelation predict observed receptor distributions, <em>CoSyNe</em>, 2022</p>
+
+    </div></div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">Data management and analysis platform</span>
+      <span class="accordion-meta">The loris Python project</span>
+    </div>
+    <div class="accordion-body"><div>
+      <p>Loris is a database and analysis application that is currently under development. The project is being tested, and core features are being added. Once the core features are stable, documentation for the different features will be added. Loris was originally created to provide a database system for the Behnia lab. The lab uses it for data entry, maintenance, and analysis on a daily basis. While the primary use case is for a Drosophila lab, it is flexible enough to be used by other research labs as well.</p>
+
+<p><a href="https://github.com/neuralsignal/loris" rel="external nofollow noopener" target="_blank">neuralsignal/loris</a></p>
+
+    </div></div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">Fast and simple dataframe manipulation</span>
+      <span class="accordion-meta">The puffbird Python package</span>
+    </div>
+    <div class="accordion-body"><div>
+      <p>Puffbird is an open-source library that extends the functionality of pandas DataFrames by providing a user-friendly interface for handling complex data structures with multiple nested cells. The library has been developed with a focus on ease of use and follows the documentation style of pandas. While some of the features in puffbird have become redundant with the addition of new functionalities such as the <code class="language-plaintext highlighter-rouge">explode</code> method in pandas, the library continues to provide a valuable extension to pandas. The project is actively maintained, albeit at an irregular rate, and welcomes contributions from the community.</p>
+
+<p><a href="https://github.com/neuralsignal/puffbird" rel="external nofollow noopener" target="_blank">neuralsignal/puffbird</a></p>
+
+    </div></div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">A collection of encoding models</span>
+      <span class="accordion-meta">The scidoggo Python package</span>
+    </div>
+    <div class="accordion-body"><div>
+      <p>This coding project is a collection of different models and data tools that I have created, modified, and used for my various research projects. Included in the package are various types of constraint convex optimization procedures, interpolation models, nonlinear encoding models, and probabilistic models for circuit model analysis. The project is still under development and can be found on GitHub.</p>
+
+<p><a href="https://github.com/neuralsignal/scidoggo" rel="external nofollow noopener" target="_blank">neuralsignal/scidoggo</a></p>
+
+    </div></div>
+  </div>
+</div>
+
+          </section>
+
+          <section id="papers" class="scroll-section">
+            <h2>papers</h2>
+            <!-- _includes/homepage_papers.html -->
+<div class="publications">
+  <ol class="bibliography">
+<li>
+<!-- _layouts/bib.html — compact accordion paper entry -->
+<div class="accordion-item paper-item" id="AISummit2025">
+  <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+    <span class="accordion-toggle">+</span>
+    <span class="accordion-meta paper-year">2025</span>
+    <span class="accordion-title">Efficient EHR Foundational Models: A Mixture-of-Experts Approach for Patient Timeline Prediction</span>
+  </div>
+  <div class="accordion-body"><div>
+    <!-- Author -->
+    <div class="paper-authors">
+    
+     Athreya, Matthias P. Christenson, and Warren Pettine</div>
+
+    <!-- Journal/venue -->
+    
+    
+    <div class="paper-venue">
+<em>AI Summit, University of Utah</em>, 2025</div>
+    
+
+    <!-- Links -->
+    <div class="paper-links">
+    </div>
+
+    
+  </div></div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html — compact accordion paper entry -->
+<div class="accordion-item paper-item" id="ChristensonAIME2024">
+  <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+    <span class="accordion-toggle">+</span>
+    <span class="accordion-meta paper-year">2024</span>
+    <span class="accordion-title">Assessing Foundation Models’ Transferability to Physiological Signals in Precision Medicine</span>
+  </div>
+  <div class="accordion-body"><div>
+    <!-- Author -->
+    <div class="paper-authors">
+    
+    Matthias P. Christenson, Cove Geary, Brian Locke, Pranav Koirala, and
+      <span class="more-authors" title="click to view 1 more author" onclick="
+            event.stopPropagation();
+            var element = $(this);
+            element.attr('title', '');
+            var more_authors_text = element.text() == '1 more author' ? 'Warren Pettine' : '1 more author';
+            var cursorPosition = 0;
+            var textAdder = setInterval(function(){
+              element.text(more_authors_text.substring(0, cursorPosition + 1));
+              if (++cursorPosition == more_authors_text.length){
+                clearInterval(textAdder);
+              }
+          }, '10');
+          ">1 more author</span>
+</div>
+
+    <!-- Journal/venue -->
+    
+    
+    <div class="paper-venue">
+<em>AI in Medicine Conference</em>, 2024</div>
+    
+
+    <!-- Links -->
+    <div class="paper-links">
+      <a href="https://medicine.utah.edu/dbmi/aime/ai-and-precision" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">URL</a>
+    </div>
+
+    
+  </div></div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html — compact accordion paper entry -->
+<div class="accordion-item paper-item" id="Christenson2023.07.12.548573">
+  <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+    <span class="accordion-toggle">+</span>
+    <span class="accordion-meta paper-year">2024</span>
+    <span class="accordion-title">Hue selectivity from recurrent circuitry in Drosophila</span>
+  </div>
+  <div class="accordion-body"><div>
+    <!-- Author -->
+    <div class="paper-authors">
+    
+    Matthias P Christenson,  Sanz Dı́ez, Sarah L Heath, Maia Saavedra-Weisenhaus, and
+      <span class="more-authors" title="click to view 3 more authors" onclick="
+            event.stopPropagation();
+            var element = $(this);
+            element.attr('title', '');
+            var more_authors_text = element.text() == '3 more authors' ? 'Atsuko Adachi, L.F. Abbott, Rudy Behnia' : '3 more authors';
+            var cursorPosition = 0;
+            var textAdder = setInterval(function(){
+              element.text(more_authors_text.substring(0, cursorPosition + 1));
+              if (++cursorPosition == more_authors_text.length){
+                clearInterval(textAdder);
+              }
+          }, '10');
+          ">3 more authors</span>
+</div>
+
+    <!-- Journal/venue -->
+    
+    
+    <div class="paper-venue">
+<em>Nature Neuroscience</em>, 2024</div>
+    
+
+    <!-- Links -->
+    <div class="paper-links">
+      <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+      <a href="https://www.biorxiv.org/content/early/2023/07/13/2023.07.12.548573.full.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
+      <a href="https://www.nature.com/articles/s41593-024-01640-4" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">URL</a>
+    </div>
+
+    <div class="bibtex hidden">
+      <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Christenson2023.07.12.548573</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Hue selectivity from recurrent circuitry in Drosophila}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Christenson, Matthias P and {\'A}lvaro Sanz D{\'\i}ez and Heath, Sarah L and Saavedra-Weisenhaus, Maia and Adachi, Atsuko and Abbott, L.F. and Behnia, Rudy}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Nature Neuroscience}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.nature.com/articles/s41593-024-01640-4}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+    </div>
+  </div></div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html — compact accordion paper entry -->
+<div class="accordion-item paper-item" id="ChristensonDefense2023">
+  <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+    <span class="accordion-toggle">+</span>
+    <span class="accordion-meta paper-year">2023</span>
+    <span class="accordion-title">Field Casualty Management AI</span>
+  </div>
+  <div class="accordion-body"><div>
+    <!-- Author -->
+    <div class="paper-authors">
+    
+    Warren Pettine, Matthias P. Christenson, and Pranav Koirala</div>
+
+    <!-- Journal/venue -->
+    
+    
+    <div class="paper-venue">
+<em>Defense TechConnect Conference</em>, 2023</div>
+    
+
+    <!-- Links -->
+    <div class="paper-links">
+      <a href="https://events.techconnect.org/DTCFall/partner/abstract/presentations.html" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">URL</a>
+    </div>
+
+    
+  </div></div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html — compact accordion paper entry -->
+<div class="accordion-item paper-item" id="Christenson2022ExploitingCS">
+  <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+    <span class="accordion-toggle">+</span>
+    <span class="accordion-meta paper-year">2022</span>
+    <span class="accordion-title">Exploiting colour space geometry for visual stimulus design across animals</span>
+  </div>
+  <div class="accordion-body"><div>
+    <!-- Author -->
+    <div class="paper-authors">
+    
+    Matthias P. Christenson, S. Navid Mousavi, Elie Oriol, Sarah L. Heath, and
+      <span class="more-authors" title="click to view 1 more author" onclick="
+            event.stopPropagation();
+            var element = $(this);
+            element.attr('title', '');
+            var more_authors_text = element.text() == '1 more author' ? 'Rudy Behnia' : '1 more author';
+            var cursorPosition = 0;
+            var textAdder = setInterval(function(){
+              element.text(more_authors_text.substring(0, cursorPosition + 1));
+              if (++cursorPosition == more_authors_text.length){
+                clearInterval(textAdder);
+              }
+          }, '10');
+          ">1 more author</span>
+</div>
+
+    <!-- Journal/venue -->
+    
+    
+    <div class="paper-venue">
+<em>Philosophical Transactions of the Royal Society B: Biological Sciences</em>, 2022</div>
+    
+
+    <!-- Links -->
+    <div class="paper-links">
+      <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+      <a href="https://royalsocietypublishing.org/doi/epdf/10.1098/rstb.2021.0280" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
+      <a href="https://royalsocietypublishing.org/doi/10.1098/rstb.2021.0280" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">URL</a>
+    </div>
+
+    <div class="bibtex hidden">
+      <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Christenson2022ExploitingCS</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Exploiting colour space geometry for visual stimulus design across animals}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Christenson, Matthias P. and Mousavi, S. Navid and Oriol, Elie and Heath, Sarah L. and Behnia, Rudy}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Philosophical Transactions of the Royal Society B: Biological Sciences}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{377}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://royalsocietypublishing.org/doi/10.1098/rstb.2021.0280}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+    </div>
+  </div></div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html — compact accordion paper entry -->
+<div class="accordion-item paper-item" id="Kohn2021FlexibleFB">
+  <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+    <span class="accordion-toggle">+</span>
+    <span class="accordion-meta paper-year">2021</span>
+    <span class="accordion-title">Flexible filtering by neural inputs supports motion computation across states and stimuli</span>
+  </div>
+  <div class="accordion-body"><div>
+    <!-- Author -->
+    <div class="paper-authors">
+    
+    Jessica R. Kohn*, Jacob P. Portes*, Matthias P. Christenson, L. F. Abbott, and
+      <span class="more-authors" title="click to view 1 more author" onclick="
+            event.stopPropagation();
+            var element = $(this);
+            element.attr('title', '');
+            var more_authors_text = element.text() == '1 more author' ? 'Rudy Behnia' : '1 more author';
+            var cursorPosition = 0;
+            var textAdder = setInterval(function(){
+              element.text(more_authors_text.substring(0, cursorPosition + 1));
+              if (++cursorPosition == more_authors_text.length){
+                clearInterval(textAdder);
+              }
+          }, '10');
+          ">1 more author</span>
+</div>
+
+    <!-- Journal/venue -->
+    
+    
+    <div class="paper-venue">
+<em>Current Biology</em>, 2021</div>
+    
+
+    <!-- Links -->
+    <div class="paper-links">
+      <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+      <a href="https://reader.elsevier.com/reader/sd/pii/S0960982221013178?token=BB237EF333535B1F2D9EF83E2230612A61F5FDD6D95224B01C9344728C20215199BDCD6464E7591CF56458DE4F6FE075&amp;originRegion=eu-west-1&amp;originCreation=20230412132244" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
+      <a href="https://www.sciencedirect.com/science/article/pii/S0960982221013178?dgcid=api_sd_search-api-endpoint" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">URL</a>
+    </div>
+
+    <div class="bibtex hidden">
+      <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Kohn2021FlexibleFB</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Kohn*, Jessica R. and Portes*, Jacob P. and Christenson, Matthias P. and Abbott, L. F. and Behnia, Rudy}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Current Biology}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2021}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{31}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{5249-5260.e5}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.sciencedirect.com/science/article/pii/S0960982221013178?dgcid=api_sd_search-api-endpoint}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+    </div>
+  </div></div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html — compact accordion paper entry -->
+<div class="accordion-item paper-item" id="Heath2019CircuitMU">
+  <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+    <span class="accordion-toggle">+</span>
+    <span class="accordion-meta paper-year">2020</span>
+    <span class="accordion-title">Circuit Mechanisms Underlying Chromatic Encoding in Drosophila Photoreceptors</span>
+  </div>
+  <div class="accordion-body"><div>
+    <!-- Author -->
+    <div class="paper-authors">
+    
+    Sarah L. Heath*, Matthias P. Christenson*, Elie Oriol, Maia Saavedra-Weisenhaus, and
+      <span class="more-authors" title="click to view 2 more authors" onclick="
+            event.stopPropagation();
+            var element = $(this);
+            element.attr('title', '');
+            var more_authors_text = element.text() == '2 more authors' ? 'Jessica R. Kohn, Rudy Behnia' : '2 more authors';
+            var cursorPosition = 0;
+            var textAdder = setInterval(function(){
+              element.text(more_authors_text.substring(0, cursorPosition + 1));
+              if (++cursorPosition == more_authors_text.length){
+                clearInterval(textAdder);
+              }
+          }, '10');
+          ">2 more authors</span>
+</div>
+
+    <!-- Journal/venue -->
+    
+    
+    <div class="paper-venue">
+<em>Current Biology</em>, 2020</div>
+    
+
+    <!-- Links -->
+    <div class="paper-links">
+      <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+      <a href="https://reader.elsevier.com/reader/sd/pii/S0960982219315775?token=4A1EF35909486A905A1FDA1B3F6F488AA24E22512E598253FC544E5A8FA2688D8601E5B44005C620453E767DB4AC4A30&amp;originRegion=eu-west-1&amp;originCreation=20230412133748" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
+      <a href="https://www.sciencedirect.com/science/article/pii/S0960982219315775?dgcid=api_sd_search-api-endpoint" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">URL</a>
+    </div>
+
+    <div class="bibtex hidden">
+      <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Heath2019CircuitMU</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Circuit Mechanisms Underlying Chromatic Encoding in Drosophila Photoreceptors}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Heath*, Sarah L. and Christenson*, Matthias P. and Oriol, Elie and Saavedra-Weisenhaus, Maia and Kohn, Jessica R. and Behnia, Rudy}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Current Biology}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2020}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{30}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{264-275.e8}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.sciencedirect.com/science/article/pii/S0960982219315775?dgcid=api_sd_search-api-endpoint}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+    </div>
+  </div></div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html — compact accordion paper entry -->
+<div class="accordion-item paper-item" id="ChristensonCosyne2020">
+  <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+    <span class="accordion-toggle">+</span>
+    <span class="accordion-meta paper-year">2020</span>
+    <span class="accordion-title">Linking structure to function in a model of early color processing</span>
+  </div>
+  <div class="accordion-body"><div>
+    <!-- Author -->
+    <div class="paper-authors">
+    
+    Matthias P. Christenson, Sarah L. Heath, <a href="https://en.wikipedia.org/wiki/Larry_Abbott" rel="external nofollow noopener" target="_blank">Larry Abbott</a>, and Rudy Behnia</div>
+
+    <!-- Journal/venue -->
+    
+    
+    <div class="paper-venue">
+<em>Computational and Systems Neuroscience Conference</em>, 2020</div>
+    
+
+    <!-- Links -->
+    <div class="paper-links">
+      <a href="https://static1.squarespace.com/static/6102ca347474c263c40150cd/t/6108704a88f5b866f9ce845f/1627942988778/Cosyne2020_program_book.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">URL</a>
+    </div>
+
+    
+  </div></div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html — compact accordion paper entry -->
+<div class="accordion-item paper-item" id="GangulyCosyne2022">
+  <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+    <span class="accordion-toggle">+</span>
+    <span class="accordion-meta paper-year">2022</span>
+    <span class="accordion-title">Normative models of spatio-spectral decorrelation predict observed receptor distributions</span>
+  </div>
+  <div class="accordion-body"><div>
+    <!-- Author -->
+    <div class="paper-authors">
+    
+    Ishani Ganguly*, Matthias P. Christenson*, and Rudy Behnia</div>
+
+    <!-- Journal/venue -->
+    
+    
+    <div class="paper-venue">
+<em>Computational and Systems Neuroscience Conference</em>, 2022</div>
+    
+
+    <!-- Links -->
+    <div class="paper-links">
+      <a href="https://static1.squarespace.com/static/6102ca347474c263c40150cd/t/62325b5f6dbf95289c4472e3/1647467367870/Cosyne2022_program_book.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">URL</a>
+    </div>
+
+    
+  </div></div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html — compact accordion paper entry -->
+<div class="accordion-item paper-item" id="ChristensonCU2020">
+  <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+    <span class="accordion-toggle">+</span>
+    <span class="accordion-meta paper-year">2020</span>
+    <span class="accordion-title">Probabilistic circuit model analysis for neural response inference</span>
+  </div>
+  <div class="accordion-body"><div>
+    <!-- Author -->
+    <div class="paper-authors">
+    
+    Matthias P. Christenson, Rudy Behnia, and <a href="https://en.wikipedia.org/wiki/Larry_Abbott" rel="external nofollow noopener" target="_blank">Larry Abbott</a>
+</div>
+
+    <!-- Journal/venue -->
+    
+    
+    <div class="paper-venue">
+<em>Columbia Neurotheory Meeting</em>, 2020</div>
+    
+
+    <!-- Links -->
+    <div class="paper-links">
+    </div>
+
+    
+  </div></div>
+</div>
+</li>
+<li>
+<!-- _layouts/bib.html — compact accordion paper entry -->
+<div class="accordion-item paper-item" id="ChristensonCU2021">
+  <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+    <span class="accordion-toggle">+</span>
+    <span class="accordion-meta paper-year">2021</span>
+    <span class="accordion-title">Inferring feedforward inputs to data-constrained recurrent neural networks</span>
+  </div>
+  <div class="accordion-body"><div>
+    <!-- Author -->
+    <div class="paper-authors">
+    
+    Matthias P. Christenson, Rudy Behnia, and <a href="https://en.wikipedia.org/wiki/Larry_Abbott" rel="external nofollow noopener" target="_blank">Larry Abbott</a>
+</div>
+
+    <!-- Journal/venue -->
+    
+    
+    <div class="paper-venue">
+<em>Columbia Neurotheory Meeting</em>, 2021</div>
+    
+
+    <!-- Links -->
+    <div class="paper-links">
+    </div>
+
+    
+  </div></div>
+</div>
+</li>
+</ol>
+</div>
+
+          </section>
+
+          <section id="cv" class="scroll-section">
+            <h2>cv</h2>
+            <!-- _includes/homepage_cv.html -->
+<div class="homepage-cv">
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">General Information</span>
+    </div>
+    <div class="accordion-body"><div>
+      <div class="cv-map">
+        <div class="cv-map-entry">
+          <span class="cv-map-key">Full Name</span>
+          <span class="cv-map-value">Matthias Christenson</span>
+        </div>
+        <div class="cv-map-entry">
+          <span class="cv-map-key">Skills</span>
+          <span class="cv-map-value">Machine Learning, Time-Series Modeling, MLOps, Statistical Analysis, Cloud (AWS, GCP)</span>
+        </div>
+        <div class="cv-map-entry">
+          <span class="cv-map-key">Languages</span>
+          <span class="cv-map-value">English (fluent), German (fluent), Spanish (working proficiency), French (basics)</span>
+        </div>
+        <div class="cv-map-entry">
+          <span class="cv-map-key">Programming</span>
+          <span class="cv-map-value">Python, SQL, Javascript, C++, Git, Bash, Unix, Docker</span>
+        </div>
+        <div class="cv-map-entry">
+          <span class="cv-map-key">Python Stack</span>
+          <span class="cv-map-value">scikit-learn, numpy, scipy, pandas, matplotlib, seaborn, dask, xarray, pytorch, transformers, lightning, pyro, cvxpy, Flask, Dask, streamlit, dash</span>
+        </div>
+      </div>
+    </div></div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">Education</span>
+    </div>
+    <div class="accordion-body"><div>
+      <div class="cv-timeline">
+        <div class="cv-entry">
+          <span class="cv-year">2022</span>
+          <span class="cv-detail">
+            <strong>PhD</strong>, Columbia University, New York, USA
+          </span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2016</span>
+          <span class="cv-detail">
+            <strong>MSci</strong>, University College London, London, UK
+          </span>
+        </div>
+      </div>
+    </div></div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">Experience</span>
+    </div>
+    <div class="accordion-body"><div>
+      <div class="cv-timeline">
+        <div class="cv-entry">
+          <span class="cv-year">2026-present</span>
+          <span class="cv-detail">
+            <strong>Head of Medical Data and AI</strong>, Sanoptis, Zurich, Switzerland
+          </span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2024-2026</span>
+          <span class="cv-detail">
+            <strong>Chief AI Architect &amp; Scientist</strong>, MTN, Salt Lake City, USA (remote)
+          </span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2024-present</span>
+          <span class="cv-detail">
+            <strong>Adjunct Faculty</strong>, University of Utah, Salt Lake City, USA (remote)
+          </span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2024-2024</span>
+          <span class="cv-detail">
+            <strong>Deep Learning Research Engineer</strong>, DeepLife, Paris, France (remote)
+          </span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2022-2023</span>
+          <span class="cv-detail">
+            <strong>Postdoctoral Research Scientist</strong>, Columbia University, New York, USA
+          </span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2016-2022</span>
+          <span class="cv-detail">
+            <strong>Doctoral Research Scientist</strong>, Columbia University, New York, USA
+          </span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2013-2016</span>
+          <span class="cv-detail">
+            <strong>Undergraduate Research Assistant (part-time)</strong>, University College London, London, UK
+          </span>
+        </div>
+      </div>
+    </div></div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">Honors and Awards</span>
+    </div>
+    <div class="accordion-body"><div>
+      <div class="cv-timeline">
+        <div class="cv-entry">
+          <span class="cv-year">2024</span>
+          <span class="cv-detail">
+            <span class="cv-award-item">NIH A2 Collective Award</span>
+          </span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2020</span>
+          <span class="cv-detail">
+            <span class="cv-award-item">NIH T32 Vision Research Grant</span>
+            <span class="cv-award-item">CoSyNe Presenters Travel Grant</span>
+          </span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2019</span>
+          <span class="cv-detail">
+            <span class="cv-award-item">NIH T32 Vision Research Grant</span>
+          </span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2018</span>
+          <span class="cv-detail">
+            <span class="cv-award-item">Cold Spring Harbor Asia Summer School Stipend</span>
+          </span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2016</span>
+          <span class="cv-detail">
+            <span class="cv-award-item">Burnstock Prize - Best in Class</span>
+            <span class="cv-award-item">Dean's List - UCL Life Sciences</span>
+          </span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2015</span>
+          <span class="cv-detail">
+            <span class="cv-award-item">Dean's List - UCL Life Sciences</span>
+            <span class="cv-award-item">UCL ChangeMakers Stipend</span>
+            <span class="cv-award-item">Physiological Society Undergraduate Vacation Studentship</span>
+          </span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2014</span>
+          <span class="cv-detail">
+            <span class="cv-award-item">UCL Research Stipend</span>
+          </span>
+        </div>
+        <div class="cv-entry">
+          <span class="cv-year">2011</span>
+          <span class="cv-detail">
+            <span class="cv-award-item">Deutscher Mathematiker Verein Award</span>
+          </span>
+        </div>
+      </div>
+    </div></div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
+      <span class="accordion-toggle">+</span>
+      <span class="accordion-title">Interests</span>
+    </div>
+    <div class="accordion-body"><div>
+      <ul class="cv-list">
+        <li>Skiing, board games, dancing, markets</li>
+      </ul>
+    </div></div>
+  </div>
+</div>
+
+          </section>
+
+          <section id="about" class="scroll-section">
+            <h2>about me</h2>
+            <div class="about-content">
+              <p>I lead medical data and AI efforts at <a href="https://www.sanoptis.com" rel="external nofollow noopener" target="_blank">Sanoptis</a>, where I work on bringing machine learning closer to everyday clinical care. I also teach part-time as Adjunct Faculty at the University of Utah. Before that, I spent time building healthcare AI systems at <a href="https://themtn.ai" rel="external nofollow noopener" target="_blank">MTN</a> and studied computational neuroscience at Columbia University. Most of what I do sits at the intersection of time-series analysis, medical imaging, and making models that clinicians can actually trust and use.</p>
+
+<p>When I am not working on my data and software projects, I enjoy exploring the great outdoors via gradient descent, playing board games with friends, and dancing salsa and the waltz. My long-term goal is to apply my skills in data and mathematical modeling to automate complex processes and gain a deeper understanding of how we interpret the world around us.</p>
 
             </div>
+          </section>
+
         </article>
 
 </div>
 
+<!-- _includes/side_nav.html -->
+
+<nav class="side-nav" id="sideNav">
+  <a href="#hero" class="side-nav-dot active" data-label="me"></a>
+  <a href="#blog" class="side-nav-dot" data-label="blog"></a>
+  <a href="#projects" class="side-nav-dot" data-label="projects"></a>
+  <a href="#papers" class="side-nav-dot" data-label="papers"></a>
+  <a href="#cv" class="side-nav-dot" data-label="cv"></a>
+  <a href="#about" class="side-nav-dot" data-label="about"></a>
+</nav>
+
+
+
+<script src="/assets/js/side_nav.js"></script>
+
     </div>
 
-    <!-- Footer -->    
-    <footer class="fixed-bottom">
-      <div class="container mt-0">
-        © Copyright 2025 Matthias Christenson. Last updated in December 2025.
+    <!-- Footer -->    <footer class="sticky-bottom mt-5">
+      <div class="container">
+        © Copyright 2026 Matthias Christenson. Last updated in March 2026.
 
       </div>
     </footer>
@@ -203,10 +1105,6 @@ My long-term goal is to apply my skills in data and mathematical modeling to aut
   <script defer src="/assets/js/common.js"></script>
   <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
 
-    
-  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
-  <script async src="https://badge.dimensions.ai/badge.js"></script>
-
     <!-- MathJax -->
   <script type="text/javascript">
     window.MathJax = {
@@ -218,7 +1116,6 @@ My long-term goal is to apply my skills in data and mathematical modeling to aut
   <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
   <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
-    
     
 
 <!-- Scrolling Progress Bar -->
