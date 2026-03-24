@@ -215,7 +215,7 @@
     <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
       <span class="accordion-toggle">+</span>
       <span class="accordion-title">Computational neuroscience methods</span>
-      <span class="accordion-meta">Tools and models for analyzing neural circuits and designing visual stimuli</span>
+      <span class="accordion-meta">Tools for analyzing neural circuits and designing experiments</span>
     </div>
     <div class="accordion-body"><div>
       <h3 id="geometry-of-color-spaces-dreye">Geometry of color spaces (dreye)</h3>
@@ -256,7 +256,7 @@
 
 <h3 id="encoding-models-scidoggo">Encoding models (scidoggo)</h3>
 
-<p>This coding project is a collection of different models and data tools that I have created, modified, and used for my various research projects. Included in the package are various types of constraint convex optimization procedures, interpolation models, nonlinear encoding models, and probabilistic models for circuit model analysis. The project is still under development and can be found on GitHub.</p>
+<p>A collection of models and data tools I built and used across my research projects. Includes constrained convex optimization procedures, interpolation models, nonlinear encoding models, and the probabilistic circuit models described above. Still under development.</p>
 
 <p><a href="https://github.com/neuralsignal/scidoggo" rel="external nofollow noopener" target="_blank">neuralsignal/scidoggo</a></p>
 
@@ -271,11 +271,11 @@
     <div class="accordion-body"><div>
       <h3 id="biometric-time-series-models-for-healthcare-monitoring">Biometric time-series models for healthcare monitoring</h3>
 
-<p>In underserved communities, elderly individuals often lack access to advanced health monitoring that could detect early signs of common issues like infections, pneumonia, and constipation. These conditions can be identified through multi-day patterns in data from wearable devices. While machine learning can enable analysis of such long-term biometric data, typical models struggle with very long input sequences. Recently developed deep state-space models overcome this limitation and scale linearly with sequence length. This project will develop a tailored deep state-space model architecture to learn individual “biometric profiles” and detect healthcare events. It will also build software tools to enable training and deployment of the models to expand access to sophisticated healthcare monitoring.</p>
+<p>Conditions like infections, pneumonia, and constipation show up as multi-day patterns in wearable data — but most ML models struggle with sequences that long. At Mountain Biometrics, I worked on deep state-space model architectures that scale linearly with sequence length, learning individual “biometric profiles” to detect these healthcare events from wearable devices. The goal was to make this kind of monitoring accessible in underserved communities where it currently does not exist.</p>
 
 <h3 id="field-casualty-management-ai">Field Casualty Management AI</h3>
 
-<p>In a near-peer conflict, warfighters may be in the field without support for days to weeks. This is especially problematic for managing casualties. In such scenarios, rationing limited quantities of blood or antibiotics requires predicting the individual progression of blood loss, or the likelihood of sepsis. While military medics are highly skilled at initial treatment of traumatic injuries, they are not trained to track the health trends of wounded warfighters over extended periods. Blood loss and sepsis produce typified patterns in heart rate, blood oxygen and other biometrics commonly collected from wearable devices. These patterns are individual-specific and emerge over hours to days. Recent advances in machine learning methods are only now making detecting such patterns possible. We are developing a generalized artificial intelligence (AI) for interpreting individual-specific, long-timescale biophysical data from wearable devices. While the AI can be used to detect and track a wide variety of health conditions, we are particularly focused on managing warfighter casualties in the field. The AI integrates into commonly used hardware and software, acting as a “force multiplier,” for existing equipment. Our AI will aid medics manage field casualties, saving lives when warfighters are cut off from advanced medical care.</p>
+<p>In prolonged field care, medics may need to manage wounded warfighters for days to weeks without evacuation. Rationing blood or antibiotics requires predicting individual progression of blood loss or likelihood of sepsis — patterns that emerge over hours to days in heart rate, blood oxygen, and other wearable biometrics. At Mountain Biometrics, we built models for interpreting these individual-specific, long-timescale biophysical signals, designed to integrate into existing military hardware and software.</p>
 
 <p>Field casualty management AI, W.W. Pettine, M. Christenson, P. Koirala, <em>Defense TechConnect</em>, 2023 <br>
 Assessing Foundation Models’ Transferability to Physiological Signals in Precision Medicine, M. Christenson, C. Geary, B. Locke, P. Koirala, W.W. Pettine, <em>Defense AI in Medicine</em>, 2024</p>
@@ -291,7 +291,7 @@ Assessing Foundation Models’ Transferability to Physiological Signals in Preci
     <div class="accordion-body"><div>
       <h3 id="agentic-engineering-kit">Agentic engineering kit</h3>
 
-<p>A composable library of engineering standards, automated workflows, and reusable components for AI-assisted software development. Includes principles, on-demand skills, and autonomous GitHub Actions that can be integrated via AI assistant rules, git subtree, or individual files. Designed as a governance framework that teams can adapt to their specific workflows.</p>
+<p>A collection of engineering standards, automated workflows, and reusable components I put together for AI-assisted software development. Includes coding principles, on-demand skills, and GitHub Actions that can be pulled in via AI assistant rules, git subtree, or individual files. Meant as a starting point that teams can adapt to how they actually work.</p>
 
 <p><a href="https://github.com/neuralsignal/agentic-engineering-kit" rel="external nofollow noopener" target="_blank">neuralsignal/agentic-engineering-kit</a></p>
 
@@ -324,19 +324,19 @@ Assessing Foundation Models’ Transferability to Physiological Signals in Preci
     <div class="accordion-body"><div>
       <h3 id="obsidian-export">Obsidian export</h3>
 
-<p>Converts Obsidian-flavored Markdown into professional PDF and DOCX documents through a 5-stage processing pipeline. Handles wikilinks, embeds, Mermaid diagrams, and callouts. Supports customizable profiles for branded styling.</p>
+<p>I use Obsidian for most of my writing, so I built a tool that converts Obsidian-flavored Markdown into PDF and DOCX documents. It handles wikilinks, embeds, Mermaid diagrams, and callouts through a 5-stage processing pipeline. You can set up profiles for different styling needs.</p>
 
 <p><a href="https://github.com/neuralsignal/obsidian-export" rel="external nofollow noopener" target="_blank">neuralsignal/obsidian-export</a></p>
 
 <h3 id="obsidian-import">Obsidian import</h3>
 
-<p>The inverse — extracts content from PDFs, Word documents, PowerPoint, spreadsheets, and other formats into Obsidian-ready Markdown with YAML frontmatter. Supports batch processing with multiple extraction backends.</p>
+<p>The inverse — pulls content from PDFs, Word documents, PowerPoint, spreadsheets, and other formats into Obsidian-ready Markdown with YAML frontmatter. Useful for batch-importing reference material.</p>
 
 <p><a href="https://github.com/neuralsignal/obsidian-import" rel="external nofollow noopener" target="_blank">neuralsignal/obsidian-import</a></p>
 
 <h3 id="excel-financial-model-tooling">Excel financial model tooling</h3>
 
-<p>excel-model converts YAML specifications into professional Excel workbooks with formulas, styling, and named ranges. It supports multiple model types including P&amp;L statements, DCF analyses, budgets, and scenario comparisons with 21 built-in formula types for financial calculations. Available as both a CLI tool and Python API.</p>
+<p>A tool that takes a YAML spec and generates Excel workbooks with formulas, styling, and named ranges. I built it to automate the tedious parts of financial modeling — P&amp;L statements, DCF analyses, budgets, scenario comparisons. Works as both a CLI tool and a Python API.</p>
 
 <p><a href="https://github.com/neuralsignal/excel-model" rel="external nofollow noopener" target="_blank">neuralsignal/excel-model</a></p>
 
@@ -351,13 +351,13 @@ Assessing Foundation Models’ Transferability to Physiological Signals in Preci
     <div class="accordion-body"><div>
       <h3 id="loris">Loris</h3>
 
-<p>Loris is a database and analysis application that is currently under development. The project is being tested, and core features are being added. Once the core features are stable, documentation for the different features will be added. Loris was originally created to provide a database system for the Behnia lab. The lab uses it for data entry, maintenance, and analysis on a daily basis. While the primary use case is for a Drosophila lab, it is flexible enough to be used by other research labs as well.</p>
+<p>I built Loris as a database system for the Behnia lab at Columbia. The lab used it daily for data entry, maintenance, and analysis. It was designed for a Drosophila lab but flexible enough for other research labs. The lab has since moved to a different tech stack, so this project is no longer maintained.</p>
 
 <p><a href="https://github.com/neuralsignal/loris" rel="external nofollow noopener" target="_blank">neuralsignal/loris</a></p>
 
 <h3 id="puffbird">Puffbird</h3>
 
-<p>Puffbird is an open-source library that extends the functionality of pandas DataFrames by providing a user-friendly interface for handling complex data structures with multiple nested cells. The library has been developed with a focus on ease of use and follows the documentation style of pandas. While some of the features in puffbird have become redundant with the addition of new functionalities such as the <code class="language-plaintext highlighter-rouge">explode</code> method in pandas, the library continues to provide a valuable extension to pandas. The project is actively maintained, albeit at an irregular rate, and welcomes contributions from the community.</p>
+<p>A pandas extension for handling DataFrames with complex nested cells. I built it because I kept running into multi-valued columns that were painful to work with. Some features have become redundant since pandas added <code class="language-plaintext highlighter-rouge">explode</code> and similar methods, but the library still fills gaps for certain workflows. Maintained at an irregular rate.</p>
 
 <p><a href="https://github.com/neuralsignal/puffbird" rel="external nofollow noopener" target="_blank">neuralsignal/puffbird</a></p>
 
