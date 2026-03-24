@@ -141,6 +141,8 @@
   </div>
 </div>
 
+
+
           </section>
 
           <section id="projects" class="scroll-section">
@@ -265,20 +267,27 @@
   <div class="accordion-item">
     <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
       <span class="accordion-toggle">+</span>
-      <span class="accordion-title">AI for biophysical data</span>
-      <span class="accordion-meta">Building models to make long-term predictions on biophysical time-series data</span>
+      <span class="accordion-title">AI for medical data</span>
+      <span class="accordion-meta">Time-series models for wearable biometrics, electronic health records, and clinical decision support</span>
     </div>
     <div class="accordion-body"><div>
-      <h3 id="biometric-time-series-models-for-healthcare-monitoring">Biometric time-series models for healthcare monitoring</h3>
+      <p>Medical decisions rely on data from different sources: wearable sensors, electronic health records, and bedside monitors. Each comes with its own challenges around sequence length, irregular sampling, and individual variability. Across these projects, we are building models that learn temporal patterns from each modality, with the longer-term goal of combining them into unified patient representations.</p>
 
-<p>Conditions like infections, pneumonia, and constipation show up as multi-day patterns in wearable data — but most ML models struggle with sequences that long. At Mountain Biometrics, I worked on deep state-space model architectures that scale linearly with sequence length, learning individual “biometric profiles” to detect these healthcare events from wearable devices. The goal was to make this kind of monitoring accessible in underserved communities where it currently does not exist.</p>
+<h3 id="biometric-time-series-models">Biometric time-series models</h3>
 
-<h3 id="field-casualty-management-ai">Field Casualty Management AI</h3>
+<p>Conditions like infections, pneumonia, and constipation show up as multi-day patterns in wearable data, but most ML models struggle with sequences that long. At Mountain Biometrics, we worked on deep state-space model architectures that scale linearly with sequence length, learning individual “biometric profiles” to detect these healthcare events from wearable devices. The goal was to make this kind of monitoring accessible in underserved communities where it currently does not exist.</p>
 
-<p>In prolonged field care, medics may need to manage wounded warfighters for days to weeks without evacuation. Rationing blood or antibiotics requires predicting individual progression of blood loss or likelihood of sepsis — patterns that emerge over hours to days in heart rate, blood oxygen, and other wearable biometrics. At Mountain Biometrics, we built models for interpreting these individual-specific, long-timescale biophysical signals, designed to integrate into existing military hardware and software.</p>
+<h3 id="ehr-foundation-models">EHR foundation models</h3>
+
+<p>Electronic health records pose a similar challenge at a different scale: the sequences are longer, irregularly sampled, and mix different data types. We are working on a transformer-based foundation model with Mixture-of-Experts routing, trained on ~298M timeline positions from MIMIC-IV. The tokenization follows previous EHR encoding approaches: patient demographics, quantized lab values, time interval tokens, and medical event codes get mapped into a unified sequence.</p>
+
+<h3 id="field-casualty-management-ai">Field casualty management AI</h3>
+
+<p>Prolonged field care combines both problems: medics need to interpret wearable biometrics over hours to days, in conditions where EHR-style clinical context is unavailable. At Mountain Biometrics, we built models for predicting individual progression of blood loss and likelihood of sepsis from heart rate, blood oxygen, and other wearable signals, designed to integrate into existing military hardware and software.</p>
 
 <p>Field casualty management AI, W.W. Pettine, M. Christenson, P. Koirala, <em>Defense TechConnect</em>, 2023 <br>
-Assessing Foundation Models’ Transferability to Physiological Signals in Precision Medicine, M. Christenson, C. Geary, B. Locke, P. Koirala, W.W. Pettine, <em>Defense AI in Medicine</em>, 2024</p>
+Assessing Foundation Models’ Transferability to Physiological Signals in Precision Medicine, M. Christenson, C. Geary, B. Locke, P. Koirala, W.W. Pettine, <em>Defense AI in Medicine</em>, 2024
+Efficient EHR Foundational Models: A Mixture-of-Experts Approach for Patient Timeline Prediction, Athreya, M. Christenson, W.W. Pettine, <em>AI Summit, University of Utah</em>, 2025</p>
 
     </div></div>
   </div>
@@ -367,40 +376,11 @@ Assessing Foundation Models’ Transferability to Physiological Signals in Preci
 
           </section>
 
-          <section id="papers" class="scroll-section">
-            <h2>papers</h2>
+          <section id="selected-works" class="scroll-section">
+            <h2>selected works</h2>
             <!-- _includes/homepage_papers.html -->
 <div class="publications">
   <ol class="bibliography">
-<li>
-<!-- _layouts/bib.html — compact accordion paper entry -->
-<div class="accordion-item paper-item" id="AISummit2025">
-  <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
-    <span class="accordion-toggle">+</span>
-    <span class="accordion-meta paper-year">2025</span>
-    <span class="accordion-title">Efficient EHR Foundational Models: A Mixture-of-Experts Approach for Patient Timeline Prediction</span>
-  </div>
-  <div class="accordion-body"><div>
-    <!-- Author -->
-    <div class="paper-authors">
-    
-     Athreya, Matthias P. Christenson, and Warren Pettine</div>
-
-    <!-- Journal/venue -->
-    
-    
-    <div class="paper-venue">
-<em>AI Summit, University of Utah</em>, 2025</div>
-    
-
-    <!-- Links -->
-    <div class="paper-links">
-    </div>
-
-    
-  </div></div>
-</div>
-</li>
 <li>
 <!-- _layouts/bib.html — compact accordion paper entry -->
 <div class="accordion-item paper-item" id="ChristensonAIME2024">
@@ -482,12 +462,16 @@ Assessing Foundation Models’ Transferability to Physiological Signals in Preci
 
     <!-- Links -->
     <div class="paper-links">
+      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
       <a href="https://www.biorxiv.org/content/early/2023/07/13/2023.07.12.548573.full.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
       <a href="https://www.nature.com/articles/s41593-024-01640-4" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">URL</a>
     </div>
 
-    <div class="bibtex hidden">
+    <div class="abstract hidden">
+      <p>The perception of color involves a transformation from the spectral properties of visual stimuli to derived perceptual quantities such as brightness, saturation and hue. Although hue-selective neurons have been reported in primates, they have not been identified in other species. Here we show that neurons in the Drosophila optic lobe have hue-selective properties, with narrow tuning for both spectral and non-spectral colors. We construct a connectomics-constrained circuit model that accounts for this hue selectivity. Our model, combined with genetic manipulations, shows that recurrent connections in the circuit are critical for the tuning properties of Drosophila hue-selective neurons.</p>
+    </div>
+<div class="bibtex hidden">
       <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Christenson2023.07.12.548573</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{Hue selectivity from recurrent circuitry in Drosophila}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Christenson, Matthias P and {\'A}lvaro Sanz D{\'\i}ez and Heath, Sarah L and Saavedra-Weisenhaus, Maia and Adachi, Atsuko and Abbott, L.F. and Behnia, Rudy}</span><span class="p">,</span>
@@ -496,36 +480,6 @@ Assessing Foundation Models’ Transferability to Physiological Signals in Preci
   <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.nature.com/articles/s41593-024-01640-4}</span><span class="p">,</span>
 <span class="p">}</span></code></pre></figure>
     </div>
-  </div></div>
-</div>
-</li>
-<li>
-<!-- _layouts/bib.html — compact accordion paper entry -->
-<div class="accordion-item paper-item" id="ChristensonDefense2023">
-  <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
-    <span class="accordion-toggle">+</span>
-    <span class="accordion-meta paper-year">2023</span>
-    <span class="accordion-title">Field Casualty Management AI</span>
-  </div>
-  <div class="accordion-body"><div>
-    <!-- Author -->
-    <div class="paper-authors">
-    
-    Warren Pettine, Matthias P. Christenson, and Pranav Koirala</div>
-
-    <!-- Journal/venue -->
-    
-    
-    <div class="paper-venue">
-<em>Defense TechConnect Conference</em>, 2023</div>
-    
-
-    <!-- Links -->
-    <div class="paper-links">
-      <a href="https://events.techconnect.org/DTCFall/partner/abstract/presentations.html" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">URL</a>
-    </div>
-
-    
   </div></div>
 </div>
 </li>
@@ -566,12 +520,16 @@ Assessing Foundation Models’ Transferability to Physiological Signals in Preci
 
     <!-- Links -->
     <div class="paper-links">
+      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
       <a href="https://royalsocietypublishing.org/doi/epdf/10.1098/rstb.2021.0280" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
       <a href="https://royalsocietypublishing.org/doi/10.1098/rstb.2021.0280" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">URL</a>
     </div>
 
-    <div class="bibtex hidden">
+    <div class="abstract hidden">
+      <p>Understanding colour vision requires carefully designed stimuli. However, colour space geometry and the097 097 097relationship between stimuli and photoreceptor activations differ across species. We present a framework that exploits colour space geometry to design stimuli for any animal, based on its photoreceptor spectral sensitivities. We demonstrate the utility of this approach across species with different numbers of photoreceptor types.</p>
+    </div>
+<div class="bibtex hidden">
       <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Christenson2022ExploitingCS</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{Exploiting colour space geometry for visual stimulus design across animals}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Christenson, Matthias P. and Mousavi, S. Navid and Oriol, Elie and Heath, Sarah L. and Behnia, Rudy}</span><span class="p">,</span>
@@ -579,61 +537,6 @@ Assessing Foundation Models’ Transferability to Physiological Signals in Preci
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
   <span class="na">volume</span> <span class="p">=</span> <span class="s">{377}</span><span class="p">,</span>
   <span class="na">url</span> <span class="p">=</span> <span class="s">{https://royalsocietypublishing.org/doi/10.1098/rstb.2021.0280}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure>
-    </div>
-  </div></div>
-</div>
-</li>
-<li>
-<!-- _layouts/bib.html — compact accordion paper entry -->
-<div class="accordion-item paper-item" id="Kohn2021FlexibleFB">
-  <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
-    <span class="accordion-toggle">+</span>
-    <span class="accordion-meta paper-year">2021</span>
-    <span class="accordion-title">Flexible filtering by neural inputs supports motion computation across states and stimuli</span>
-  </div>
-  <div class="accordion-body"><div>
-    <!-- Author -->
-    <div class="paper-authors">
-    
-    Jessica R. Kohn*, Jacob P. Portes*, Matthias P. Christenson, L. F. Abbott, and
-      <span class="more-authors" title="click to view 1 more author" onclick="
-            event.stopPropagation();
-            var element = $(this);
-            element.attr('title', '');
-            var more_authors_text = element.text() == '1 more author' ? 'Rudy Behnia' : '1 more author';
-            var cursorPosition = 0;
-            var textAdder = setInterval(function(){
-              element.text(more_authors_text.substring(0, cursorPosition + 1));
-              if (++cursorPosition == more_authors_text.length){
-                clearInterval(textAdder);
-              }
-          }, '10');
-          ">1 more author</span>
-</div>
-
-    <!-- Journal/venue -->
-    
-    
-    <div class="paper-venue">
-<em>Current Biology</em>, 2021</div>
-    
-
-    <!-- Links -->
-    <div class="paper-links">
-      <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-      <a href="https://reader.elsevier.com/reader/sd/pii/S0960982221013178?token=BB237EF333535B1F2D9EF83E2230612A61F5FDD6D95224B01C9344728C20215199BDCD6464E7591CF56458DE4F6FE075&amp;originRegion=eu-west-1&amp;originCreation=20230412132244" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
-      <a href="https://www.sciencedirect.com/science/article/pii/S0960982221013178?dgcid=api_sd_search-api-endpoint" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">URL</a>
-    </div>
-
-    <div class="bibtex hidden">
-      <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Kohn2021FlexibleFB</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Kohn*, Jessica R. and Portes*, Jacob P. and Christenson, Matthias P. and Abbott, L. F. and Behnia, Rudy}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Current Biology}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2021}</span><span class="p">,</span>
-  <span class="na">volume</span> <span class="p">=</span> <span class="s">{31}</span><span class="p">,</span>
-  <span class="na">pages</span> <span class="p">=</span> <span class="s">{5249-5260.e5}</span><span class="p">,</span>
-  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.sciencedirect.com/science/article/pii/S0960982221013178?dgcid=api_sd_search-api-endpoint}</span><span class="p">,</span>
 <span class="p">}</span></code></pre></figure>
     </div>
   </div></div>
@@ -676,12 +579,16 @@ Assessing Foundation Models’ Transferability to Physiological Signals in Preci
 
     <!-- Links -->
     <div class="paper-links">
+      <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
       <a href="https://reader.elsevier.com/reader/sd/pii/S0960982219315775?token=4A1EF35909486A905A1FDA1B3F6F488AA24E22512E598253FC544E5A8FA2688D8601E5B44005C620453E767DB4AC4A30&amp;originRegion=eu-west-1&amp;originCreation=20230412133748" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
       <a href="https://www.sciencedirect.com/science/article/pii/S0960982219315775?dgcid=api_sd_search-api-endpoint" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">URL</a>
     </div>
 
-    <div class="bibtex hidden">
+    <div class="abstract hidden">
+      <p>Color vision begins with photoreceptors that have distinct spectral sensitivities. How photoreceptor signals are combined and transformed to extract chromatic information is poorly understood. We investigate chromatic encoding in Drosophila photoreceptors using a combination of electrophysiology, genetics, and modeling. We find that horizontal-cell-mediated feedback from downstream neurons shapes the chromatic properties of photoreceptor outputs, creating color opponency at the first stage of visual processing.</p>
+    </div>
+<div class="bibtex hidden">
       <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Heath2019CircuitMU</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{Circuit Mechanisms Underlying Chromatic Encoding in Drosophila Photoreceptors}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Heath*, Sarah L. and Christenson*, Matthias P. and Oriol, Elie and Saavedra-Weisenhaus, Maia and Kohn, Jessica R. and Behnia, Rudy}</span><span class="p">,</span>
@@ -692,96 +599,6 @@ Assessing Foundation Models’ Transferability to Physiological Signals in Preci
   <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.sciencedirect.com/science/article/pii/S0960982219315775?dgcid=api_sd_search-api-endpoint}</span><span class="p">,</span>
 <span class="p">}</span></code></pre></figure>
     </div>
-  </div></div>
-</div>
-</li>
-<li>
-<!-- _layouts/bib.html — compact accordion paper entry -->
-<div class="accordion-item paper-item" id="ChristensonCosyne2020">
-  <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
-    <span class="accordion-toggle">+</span>
-    <span class="accordion-meta paper-year">2020</span>
-    <span class="accordion-title">Linking structure to function in a model of early color processing</span>
-  </div>
-  <div class="accordion-body"><div>
-    <!-- Author -->
-    <div class="paper-authors">
-    
-    Matthias P. Christenson, Sarah L. Heath, <a href="https://en.wikipedia.org/wiki/Larry_Abbott" rel="external nofollow noopener" target="_blank">Larry Abbott</a>, and Rudy Behnia</div>
-
-    <!-- Journal/venue -->
-    
-    
-    <div class="paper-venue">
-<em>Computational and Systems Neuroscience Conference</em>, 2020</div>
-    
-
-    <!-- Links -->
-    <div class="paper-links">
-      <a href="https://static1.squarespace.com/static/6102ca347474c263c40150cd/t/6108704a88f5b866f9ce845f/1627942988778/Cosyne2020_program_book.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">URL</a>
-    </div>
-
-    
-  </div></div>
-</div>
-</li>
-<li>
-<!-- _layouts/bib.html — compact accordion paper entry -->
-<div class="accordion-item paper-item" id="GangulyCosyne2022">
-  <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
-    <span class="accordion-toggle">+</span>
-    <span class="accordion-meta paper-year">2022</span>
-    <span class="accordion-title">Normative models of spatio-spectral decorrelation predict observed receptor distributions</span>
-  </div>
-  <div class="accordion-body"><div>
-    <!-- Author -->
-    <div class="paper-authors">
-    
-    Ishani Ganguly*, Matthias P. Christenson*, and Rudy Behnia</div>
-
-    <!-- Journal/venue -->
-    
-    
-    <div class="paper-venue">
-<em>Computational and Systems Neuroscience Conference</em>, 2022</div>
-    
-
-    <!-- Links -->
-    <div class="paper-links">
-      <a href="https://static1.squarespace.com/static/6102ca347474c263c40150cd/t/62325b5f6dbf95289c4472e3/1647467367870/Cosyne2022_program_book.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">URL</a>
-    </div>
-
-    
-  </div></div>
-</div>
-</li>
-<li>
-<!-- _layouts/bib.html — compact accordion paper entry -->
-<div class="accordion-item paper-item" id="ChristensonCU2020">
-  <div class="accordion-header" onclick="this.parentElement.classList.toggle('expanded')">
-    <span class="accordion-toggle">+</span>
-    <span class="accordion-meta paper-year">2020</span>
-    <span class="accordion-title">Probabilistic circuit model analysis for neural response inference</span>
-  </div>
-  <div class="accordion-body"><div>
-    <!-- Author -->
-    <div class="paper-authors">
-    
-    Matthias P. Christenson, Rudy Behnia, and <a href="https://en.wikipedia.org/wiki/Larry_Abbott" rel="external nofollow noopener" target="_blank">Larry Abbott</a>
-</div>
-
-    <!-- Journal/venue -->
-    
-    
-    <div class="paper-venue">
-<em>Columbia Neurotheory Meeting</em>, 2020</div>
-    
-
-    <!-- Links -->
-    <div class="paper-links">
-    </div>
-
-    
   </div></div>
 </div>
 </li>
@@ -816,6 +633,9 @@ Assessing Foundation Models’ Transferability to Physiological Signals in Preci
 </div>
 </li>
 </ol>
+</div>
+<div class="blog-view-all">
+  <a href="/publications">View all works →</a>
 </div>
 
           </section>
@@ -1025,7 +845,7 @@ Assessing Foundation Models’ Transferability to Physiological Signals in Preci
   <a href="#hero" class="side-nav-dot active" data-label="me"></a>
   <a href="#blog" class="side-nav-dot" data-label="blog"></a>
   <a href="#projects" class="side-nav-dot" data-label="projects"></a>
-  <a href="#papers" class="side-nav-dot" data-label="papers"></a>
+  <a href="#selected-works" class="side-nav-dot" data-label="works"></a>
   <a href="#cv" class="side-nav-dot" data-label="cv"></a>
   <a href="#about" class="side-nav-dot" data-label="about"></a>
 </nav>
@@ -1154,6 +974,8 @@ Assessing Foundation Models’ Transferability to Physiological Signals in Preci
     return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
   }
 </script>
+
+    
 
   </body>
 </html>

@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AI for biophysical data | Matthias Christenson</title>
+    <title>AI for medical data | Matthias Christenson</title>
     <meta name="author" content="Matthias Christenson">
-    <meta name="description" content="Building models to make long-term predictions on biophysical time-series data">
+    <meta name="description" content="Time-series models for wearable biometrics, electronic health records, and clinical decision support">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -85,21 +85,28 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">AI for biophysical data</h1>
-            <p class="post-description">Building models to make long-term predictions on biophysical time-series data</p>
+            <h1 class="post-title">AI for medical data</h1>
+            <p class="post-description">Time-series models for wearable biometrics, electronic health records, and clinical decision support</p>
           </header>
 
           <article>
-            <h3 id="biometric-time-series-models-for-healthcare-monitoring">Biometric time-series models for healthcare monitoring</h3>
+            <p>Medical decisions rely on data from different sources: wearable sensors, electronic health records, and bedside monitors. Each comes with its own challenges around sequence length, irregular sampling, and individual variability. Across these projects, we are building models that learn temporal patterns from each modality, with the longer-term goal of combining them into unified patient representations.</p>
 
-<p>Conditions like infections, pneumonia, and constipation show up as multi-day patterns in wearable data — but most ML models struggle with sequences that long. At Mountain Biometrics, I worked on deep state-space model architectures that scale linearly with sequence length, learning individual “biometric profiles” to detect these healthcare events from wearable devices. The goal was to make this kind of monitoring accessible in underserved communities where it currently does not exist.</p>
+<h3 id="biometric-time-series-models">Biometric time-series models</h3>
 
-<h3 id="field-casualty-management-ai">Field Casualty Management AI</h3>
+<p>Conditions like infections, pneumonia, and constipation show up as multi-day patterns in wearable data, but most ML models struggle with sequences that long. At Mountain Biometrics, we worked on deep state-space model architectures that scale linearly with sequence length, learning individual “biometric profiles” to detect these healthcare events from wearable devices. The goal was to make this kind of monitoring accessible in underserved communities where it currently does not exist.</p>
 
-<p>In prolonged field care, medics may need to manage wounded warfighters for days to weeks without evacuation. Rationing blood or antibiotics requires predicting individual progression of blood loss or likelihood of sepsis — patterns that emerge over hours to days in heart rate, blood oxygen, and other wearable biometrics. At Mountain Biometrics, we built models for interpreting these individual-specific, long-timescale biophysical signals, designed to integrate into existing military hardware and software.</p>
+<h3 id="ehr-foundation-models">EHR foundation models</h3>
+
+<p>Electronic health records pose a similar challenge at a different scale: the sequences are longer, irregularly sampled, and mix different data types. We are working on a transformer-based foundation model with Mixture-of-Experts routing, trained on ~298M timeline positions from MIMIC-IV. The tokenization follows previous EHR encoding approaches: patient demographics, quantized lab values, time interval tokens, and medical event codes get mapped into a unified sequence.</p>
+
+<h3 id="field-casualty-management-ai">Field casualty management AI</h3>
+
+<p>Prolonged field care combines both problems: medics need to interpret wearable biometrics over hours to days, in conditions where EHR-style clinical context is unavailable. At Mountain Biometrics, we built models for predicting individual progression of blood loss and likelihood of sepsis from heart rate, blood oxygen, and other wearable signals, designed to integrate into existing military hardware and software.</p>
 
 <p>Field casualty management AI, W.W. Pettine, M. Christenson, P. Koirala, <em>Defense TechConnect</em>, 2023 <br>
-Assessing Foundation Models’ Transferability to Physiological Signals in Precision Medicine, M. Christenson, C. Geary, B. Locke, P. Koirala, W.W. Pettine, <em>Defense AI in Medicine</em>, 2024</p>
+Assessing Foundation Models’ Transferability to Physiological Signals in Precision Medicine, M. Christenson, C. Geary, B. Locke, P. Koirala, W.W. Pettine, <em>Defense AI in Medicine</em>, 2024
+Efficient EHR Foundational Models: A Mixture-of-Experts Approach for Patient Timeline Prediction, Athreya, M. Christenson, W.W. Pettine, <em>AI Summit, University of Utah</em>, 2025</p>
 
           </article>
 
@@ -225,6 +232,8 @@ Assessing Foundation Models’ Transferability to Physiological Signals in Preci
     return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
   }
 </script>
+
+    
 
   </body>
 </html>
