@@ -1,0 +1,41 @@
+{% if page.enable_vega %}
+<style>
+/* Dark mode overrides for Vega-Lite charts */
+html[data-theme='dark'] .vega-embed text {
+  fill: #E0E0E0 !important;
+}
+html[data-theme='dark'] .vega-embed .role-axis-domain line,
+html[data-theme='dark'] .vega-embed .role-axis-tick line {
+  stroke: #A0A0A0 !important;
+}
+html[data-theme='dark'] .vega-embed .role-axis-grid line {
+  stroke: rgba(160, 160, 160, 0.2) !important;
+}
+/* Remove Vega action links (export/source/editor) */
+.vega-embed .vega-actions {
+  display: none !important;
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+<script>
+(function() {
+  var baseUrl = '{{ page.vega_base_url | default: "/assets/blog" | relative_url }}';
+  var charts = [
+    {% for chart in page.vega_charts %}
+    { id: '#{{ chart.id }}', file: '{{ chart.file }}' }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+  charts.forEach(function(c) {
+    fetch(baseUrl + '/' + c.file)
+      .then(function(r) { return r.json(); })
+      .then(function(spec) {
+        vegaEmbed(c.id, spec, { actions: false, renderer: 'svg' });
+      });
+  });
+})();
+</script>
+{% endif %}

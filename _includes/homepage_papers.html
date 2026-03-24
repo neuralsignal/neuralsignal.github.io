@@ -1,4 +1,7 @@
 <!-- _includes/homepage_papers.html -->
 <div class="publications">
-  {% bibliography -f papers %}
+  {% bibliography -f papers -q @*[selected=true] %}
+</div>
+<div class="blog-view-all">
+  <a href="{{ '/publications' | relative_url }}">View all works →</a>
 </div>

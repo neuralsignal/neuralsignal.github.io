@@ -28,3 +28,39 @@
   <p>No posts yet.</p>
   {%- endif %}
 </div>
+
+{% comment %}Load vega scripts for any accordion posts that use vega charts{% endcomment %}
+{%- assign needs_vega = false -%}
+{%- for post in all_posts limit:5 -%}
+  {%- if post.enable_vega -%}
+    {%- assign needs_vega = true -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if needs_vega %}
+<style>
+html[data-theme='dark'] .vega-embed text { fill: #E0E0E0 !important; }
+html[data-theme='dark'] .vega-embed .role-axis-domain line,
+html[data-theme='dark'] .vega-embed .role-axis-tick line { stroke: #A0A0A0 !important; }
+html[data-theme='dark'] .vega-embed .role-axis-grid line { stroke: rgba(160, 160, 160, 0.2) !important; }
+.vega-embed .vega-actions { display: none !important; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+<script>
+(function() {
+  var charts = [
+    {% for post in all_posts limit:5 %}{% if post.enable_vega %}{% for chart in post.vega_charts %}
+    { id: '#{{ chart.id }}', file: '{{ post.vega_base_url | default: "/assets/blog" | relative_url }}/{{ chart.file }}' },
+    {% endfor %}{% endif %}{% endfor %}
+  ];
+  charts.forEach(function(c) {
+    fetch(c.file)
+      .then(function(r) { return r.json(); })
+      .then(function(spec) {
+        vegaEmbed(c.id, spec, { actions: false, renderer: 'svg' });
+      });
+  });
+})();
+</script>
+{%- endif %}
