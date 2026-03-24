@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AI for medical data
-description: Time-series models for wearable biometrics, electronic health records, and clinical decision support
+description: Time-series models for wearables, EHRs, and clinical decision support
 img:
 order: 30
 category: machine learning
@@ -22,5 +22,5 @@ Electronic health records pose a similar challenge at a different scale: the seq
 Prolonged field care combines both problems: medics need to interpret wearable biometrics over hours to days, in conditions where EHR-style clinical context is unavailable. At Mountain Biometrics, we built models for predicting individual progression of blood loss and likelihood of sepsis from heart rate, blood oxygen, and other wearable signals, designed to integrate into existing military hardware and software.
 
 Field casualty management AI, W.W. Pettine, M. Christenson, P. Koirala, *Defense TechConnect*, 2023 \
-Assessing Foundation Models' Transferability to Physiological Signals in Precision Medicine, M. Christenson, C. Geary, B. Locke, P. Koirala, W.W. Pettine, *Defense AI in Medicine*, 2024
+Assessing Foundation Models' Transferability to Physiological Signals in Precision Medicine, M. Christenson, C. Geary, B. Locke, P. Koirala, W.W. Pettine, *Defense AI in Medicine*, 2024 \
 Efficient EHR Foundational Models: A Mixture-of-Experts Approach for Patient Timeline Prediction, Athreya, M. Christenson, W.W. Pettine, *AI Summit, University of Utah*, 2025
