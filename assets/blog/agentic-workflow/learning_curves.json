@@ -1,0 +1,386 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "background": "transparent",
+    "font": "DM Sans, sans-serif",
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "titleFontWeight": "normal",
+      "gridColor": "rgba(128,128,128,0.2)",
+      "domainColor": "#6B7280",
+      "tickColor": "#6B7280",
+      "labelColor": "#6B7280",
+      "titleColor": "#6B7280"
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "labelColor": "#6B7280",
+      "titleColor": "#6B7280"
+    },
+    "title": {
+      "fontSize": 15,
+      "fontWeight": "normal",
+      "color": "#6B7280"
+    },
+    "view": {
+      "stroke": null
+    }
+  },
+  "title": {
+    "text": "The delayed payoff",
+    "subtitle": "System-level workflows often start above manual cost and may pay back only after repeated use",
+    "subtitleFontSize": 11,
+    "subtitleColor": "#6B7280"
+  },
+  "width": "container",
+  "height": 230,
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "opacity": 0.08
+      },
+      "data": {
+        "values": [
+          {
+            "x0": 4.75,
+            "x1": 6.45,
+            "y0": 0,
+            "y1": 1.0
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "x0",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "x1"
+        },
+        "y": {
+          "field": "y0",
+          "type": "quantitative"
+        },
+        "y2": {
+          "field": "y1"
+        },
+        "color": {
+          "value": "#E8A838"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "stage": 0,
+            "effort": 0.42,
+            "type": "Manual"
+          },
+          {
+            "stage": 0,
+            "effort": 0.92,
+            "type": "Agentic system"
+          },
+          {
+            "stage": 1,
+            "effort": 0.4,
+            "type": "Manual"
+          },
+          {
+            "stage": 1,
+            "effort": 0.76,
+            "type": "Agentic system"
+          },
+          {
+            "stage": 2,
+            "effort": 0.38,
+            "type": "Manual"
+          },
+          {
+            "stage": 2,
+            "effort": 0.6,
+            "type": "Agentic system"
+          },
+          {
+            "stage": 3,
+            "effort": 0.37,
+            "type": "Manual"
+          },
+          {
+            "stage": 3,
+            "effort": 0.48,
+            "type": "Agentic system"
+          },
+          {
+            "stage": 4,
+            "effort": 0.36,
+            "type": "Manual"
+          },
+          {
+            "stage": 4,
+            "effort": 0.38,
+            "type": "Agentic system"
+          },
+          {
+            "stage": 5,
+            "effort": 0.35,
+            "type": "Manual"
+          },
+          {
+            "stage": 5,
+            "effort": 0.31,
+            "type": "Agentic system"
+          },
+          {
+            "stage": 6,
+            "effort": 0.34,
+            "type": "Manual"
+          },
+          {
+            "stage": 6,
+            "effort": 0.28,
+            "type": "Agentic system"
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "interpolate": "monotone"
+      },
+      "encoding": {
+        "x": {
+          "field": "stage",
+          "type": "quantitative",
+          "title": "Time / repeated use",
+          "scale": {
+            "domain": [
+              0,
+              6.6
+            ]
+          },
+          "axis": {
+            "labels": false,
+            "ticks": true,
+            "domain": true,
+            "grid": false,
+            "values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          }
+        },
+        "y": {
+          "field": "effort",
+          "type": "quantitative",
+          "title": "Cost / effort",
+          "scale": {
+            "domain": [
+              0.25,
+              1.0
+            ]
+          },
+          "axis": {
+            "labels": false,
+            "ticks": true,
+            "domain": true,
+            "grid": true,
+            "values": [
+              0.3,
+              0.5,
+              0.7,
+              0.9
+            ]
+          }
+        },
+        "color": {
+          "field": "type",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "Manual",
+              "Agentic system"
+            ],
+            "range": [
+              "#E07A5F",
+              "#2D6A4F"
+            ]
+          },
+          "legend": null
+        },
+        "strokeDash": {
+          "field": "type",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Manual",
+              "Agentic system"
+            ],
+            "range": [
+              [
+                0
+              ],
+              [
+                6,
+                3
+              ]
+            ]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          4,
+          3
+        ],
+        "strokeWidth": 1.2,
+        "opacity": 0.7
+      },
+      "data": {
+        "values": [
+          {
+            "stage": 4.55
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "stage",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "#6B7280"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "dy": -8,
+        "fontSize": 11,
+        "fontStyle": "italic"
+      },
+      "data": {
+        "values": [
+          {
+            "stage": 5.0,
+            "effort": 0.5,
+            "label": "possible payoff region"
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "stage",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "effort",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        },
+        "color": {
+          "value": "#E8A838"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "dy": -10,
+        "fontSize": 11,
+        "fontStyle": "italic"
+      },
+      "data": {
+        "values": [
+          {
+            "stage": 4.55,
+            "effort": 0.44,
+            "label": "crossover"
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "stage",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "effort",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        },
+        "color": {
+          "value": "#6B7280"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 12
+      },
+      "data": {
+        "values": [
+          {
+            "stage": 6.08,
+            "effort": 0.34,
+            "label": "manual",
+            "color": "#E07A5F"
+          },
+          {
+            "stage": 6.08,
+            "effort": 0.28,
+            "label": "agentic system",
+            "color": "#2D6A4F"
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "stage",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "effort",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "color",
+          "type": "nominal",
+          "scale": null
+        }
+      }
+    }
+  ]
+}

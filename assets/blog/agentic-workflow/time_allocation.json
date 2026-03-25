@@ -1,0 +1,180 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "background": "transparent",
+    "font": "DM Sans, sans-serif",
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "titleFontWeight": "normal",
+      "gridColor": "rgba(128,128,128,0.2)",
+      "domainColor": "#6B7280",
+      "tickColor": "#6B7280",
+      "labelColor": "#6B7280",
+      "titleColor": "#6B7280"
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "labelColor": "#6B7280",
+      "titleColor": "#6B7280"
+    },
+    "title": {
+      "fontSize": 15,
+      "fontWeight": "normal",
+      "color": "#6B7280"
+    },
+    "view": {
+      "stroke": null
+    }
+  },
+  "title": {
+    "text": "A typical day, before and after",
+    "subtitle": "Rough estimates, not measured data",
+    "subtitleFontSize": 11,
+    "subtitleColor": "#6B7280"
+  },
+  "width": "container",
+  "height": 120,
+  "data": {
+    "values": [
+      {
+        "mode": "Manual",
+        "category": "Doing",
+        "pct": 75
+      },
+      {
+        "mode": "Manual",
+        "category": "Review & Verify",
+        "pct": 15
+      },
+      {
+        "mode": "Manual",
+        "category": "Coordination",
+        "pct": 10
+      },
+      {
+        "mode": "Agentic",
+        "category": "Doing",
+        "pct": 10
+      },
+      {
+        "mode": "Agentic",
+        "category": "Review & Verify",
+        "pct": 25
+      },
+      {
+        "mode": "Agentic",
+        "category": "Coordination",
+        "pct": 10
+      },
+      {
+        "mode": "Agentic",
+        "category": "Context & Tools",
+        "pct": 25
+      },
+      {
+        "mode": "Agentic",
+        "category": "Knowledge Curation",
+        "pct": 20
+      },
+      {
+        "mode": "Agentic",
+        "category": "Agent Management",
+        "pct": 10
+      }
+    ]
+  },
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 2
+  },
+  "encoding": {
+    "y": {
+      "field": "mode",
+      "type": "nominal",
+      "title": null,
+      "axis": {
+        "labelFontSize": 13,
+        "labelFontWeight": "bold"
+      },
+      "sort": [
+        "Manual",
+        "Agentic"
+      ]
+    },
+    "x": {
+      "field": "pct",
+      "type": "quantitative",
+      "title": "~% of time",
+      "stack": "zero",
+      "axis": {
+        "format": "d"
+      },
+      "scale": {
+        "domain": [
+          0,
+          100
+        ]
+      }
+    },
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "title": null,
+      "scale": {
+        "domain": [
+          "Doing",
+          "Review & Verify",
+          "Coordination",
+          "Context & Tools",
+          "Knowledge Curation",
+          "Agent Management"
+        ],
+        "range": [
+          "#E07A5F",
+          "#E8A838",
+          "#B0B0B0",
+          "#2D6A4F",
+          "#81B29A",
+          "#3D85C6"
+        ]
+      },
+      "sort": [
+        "Doing",
+        "Review & Verify",
+        "Coordination",
+        "Context & Tools",
+        "Knowledge Curation",
+        "Agent Management"
+      ]
+    },
+    "order": {
+      "field": "category",
+      "type": "nominal",
+      "sort": [
+        "Doing",
+        "Review & Verify",
+        "Coordination",
+        "Context & Tools",
+        "Knowledge Curation",
+        "Agent Management"
+      ]
+    },
+    "tooltip": [
+      {
+        "field": "mode",
+        "type": "nominal"
+      },
+      {
+        "field": "category",
+        "type": "nominal"
+      },
+      {
+        "field": "pct",
+        "type": "quantitative",
+        "title": "~%"
+      }
+    ]
+  }
+}

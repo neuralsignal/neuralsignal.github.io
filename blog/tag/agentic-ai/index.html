@@ -10,9 +10,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AI for medical data | Matthias Christenson</title>
+    <title>agentic-ai | Matthias Christenson</title>
     <meta name="author" content="Matthias Christenson">
-    <meta name="description" content="Time-series models for wearables, EHRs, and clinical decision support">
+    <meta name="description" content="Personal profile of Matthias Christenson.
+">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -35,7 +36,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://neuralsignal.github.io/projects/3_biometric/">
+    <link rel="canonical" href="https://neuralsignal.github.io/blog/tag/agentic-ai/">
     
     <!-- Dark Mode -->
     
@@ -81,36 +82,18 @@
 
     <!-- Content -->
     <div class="container mt-5 site-content">
-      <!-- page.html -->
-        <div class="post">
+      <div class="blog-page">
+  <h2 class="section-heading">#agentic-ai</h2>
 
-          <header class="post-header">
-            <h1 class="post-title">AI for medical data</h1>
-            <p class="post-description">Time-series models for wearables, EHRs, and clinical decision support</p>
-          </header>
-
-          <article>
-            <p>Medical decisions rely on data from different sources: wearable sensors, electronic health records, and bedside monitors. Each comes with its own challenges around sequence length, irregular sampling, and individual variability. Across these projects, we are building models that learn temporal patterns from each modality, with the longer-term goal of combining them into unified patient representations.</p>
-
-<h3 id="biometric-time-series-models">Biometric time-series models</h3>
-
-<p>Conditions like infections, pneumonia, and constipation show up as multi-day patterns in wearable data, but most ML models struggle with sequences that long. At Mountain Biometrics, we worked on deep state-space model architectures that scale linearly with sequence length, learning individual “biometric profiles” to detect these healthcare events from wearable devices. The goal was to make this kind of monitoring accessible in underserved communities where it currently does not exist.</p>
-
-<h3 id="ehr-foundation-models">EHR foundation models</h3>
-
-<p>Electronic health records pose a similar challenge at a different scale: the sequences are longer, irregularly sampled, and mix different data types. We are working on a transformer-based foundation model with Mixture-of-Experts routing, trained on ~298M timeline positions from MIMIC-IV. The tokenization follows previous EHR encoding approaches: patient demographics, quantized lab values, time interval tokens, and medical event codes get mapped into a unified sequence.</p>
-
-<h3 id="field-casualty-management-ai">Field casualty management AI</h3>
-
-<p>Prolonged field care combines both problems: medics need to interpret wearable biometrics over hours to days, in conditions where EHR-style clinical context is unavailable. At Mountain Biometrics, we built models for predicting individual progression of blood loss and likelihood of sepsis from heart rate, blood oxygen, and other wearable signals, designed to integrate into existing military hardware and software.</p>
-
-<p>Field casualty management AI, W.W. Pettine, M. Christenson, P. Koirala, <em>Defense TechConnect</em>, 2023 <br>
-Assessing Foundation Models’ Transferability to Physiological Signals in Precision Medicine, M. Christenson, C. Geary, B. Locke, P. Koirala, W.W. Pettine, <em>Defense AI in Medicine</em>, 2024 <br>
-Efficient EHR Foundational Models: A Mixture-of-Experts Approach for Patient Timeline Prediction, Athreya, M. Christenson, W.W. Pettine, <em>AI Summit, University of Utah</em>, 2025</p>
-
-          </article>
-
-        </div>
+  <div class="archive-list">
+    
+    <div class="archive-item">
+      <span class="accordion-meta blog-date">Mar 2026</span>
+      <a class="archive-link" href="/blog/2026/agentic-workflow-value/">Working with the machines</a>
+    </div>
+    
+  </div>
+</div>
 
     </div>
 
