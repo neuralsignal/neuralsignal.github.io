@@ -16,8 +16,29 @@
               {{- site.title -}}
             {%- endif -%}
           </a>
-          <div class="ml-auto">
-            <ul class="navbar-nav flex-nowrap">
+
+          <!-- Hamburger toggle (shown on narrow screens) -->
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav-menu" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="nav-menu">
+            <ul class="navbar-nav ml-auto site-nav">
+              {%- assign current = page.url -%}
+              <li class="nav-item">
+                <a class="nav-link {% if current == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">about</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if current contains '/projects' %}active{% endif %}" href="{{ '/projects/' | relative_url }}">projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if current contains '/resume' %}active{% endif %}" href="{{ '/resume/' | relative_url }}">resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if current contains '/blog' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">blog</a>
+              </li>
               {%- if site.enable_darkmode %}
               <li class="toggle-container">
                 <button id="light-toggle" title="Change theme">
@@ -30,12 +51,4 @@
           </div>
         </div>
       </nav>
-{% if site.enable_progressbar %}
-      <!-- Scrolling Progress Bar -->
-      <progress id="progress" value="0">
-        <div class="progress-container">
-          <span class="progress-bar"></span>
-        </div>
-      </progress>
-{%- endif %}
     </header>

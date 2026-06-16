@@ -1,33 +1,24 @@
 ---
-layout: default
+layout: page
 title: blog
+description: Notes on data, AI, and things I find interesting.
 ---
 
-<div class="blog-page">
-  <h2 class="section-heading">blog</h2>
-
-  {% if site.display_tags %}
-  <div class="blog-tags">
-    {% for tag in site.display_tags %}
-      <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">#{{ tag }}</a>
-    {% endfor %}
-  </div>
-  {% endif %}
-
-  {%- assign all_posts = site.posts -%}
-  {%- if all_posts.size > 0 -%}
-  <div class="blog-list">
-    {%- for post in all_posts %}
-    <a class="blog-list-item" href="{{ post.url | relative_url }}">
-      <span class="accordion-meta blog-date">{{ post.date | date: "%b %Y" }}</span>
-      <span class="accordion-title">{{ post.title }}</span>
+{%- assign all_posts = site.posts -%}
+{%- if all_posts.size > 0 -%}
+<div class="index-list">
+  {%- for post in all_posts %}
+  <a class="index-item" href="{{ post.url | relative_url }}">
+    <span class="index-meta">{{ post.date | date: "%b %Y" }}</span>
+    <span class="index-text">
+      <span class="index-title">{{ post.title }}</span>
       {%- if post.description %}
-      <span class="accordion-meta">{{ post.description }}</span>
+      <span class="index-desc">{{ post.description }}</span>
       {%- endif %}
-    </a>
-    {%- endfor %}
-  </div>
-  {%- else -%}
-  <p>No posts yet.</p>
-  {%- endif %}
+    </span>
+  </a>
+  {%- endfor %}
 </div>
+{%- else -%}
+<p>No posts yet.</p>
+{%- endif %}

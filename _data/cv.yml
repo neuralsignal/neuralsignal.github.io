@@ -12,16 +12,6 @@
     - name: Python Stack 
       value: scikit-learn, numpy, scipy, pandas, matplotlib, seaborn, dask, xarray, pytorch, transformers, lightning, pyro, cvxpy, Flask, Dask, streamlit, dash
 
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD
-      institution: Columbia University, New York, USA
-      year: 2022
-    - title: MSci
-      institution: University College London, London, UK
-      year: 2016
-
 - title: Experience
   type: time_table
   contents:
@@ -52,6 +42,16 @@
     - title: Undergraduate Research Assistant (part-time)
       institution: University College London, London, UK
       year: 2013-2016
+
+- title: Education
+  type: time_table
+  contents:
+    - title: PhD
+      institution: Columbia University, New York, USA
+      year: 2022
+    - title: MSci
+      institution: University College London, London, UK
+      year: 2016
 
 - title: Honors and Awards
   type: time_table
@@ -88,4 +88,7 @@
 - title: Interests
   type: list
   contents:
-    - Skiing, board games, dancing, markets
+    - Skiing and mountaineering
+    - Board games (especially Catan Cities & Knights)
+    - Dancing (from waltzing to salsa)
+    - Understanding dynamical systems (from financial markets to biological circuits)

@@ -3,58 +3,19 @@ layout: default
 ---
 
 <!-- about.html -->
-      <div class="post">
+<div class="post">
+  <header class="page-header">
+    <h1 class="section-title">{{ page.title }}</h1>
+    <p class="page-description">medical AI · data · neuroML</p>
+  </header>
 
-        <article>
-          <section id="hero" class="scroll-section visible hero-section">
-            <div class="hero-content">
-              {% if page.profile.image %}
-                {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-                <div class="hero-photo">
-                  {% include figure.html path=profile_image_path
-                    class="img-fluid z-depth-1 rounded-circle" alt=page.profile.image %}
-                </div>
-              {% endif %}
-              <p class="hero-tagline">medical AI · data · neuroML</p>
-              {% if page.social %}
-              <div class="social">
-                <div class="contact-icons">{% include social.html %}</div>
-              </div>
-              {% endif %}
-            </div>
-          </section>
+  <div class="home-bio">
+    {{ content }}
+  </div>
 
-          <section id="blog" class="scroll-section">
-            <h2>blog</h2>
-            {% include homepage_blog.html %}
-          </section>
-
-          <section id="projects" class="scroll-section">
-            <h2>projects</h2>
-            {% include homepage_projects.html %}
-          </section>
-
-          <section id="selected-works" class="scroll-section">
-            <h2>selected works</h2>
-            {% include homepage_papers.html %}
-          </section>
-
-          <section id="cv" class="scroll-section">
-            <h2>cv</h2>
-            {% include homepage_cv.html %}
-          </section>
-
-          <section id="about" class="scroll-section">
-            <h2>about me</h2>
-            <div class="about-content">
-              {{ content }}
-            </div>
-          </section>
-
-        </article>
-
+  {% if page.social %}
+  <div class="social home-social">
+    <div class="contact-icons">{% include social.html %}</div>
+  </div>
+  {% endif %}
 </div>
-
-{% include side_nav.html %}
-
-<script src="{{ '/assets/js/side_nav.js' | relative_url }}"></script>

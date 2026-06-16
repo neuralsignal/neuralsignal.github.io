@@ -1,36 +1,31 @@
 /*******************************************************************************
- * Styles for the base elements of the theme.
+ * Base styles. Kept intentionally lean: a small set of shared primitives
+ * (.section-title, .index-list, .cv-*, .bib-entry) reused across all pages.
  ******************************************************************************/
 
 // Typography
+//
+// Mixed pairing from the same type family: proportional Fira Sans for the
+// name + headings (display), monospace Fira Code for body and code.
 
-$font-family-serif: 'Cormorant Garamond', Georgia, serif;
-$font-family-sans: 'DM Sans', -apple-system, 'Segoe UI', sans-serif;
+$font-family-mono: 'Fira Code', ui-monospace, 'SFMono-Regular', 'SF Mono', Menlo, monospace;
+$font-family-display: 'Fira Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 
 body {
-  font-family: $font-family-sans !important;
-  line-height: 1.7;
+  font-family: $font-family-mono !important;
+  font-size: 0.95rem;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-family-serif !important;
+  font-family: $font-family-display !important;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.25;
+  letter-spacing: 0;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-em,
-div,
-li,
-span,
-strong {
+p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
   color: var(--global-text-color);
 }
 
@@ -39,19 +34,11 @@ hr {
 }
 
 table {
-
-  td,
-  th {
-    color: var(--global-text-color);
-  }
-
-  td {
-    font-size: 1rem;
-  }
+  td, th { color: var(--global-text-color); }
+  td { font-size: 1rem; }
 }
 
-a,
-table.table a {
+a {
   color: var(--global-theme-color);
   transition: color 0.2s ease;
 
@@ -59,14 +46,9 @@ table.table a {
     color: var(--global-theme-color);
     text-decoration: underline;
   }
-
-  &:hover:after :not(.nav-item.dropdown) {
-    width: 100%;
-  }
 }
 
-figure,
-img {
+figure, img {
   max-width: 90vw;
 }
 
@@ -75,17 +57,15 @@ blockquote {
   border-left: 2px solid var(--global-theme-color);
   margin: 1.5em 10px;
   padding: 0.5em 10px;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
 }
 
-// Math
+// Math + figure caption (used in posts / project pages)
 
 .equation {
   margin-bottom: 1rem;
   text-align: center;
 }
-
-// Caption
 
 .caption {
   font-size: 0.875rem;
@@ -94,172 +74,118 @@ blockquote {
   text-align: center;
 }
 
-// Card
-
-.card {
-  background-color: var(--global-card-bg-color);
-
-  img {
-    width: 100%;
-  }
-
-  .card-title {
-    color: var(--global-text-color);
-  }
-
-  .card-item {
-    width: auto;
-    margin-bottom: 10px;
-
-    .row {
-      display: flex;
-      align-items: center;
-    }
-  }
-}
-
-// Citation
-
 .citation,
 .citation-number {
   color: var(--global-theme-color);
 }
 
-// Profile
 
-.profile {
-  width: 100%;
+/*******************************************************************************
+ * Shared primitives
+ ******************************************************************************/
 
-  .address {
-    margin-bottom: 5px;
-    margin-top: 5px;
-    font-family: $font-family-sans;
-
-    p {
-      display: inline-block;
-      margin: 0;
-    }
-  }
+// One heading style: page headings AND in-page section headings.
+.section-title {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  letter-spacing: 0.06em;
+  color: var(--global-text-color-light);
+  margin-bottom: 1.5rem;
 }
 
-.profile.float-right {
-  margin-left: 1rem;
+// Page header (blog / projects / resume) reuses .section-title, tighter spacing.
+.page-header {
+  margin-bottom: 1.75rem;
+
+  .section-title { margin-bottom: 0.3rem; }
 }
 
-.profile.float-left {
-  margin-right: 1rem;
+.page-description {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
 }
 
-@media (min-width: 576px) {
-  .profile {
-    width: 30%;
-
-    .address {
-      p {
-        display: block;
-      }
-    }
-  }
-}
-
-.post-description {
-  margin-bottom: 2rem;
-  font-size: 0.875rem;
-
-  a {
-    color: inherit;
+// One list style: blog index, projects index, post archives.
+.index-list {
+  .index-item {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+    text-decoration: none;
 
     &:hover {
-      color: var(--global-theme-color);
       text-decoration: none;
+      .index-title { color: var(--global-theme-color); }
+    }
+  }
+
+  .index-meta {
+    flex-shrink: 0;
+    min-width: 4.5rem;
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+  }
+
+  .index-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .index-title {
+    font-weight: 600;
+    color: var(--global-text-color);
+    transition: color 0.2s ease;
+  }
+
+  .index-desc {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+// One bullet style: CV interests + award items.
+.cv-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+
+  li {
+    position: relative;
+    padding-left: 1.1rem;
+    margin-bottom: 0.25rem;
+
+    &::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--global-text-color-light);
     }
   }
 }
 
 
-// Navbar customization
+/*******************************************************************************
+ * Navbar
+ ******************************************************************************/
 
 .navbar {
   box-shadow: none;
-  border-bottom: 1px solid rgba(0,0,0,0.04);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
   background-color: var(--global-bg-color);
-  opacity: 0.95;
-}
-
-.navbar .dropdown-menu {
-  background-color: var(--global-bg-color);
-  border: 1px solid var(--global-divider-color);
-
-  a:not(.active) {
-    color: var(--global-text-color);
-  }
-
-  a:hover {
-    color: var(--global-hover-color);
-  }
-
-  .dropdown-divider {
-    border-top: 1px solid var(--global-divider-color) !important;
-  }
-}
-
-.dropdown-item {
-  color: var(--global-text-color);
-
-  &:hover {
-    color: var(--global-hover-color);
-    background-color: var(--global-bg-color);
-  }
 }
 
 .navbar.navbar-light {
-  a {
-    &:hover {
-      text-decoration: none;
-    }
-  }
+  a:hover { text-decoration: none; }
 
   .navbar-brand {
+    font-family: $font-family-display;
     color: var(--global-text-color);
     text-transform: lowercase;
-  }
-
-  .navbar-nav .nav-item .nav-link {
-    color: var(--global-text-color);
-    letter-spacing: 0.02em;
-
-    &:hover {
-      color: var(--global-hover-color);
-    }
-  }
-
-  .navbar-nav .nav-item.active>.nav-link {
-    background-color: inherit;
-    font-weight: bolder;
-    color: var(--global-theme-color);
-
-    &:hover {
-      color: var(--global-hover-color);
-    }
-  }
-
-  .navbar-brand.social {
-    padding-bottom: 0;
-    padding-top: 0;
-    font-size: 1.7rem;
-
-    a {
-      i::before {
-        color: var(--global-text-color);
-        transition-property: all 0.2s ease-in-out;
-      }
-
-      &:hover {
-        i::before {
-          color: var(--global-theme-color);
-        }
-      }
-    }
   }
 }
 
@@ -274,33 +200,15 @@ blockquote {
     transition: all 0.2s;
   }
 
-  .top-bar {
-    transform: rotate(45deg);
-    transform-origin: 10% 10%;
-  }
-
-  .middle-bar {
-    opacity: 0;
-  }
-
-  .bottom-bar {
-    transform: rotate(-45deg);
-    transform-origin: 10% 90%;
-  }
+  .top-bar { transform: rotate(45deg); transform-origin: 10% 10%; }
+  .middle-bar { opacity: 0; }
+  .bottom-bar { transform: rotate(-45deg); transform-origin: 10% 90%; }
 }
 
 .navbar-toggler.collapsed {
-  .top-bar {
-    transform: rotate(0);
-  }
-
-  .middle-bar {
-    opacity: 1;
-  }
-
-  .bottom-bar {
-    transform: rotate(0);
-  }
+  .top-bar { transform: rotate(0); }
+  .middle-bar { opacity: 1; }
+  .bottom-bar { transform: rotate(0); }
 }
 
 #light-toggle {
@@ -309,13 +217,90 @@ blockquote {
   background-color: inherit;
   color: var(--global-text-color);
 
-  &:hover {
-    color: var(--global-hover-color);
+  &:hover { color: var(--global-hover-color); }
+}
+
+// Top navigation links. Scoped under `.navbar.navbar-light` so the theme-aware
+// colors win over Bootstrap's hardcoded `.navbar-light .navbar-nav .nav-link`.
+.navbar.navbar-light .site-nav {
+  align-items: center;
+  gap: 1.25rem;
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-link {
+    padding: 0;
+    font-size: 0.85rem;
+    text-transform: lowercase;
+    letter-spacing: 0.02em;
+    // !important to override Bootstrap/MDB's hardcoded `.navbar-light
+    // .navbar-nav .nav-link` color, which otherwise renders near-black.
+    color: var(--global-text-color-light) !important;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      color: var(--global-theme-color) !important;
+      text-decoration: none;
+    }
+
+    &.active {
+      color: var(--global-theme-color) !important;
+      border-bottom-color: var(--global-theme-color);
+    }
+  }
+
+  .toggle-container {
+    list-style: none;
+    display: flex;
+    align-items: center;
   }
 }
 
-// Social (bottom)
+// Collapsed (hamburger) menu on narrow screens: vertical, left-aligned list.
+@media (max-width: 575px) {
+  .navbar.navbar-light .site-nav {
+    width: 100%;
+    margin-left: 0 !important;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 0.85rem 0 0.4rem;
 
+    .nav-link { font-size: 0.95rem; }
+  }
+}
+
+
+/*******************************************************************************
+ * Home / about
+ ******************************************************************************/
+
+.home-bio {
+  font-size: 1rem;
+  line-height: 1.8;
+
+  p { margin-bottom: 1.2rem; }
+}
+
+.social.home-social {
+  text-align: left;
+  margin-top: 2.5rem;
+
+  .contact-icons {
+    font-size: 1.4rem;
+
+    a:first-child {
+      margin-left: 0;
+
+      i { margin-left: 0; }
+    }
+  }
+}
+
+// Social icons (shared)
 .social {
   text-align: center;
 
@@ -330,21 +315,18 @@ blockquote {
         transition-property: all 0.2s ease-in-out;
       }
 
-      &:hover {
-        i::before {
-          color: var(--global-theme-color);
-        }
-      }
+      &:hover i::before { color: var(--global-theme-color); }
     }
   }
 
-  .contact-note {
-    font-size: 0.8rem;
-  }
+  .contact-note { font-size: 0.8rem; }
 }
 
 
-// Footer
+/*******************************************************************************
+ * Footer
+ ******************************************************************************/
+
 .site-footer {
   padding: 2rem 0;
   font-size: 0.8rem;
@@ -358,123 +340,123 @@ blockquote {
     flex-wrap: wrap;
   }
 
-  .footer-sep {
-    opacity: 0.4;
-  }
+  .footer-sep { opacity: 0.4; }
 }
 
-// CV
 
-.cv {
-  margin-bottom: 40px;
-
-  .card {
-    background-color: var(--global-card-bg-color);
-    border: 1px solid var(--global-divider-color);
-
-    .list-group-item {
-      background-color: inherit;
-      border-color: var(--global-divider-color);
-
-      .badge {
-        color: var(--global-card-bg-color) !important;
-        background-color: var(--global-theme-color) !important;
-      }
-    }
-  }
-}
-
-// Repositories
-
-@media (min-width: 768px) {
-  .repo {
-    max-width: 50%;
-  }
-}
-
-// Blog
+/*******************************************************************************
+ * Blog
+ ******************************************************************************/
 
 .blog-page {
   padding: 3rem 0;
 }
 
-.section-heading {
-  font-size: 1.1rem;
-  font-weight: 400;
-  font-family: $font-family-sans !important;
-  text-transform: lowercase;
-  letter-spacing: 0.08em;
-  color: var(--global-text-color-light);
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
 
-  &::after {
-    content: '';
-    flex: 0 0 2rem;
-    height: 1px;
-    background: var(--global-text-color-light);
-  }
+/*******************************************************************************
+ * Resume (static CV)
+ ******************************************************************************/
+
+.cv-block {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  &:first-of-type { padding-top: 0; }
+  &:last-child { border-bottom: none; }
 }
 
-.blog-tags {
-  margin-bottom: 1.5rem;
+.cv-map,
+.cv-timeline {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
-  a {
+.cv-entry,
+.cv-map-entry {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+}
+
+.cv-year,
+.cv-map-key {
+  flex-shrink: 0;
+  width: 7rem;
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+}
+
+.cv-map-key { font-weight: 600; }
+
+.cv-detail,
+.cv-map-value {
+  font-size: 0.9rem;
+}
+
+.cv-award {
+  display: block;
+
+  & + .cv-award { margin-top: 0.1rem; }
+}
+
+@media (max-width: 575px) {
+  .cv-entry,
+  .cv-map-entry { flex-direction: column; gap: 0.1rem; }
+
+  .cv-year,
+  .cv-map-key { width: auto; }
+}
+
+
+/*******************************************************************************
+ * Selected works (bibliography)
+ ******************************************************************************/
+
+ol.bibliography {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bib-entry {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  &:last-child { border-bottom: none; }
+
+  .bib-title { font-weight: 600; }
+
+  .bib-authors,
+  .bib-venue {
     font-size: 0.85rem;
     color: var(--global-text-color-light);
-    text-decoration: none;
-
-    &:hover {
-      color: var(--global-theme-color);
-    }
   }
-}
 
-.blog-list {
-  .blog-list-item {
-    display: flex;
-    align-items: baseline;
-    gap: 0.6rem;
-    padding: 0.6rem 0;
-    border-bottom: 1px solid var(--global-divider-color);
-    text-decoration: none;
+  .bib-authors em {
+    font-style: normal;
     color: var(--global-text-color);
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: var(--global-theme-color);
-    }
-  }
-}
-
-.archive-list {
-  .archive-item {
-    display: flex;
-    align-items: baseline;
-    gap: 0.6rem;
-    padding: 0.6rem 0;
-    border-bottom: 1px solid var(--global-divider-color);
+    border-bottom: 1px solid;
   }
 
-  .archive-link {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--global-text-color);
-    text-decoration: none;
+  .bib-links {
+    margin-top: 0.3rem;
 
-    &:hover {
-      color: var(--global-theme-color);
+    a {
+      font-size: 0.75rem;
+      margin-right: 0.7rem;
+      color: var(--global-text-color-light);
+      text-decoration: none;
+
+      &:hover { color: var(--global-theme-color); }
     }
   }
 }
 
 
-// Distill
+/*******************************************************************************
+ * Distill (only if a distill-style post is used)
+ ******************************************************************************/
 
 .distill {
   a:hover {
@@ -484,186 +466,18 @@ blockquote {
 }
 
 
-// Projects
+/*******************************************************************************
+ * Code / syntax highlighting
+ ******************************************************************************/
 
-.projects {
-  a {
-    text-decoration: none;
-
-    &:hover {
-      .card-title {
-        color: var(--global-theme-color);
-      }
-    }
-  }
-
-  .card {
-    img {
-      width: 100%;
-    }
-  }
-
-  .card-item {
-    width: auto;
-    margin-bottom: 10px;
-
-    .row {
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  .grid-sizer,
-  .grid-item {
-    width: 250px;
-    margin-bottom: 10px;
-  }
-
-  h2.category {
-    color: var(--global-divider-color);
-    border-bottom: 1px solid var(--global-divider-color);
-    padding-top: 0.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    text-align: right;
-  }
-}
-
-
-// Publications
-
-.publications {
-  margin-top: 2rem;
-
-  h1 {
-    color: var(--global-theme-color);
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-
-  h2.year {
-    display: none;
-  }
-
-  ol.bibliography {
-    list-style: none;
-    padding: 0;
-    margin-top: 0;
-
-    li {
-      margin-bottom: 0;
-
-      // Hide the old 2-column row wrapper if still rendered
-      > .row { display: contents; }
-      .col-sm-2 { display: none; }
-      .col-sm-8 { max-width: 100%; flex: none; padding: 0; }
-    }
-  }
-}
-
-// Paper accordion entries
-.paper-item {
-  .paper-year {
-    flex-shrink: 0;
-    min-width: 2.5rem;
-  }
-
-  .paper-authors {
-    font-size: 0.85rem;
-    margin-bottom: 0.3rem;
-
-    a {
-      border-bottom: 1px dashed var(--global-theme-color);
-      &:hover {
-        border-bottom-style: solid;
-        text-decoration: none;
-      }
-    }
-
-    > em {
-      border-bottom: 1px solid;
-      font-style: normal;
-    }
-
-    > span.more-authors {
-      color: var(--global-text-color-light);
-      border-bottom: 1px dashed var(--global-text-color-light);
-      cursor: pointer;
-      &:hover {
-        color: var(--global-text-color);
-        border-bottom: 1px dashed var(--global-text-color);
-      }
-    }
-  }
-
-  .paper-venue {
-    font-size: 0.85rem;
-    color: var(--global-text-color-light);
-    margin-bottom: 0.3rem;
-  }
-
-  .paper-links {
-    margin-top: 0.3rem;
-
-    a.btn {
-      font-size: 0.75rem;
-      color: var(--global-text-color);
-      border: 1px solid var(--global-text-color);
-      padding: 0.15rem 0.5rem;
-      margin-right: 0.25rem;
-
-      &:hover {
-        color: var(--global-theme-color);
-        border-color: var(--global-theme-color);
-      }
-    }
-  }
-
-  .hidden {
-    font-size: 0.85rem;
-    max-height: 0px;
-    overflow: hidden;
-    text-align: justify;
-    transition: all 0.15s ease;
-
-    p {
-      line-height: 1.4em;
-      margin: 10px;
-    }
-
-    pre {
-      font-size: 1em;
-      line-height: 1.4em;
-      padding: 10px;
-    }
-  }
-
-  .hidden.open {
-    max-height: 100em;
-    transition: all 0.15s ease;
-  }
-
-  div.abstract.hidden {
-    border: dashed 1px var(--global-bg-color);
-  }
-
-  div.abstract.hidden.open {
-    border-color: var(--global-text-color);
-  }
-}
-
-// Rouge Color Customization
-figure.highlight {
-  margin: 0 0 1rem;
-}
+figure.highlight { margin: 0 0 1rem; }
 
 pre {
   color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
   border-radius: 6px;
-  padding: 6px 12px;
+  padding: 8px 12px;
+  position: relative;
 
   pre,
   code {
@@ -671,6 +485,27 @@ pre {
     border-radius: 0;
     margin-bottom: 0;
     padding: 0;
+  }
+
+  // Copy-to-clipboard button
+  .copy {
+    background: var(--global-card-bg-color);
+    border-color: var(--global-bg-color);
+    border-radius: 0.3rem;
+    border-style: solid;
+    color: var(--global-text-color);
+    font-size: medium;
+    opacity: 0;
+    position: absolute;
+    right: 0.25rem;
+    top: 0.25rem;
+  }
+
+  &:active .copy,
+  &:focus .copy,
+  &:hover .copy {
+    color: var(--global-hover-color);
+    opacity: 1;
   }
 }
 
@@ -682,7 +517,10 @@ code {
 }
 
 
-// Transitioning Themes
+/*******************************************************************************
+ * Theme transition
+ ******************************************************************************/
+
 html.transition,
 html.transition *,
 html.transition *:before,
@@ -691,7 +529,10 @@ html.transition *:after {
   transition-delay: 0 !important;
 }
 
-// Extra Markdown style (post Customization)
+
+/*******************************************************************************
+ * Blog post
+ ******************************************************************************/
 
 .post-header {
   margin-bottom: 2.5rem;
@@ -704,17 +545,21 @@ html.transition *:after {
       color: var(--global-text-color-light);
       text-decoration: none;
 
-      &:hover {
-        color: var(--global-theme-color);
-      }
+      &:hover { color: var(--global-theme-color); }
     }
   }
 
   .post-title {
-    font-size: 1.8rem;
-    font-weight: 600;
-    line-height: 1.3;
-    margin-bottom: 0.5rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 0.4rem;
+  }
+
+  .post-subtitle {
+    color: var(--global-text-color-light);
+    font-size: 0.95rem;
+    margin-bottom: 0;
   }
 
   .post-meta {
@@ -734,357 +579,42 @@ html.transition *:after {
       color: var(--global-text-color-light);
       text-decoration: none;
 
-      &:hover {
-        color: var(--global-theme-color);
-      }
+      &:hover { color: var(--global-theme-color); }
     }
   }
 }
 
+// Content heading scale, shared by blog posts and project detail pages.
+// Headings are clearly subordinate to the page title (1.7rem), and each
+// top-level section is divided by a hairline for easy separation.
 .post-content {
+  h2, h3, h4, h5, h6 {
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+  }
+
+  h2 { font-size: 1.2rem; }
+  h3 { font-size: 1.1rem; }
+  h4 { font-size: 1rem; }
+  h5, h6 { font-size: 0.95rem; }
+
+  > h2,
+  > h3 {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--global-divider-color);
+
+    &:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+  }
+
+  p { margin-bottom: 1.1rem; }
+
   blockquote {
     border-left: 5px solid var(--global-theme-color);
     padding: 8px;
-  }
-}
-
-progress {
-  /* Positioning */
-  position: fixed;
-  left: 0;
-  top: 56px;
-  z-index: 10;
-
-  /* Dimensions */
-  width: 100%;
-  height: 1px;
-
-  /* Reset the appearance */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-
-  /* Get rid of the default border in Firefox/Opera. */
-  border: none;
-
-  /* Progress bar container for Firefox/IE10  */
-  background-color: transparent;
-
-  /* Progress bar value for IE10  */
-  color: var(--global-theme-color);
-}
-
-progress::-webkit-progress-bar {
-  background-color: transparent;
-}
-
-progress::-webkit-progress-value {
-  background-color: var(--global-theme-color);
-}
-
-progress::-moz-progress-bar {
-  background-color: var(--global-theme-color);
-}
-
-.progress-container {
-  width: 100%;
-  background-color: transparent;
-  position: fixed;
-  top: 56px;
-  left: 0;
-  height: 5px;
-  display: block;
-}
-
-.progress-bar {
-  background-color: var(--global-theme-color);
-  width: 0%;
-  display: block;
-  height: inherit;
-}
-
-pre {
-  padding: 8px 12px;
-  position: relative;
-
-  /* Copy code to clipboard button */
-  .copy {
-    background: var(--global-card-bg-color);
-    border-color: var(--global-bg-color);
-    border-radius: .3rem;
-    border-style: solid;
-    color: var(--global-text-color);
-    font-size: medium;
-    opacity: 0;
-    position: absolute;
-    right: .25rem;
-    top: .25rem;
-
-    &:active,
-    &:focus,
-    &:hover {
-      color: var(--global-hover-color);
-      opacity: 1;
-    }
-  }
-
-  &:active .copy,
-  &:focus .copy,
-  &:hover .copy {
-    color: var(--global-hover-color);
-    opacity: 1;
-  }
-}
-
-// Side navigation dots
-.side-nav {
-  position: fixed;
-  right: 1.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  opacity: 0.3;
-  transition: opacity 0.3s ease;
-
-  &:hover { opacity: 1; }
-
-  .side-nav-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--global-text-color-light);
-    transition: all 0.3s ease;
-    position: relative;
-    display: block;
-
-    &.active {
-      background: var(--global-theme-color);
-      transform: scale(1.4);
-    }
-
-    &::before {
-      content: attr(data-label);
-      position: absolute;
-      right: 1.2rem;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 0.7rem;
-      color: var(--global-text-color-light);
-      opacity: 0;
-      transition: opacity 0.2s ease;
-      white-space: nowrap;
-    }
-  }
-
-  &:hover .side-nav-dot::before { opacity: 1; }
-
-  @media (max-width: 768px) { display: none; }
-}
-
-// Scroll sections
-.scroll-section {
-  padding: 5rem 0;
-  opacity: 0;
-  transform: translateY(15px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  > h2 {
-    font-size: 1.1rem;
-    font-weight: 400;
-    font-family: $font-family-sans !important;
-    text-transform: lowercase;
-    letter-spacing: 0.08em;
-    color: var(--global-text-color-light);
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-
-    &::after {
-      content: '';
-      flex: 0 0 2rem;
-      height: 1px;
-      background: var(--global-text-color-light);
-    }
-  }
-}
-
-#hero.scroll-section {
-  padding-top: 2rem;
-}
-
-// Hero section
-.hero-section {
-  .hero-content {
-    text-align: center;
-  }
-
-  .hero-photo {
-    max-width: 180px;
-    margin: 0 auto 1.5rem;
-  }
-
-  .hero-tagline {
-    font-size: 1.2rem;
-    color: var(--global-text-color);
-    margin-bottom: 0.3rem;
-  }
-
-}
-
-// Unified accordion system (used by blog, projects, papers, CV)
-
-.accordion-item {
-  border-bottom: 1px solid var(--global-divider-color);
-}
-
-.accordion-header {
-  padding: 0.6rem 0;
-  cursor: pointer;
-  display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
-  transition: color 0.2s ease;
-
-  &:hover { color: var(--global-theme-color); }
-}
-
-.accordion-toggle {
-  font-family: monospace;
-  font-size: 0.85rem;
-  flex-shrink: 0;
-  width: 1rem;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.expanded > .accordion-header > .accordion-toggle {
-  transform: rotate(45deg);
-}
-
-.accordion-title {
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-.accordion-meta {
-  font-size: 0.85rem;
-  color: var(--global-text-color-light);
-}
-
-.accordion-body {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.35s ease;
-
-  > div {
-    overflow: hidden;
-    padding: 0 0 0 1.6rem;
-    font-size: 0.9rem;
-  }
-}
-
-.expanded > .accordion-body {
-  grid-template-rows: 1fr;
-
-  > div {
-    padding-bottom: 1.2rem;
-  }
-}
-
-// Blog date column
-.blog-date {
-  flex-shrink: 0;
-  min-width: 4.5rem;
-  text-align: right;
-}
-
-.blog-view-all {
-  padding: 0.8rem 0;
-  text-align: right;
-  font-size: 0.9rem;
-}
-
-// CV section-specific styles
-
-.cv-timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.cv-entry {
-  display: flex;
-  align-items: baseline;
-  gap: 1.2rem;
-}
-
-.cv-year {
-  flex-shrink: 0;
-  width: 7rem;
-  font-size: 0.85rem;
-  color: var(--global-text-color-light);
-  text-align: right;
-}
-
-.cv-detail {
-  font-size: 0.9rem;
-}
-
-.cv-award-item {
-  display: block;
-}
-
-.cv-map {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.cv-map-entry {
-  display: flex;
-  align-items: baseline;
-  gap: 1.2rem;
-}
-
-.cv-map-key {
-  flex-shrink: 0;
-  width: 7rem;
-  font-size: 0.85rem;
-  color: var(--global-text-color-light);
-  text-align: right;
-  font-weight: 600;
-}
-
-.cv-map-value {
-  font-size: 0.9rem;
-}
-
-.cv-list {
-  margin: 0;
-  padding-left: 1.2rem;
-  font-size: 0.9rem;
-}
-
-// About me section
-.about-content {
-  font-size: 1rem;
-  line-height: 1.8;
-  max-width: 38em;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .scroll-section {
-    opacity: 1;
-    transform: none;
-    transition: none;
   }
 }

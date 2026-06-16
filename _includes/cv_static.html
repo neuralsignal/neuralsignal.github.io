@@ -1,0 +1,49 @@
+<!-- _includes/cv_static.html -->
+<div class="cv-static">
+  {%- for entry in site.data.cv %}
+  {%- comment -%} Selected works sits just before Interests, so Interests stays last. {%- endcomment -%}
+  {%- if entry.title == "Interests" %}
+  {% include selected_works.html %}
+  {%- endif %}
+  <section class="cv-block">
+    <h2 class="section-title">{{ entry.title }}</h2>
+
+    {%- if entry.type == "map" %}
+    <div class="cv-map">
+      {%- for item in entry.contents %}
+      <div class="cv-map-entry">
+        <span class="cv-map-key">{{ item.name }}</span>
+        <span class="cv-map-value">{{ item.value }}</span>
+      </div>
+      {%- endfor %}
+    </div>
+
+    {%- elsif entry.type == "time_table" %}
+    <div class="cv-timeline">
+      {%- for item in entry.contents %}
+      <div class="cv-entry">
+        <span class="cv-year">{{ item.year }}</span>
+        <span class="cv-detail">
+          {%- if item.title %}
+          <strong>{{ item.title }}</strong>{%- if item.institution %} · {{ item.institution }}{%- endif %}
+          {%- endif %}
+          {%- if item.items %}
+          {%- for award in item.items %}
+          <span class="cv-award">{{ award }}</span>
+          {%- endfor %}
+          {%- endif %}
+        </span>
+      </div>
+      {%- endfor %}
+    </div>
+
+    {%- elsif entry.type == "list" %}
+    <ul class="cv-list">
+      {%- for item in entry.contents %}
+      <li>{{ item }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </section>
+  {%- endfor %}
+</div>
