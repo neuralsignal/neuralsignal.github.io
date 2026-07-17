@@ -99,6 +99,10 @@ collections:
 # Jekyll settings
 # -----------------------------------------------------------------------------
 
+# Build future-dated posts (the distributions series is drafted ahead of its
+# publish dates).
+future: true
+
 # Markdown and syntax highlight
 markdown: kramdown
 highlighter: rouge

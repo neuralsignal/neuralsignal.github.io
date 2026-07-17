@@ -9,3 +9,67 @@ _site
 Gemfile.lock
 vendor
 
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+.eggs/
+*.egg-info/
+*.egg
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Pytest cache
+.pytest_cache/
+
+# Data and outputs
+*.parquet
+*.csv
+*.tsv
+*.h5
+*.np[zy]
+*.pkl
+*.db
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor directories and core dumps
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+
+# Logs
+*.log
+
+# Secret/config files
+.env.*
+.secrets
+config.yaml
+
+# Ignore data folder if needed
+data/
+
+# Misc
+*.out
+*.old
+
+**/*_output*
+

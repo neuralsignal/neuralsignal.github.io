@@ -1,0 +1,208 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "background": "transparent",
+    "font": "DM Sans, sans-serif",
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "titleFontWeight": "normal",
+      "gridColor": "rgba(128,128,128,0.2)",
+      "domainColor": "#6B7280",
+      "tickColor": "#6B7280",
+      "labelColor": "#6B7280",
+      "titleColor": "#6B7280"
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "labelColor": "#6B7280",
+      "titleColor": "#6B7280"
+    },
+    "title": {
+      "fontSize": 15,
+      "fontWeight": "normal",
+      "color": "#6B7280"
+    },
+    "view": {
+      "stroke": null
+    }
+  },
+  "title": "Log-likelihood per day by move size, relative to the Johnson SU",
+  "width": "container",
+  "height": 300,
+  "data": {
+    "values": [
+      {
+        "band": "<0.5% (12,270 days)",
+        "dist": "Model 1 (4 params)",
+        "diff": -0.0124,
+        "factor": 0.9876
+      },
+      {
+        "band": "<0.5% (12,270 days)",
+        "dist": "Model 2 (4 params)",
+        "diff": 0.118,
+        "factor": 1.1253
+      },
+      {
+        "band": "<0.5% (12,270 days)",
+        "dist": "Model 3 (5 params)",
+        "diff": 0.0801,
+        "factor": 1.0834
+      },
+      {
+        "band": "0.5-1% (6,362 days)",
+        "dist": "Model 1 (4 params)",
+        "diff": -0.1395,
+        "factor": 0.8698
+      },
+      {
+        "band": "0.5-1% (6,362 days)",
+        "dist": "Model 2 (4 params)",
+        "diff": -0.0634,
+        "factor": 0.9385
+      },
+      {
+        "band": "0.5-1% (6,362 days)",
+        "dist": "Model 3 (5 params)",
+        "diff": 0.0033,
+        "factor": 1.0034
+      },
+      {
+        "band": "1-3% (5,301 days)",
+        "dist": "Model 1 (4 params)",
+        "diff": 0.0821,
+        "factor": 1.0855
+      },
+      {
+        "band": "1-3% (5,301 days)",
+        "dist": "Model 2 (4 params)",
+        "diff": -0.2252,
+        "factor": 0.7983
+      },
+      {
+        "band": "1-3% (5,301 days)",
+        "dist": "Model 3 (5 params)",
+        "diff": -0.2084,
+        "factor": 0.8119
+      },
+      {
+        "band": "3-6% (571 days)",
+        "dist": "Model 1 (4 params)",
+        "diff": 0.4732,
+        "factor": 1.6052
+      },
+      {
+        "band": "3-6% (571 days)",
+        "dist": "Model 2 (4 params)",
+        "diff": -1.1662,
+        "factor": 0.3116
+      },
+      {
+        "band": "3-6% (571 days)",
+        "dist": "Model 3 (5 params)",
+        "diff": -0.5655,
+        "factor": 0.5681
+      },
+      {
+        "band": ">6% (110 days)",
+        "dist": "Model 1 (4 params)",
+        "diff": 0.3879,
+        "factor": 1.4739
+      },
+      {
+        "band": ">6% (110 days)",
+        "dist": "Model 2 (4 params)",
+        "diff": -4.2141,
+        "factor": 0.0148
+      },
+      {
+        "band": ">6% (110 days)",
+        "dist": "Model 3 (5 params)",
+        "diff": 0.5083,
+        "factor": 1.6625
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "band",
+          "type": "nominal",
+          "sort": [
+            "<0.5% (12,270 days)",
+            "0.5-1% (6,362 days)",
+            "1-3% (5,301 days)",
+            "3-6% (571 days)",
+            ">6% (110 days)"
+          ],
+          "title": "Size of the daily move",
+          "axis": {
+            "labelAngle": 0
+          }
+        },
+        "xOffset": {
+          "field": "dist"
+        },
+        "y": {
+          "field": "diff",
+          "type": "quantitative",
+          "title": "Log-likelihood per day vs Johnson SU"
+        },
+        "color": {
+          "field": "dist",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "Model 1 (4 params)",
+              "Model 2 (4 params)",
+              "Model 3 (5 params)"
+            ],
+            "range": [
+              "#2D6A4F",
+              "#E8A838",
+              "#5E4FA2"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "dist",
+            "type": "nominal",
+            "title": "distribution"
+          },
+          {
+            "field": "band",
+            "type": "nominal",
+            "title": "move size"
+          },
+          {
+            "field": "factor",
+            "type": "quantitative",
+            "title": "times as probable as Johnson SU",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#6B7280",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "datum": 0
+        }
+      }
+    }
+  ]
+}

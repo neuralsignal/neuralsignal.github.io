@@ -1,0 +1,288 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "background": "transparent",
+    "font": "DM Sans, sans-serif",
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "titleFontWeight": "normal",
+      "gridColor": "rgba(128,128,128,0.2)",
+      "domainColor": "#6B7280",
+      "tickColor": "#6B7280",
+      "labelColor": "#6B7280",
+      "titleColor": "#6B7280"
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "labelColor": "#6B7280",
+      "titleColor": "#6B7280"
+    },
+    "title": {
+      "fontSize": 15,
+      "fontWeight": "normal",
+      "color": "#6B7280"
+    },
+    "view": {
+      "stroke": null
+    }
+  },
+  "title": "Log-likelihood per day on the held-out returns (2025-12-30 to 2026-07-02)",
+  "data": {
+    "values": [
+      {
+        "dist": "Normal",
+        "cv_ll": 3.2348,
+        "ratio": 0.0,
+        "is_best": false
+      },
+      {
+        "dist": "Laplace",
+        "cv_ll": 3.3121,
+        "ratio": 0.0804,
+        "is_best": true
+      },
+      {
+        "dist": "Student t",
+        "cv_ll": 3.3103,
+        "ratio": 0.0784,
+        "is_best": false
+      },
+      {
+        "dist": "Skew Normal",
+        "cv_ll": 3.2427,
+        "ratio": 0.008,
+        "is_best": false
+      },
+      {
+        "dist": "Johnson SU",
+        "cv_ll": 3.3102,
+        "ratio": 0.0784,
+        "is_best": false
+      },
+      {
+        "dist": "Model 1 (4 params)",
+        "cv_ll": 3.2785,
+        "ratio": 0.0447,
+        "is_best": false
+      },
+      {
+        "dist": "Model 2 (4 params)",
+        "cv_ll": 3.2978,
+        "ratio": 0.065,
+        "is_best": false
+      },
+      {
+        "dist": "Model 3 (5 params)",
+        "cv_ll": 3.3045,
+        "ratio": 0.0722,
+        "is_best": false
+      }
+    ]
+  },
+  "spacing": 44,
+  "hconcat": [
+    {
+      "width": 300,
+      "height": 240,
+      "layer": [
+        {
+          "mark": {
+            "type": "bar",
+            "cornerRadiusEnd": 2
+          },
+          "encoding": {
+            "y": {
+              "field": "dist",
+              "type": "nominal",
+              "title": null,
+              "sort": {
+                "field": "cv_ll",
+                "order": "descending"
+              },
+              "axis": {
+                "labelFontSize": 13
+              }
+            },
+            "x": {
+              "field": "cv_ll",
+              "type": "quantitative",
+              "title": "Log-likelihood per day (higher is better)",
+              "scale": {
+                "domain": [
+                  3.0,
+                  3.4
+                ],
+                "nice": false
+              }
+            },
+            "x2": {
+              "datum": 3.0
+            },
+            "color": {
+              "condition": {
+                "test": "datum.is_best",
+                "value": "#2D6A4F"
+              },
+              "value": "#9CA3AF"
+            },
+            "tooltip": [
+              {
+                "field": "dist",
+                "type": "nominal",
+                "title": "distribution"
+              },
+              {
+                "field": "cv_ll",
+                "type": "quantitative",
+                "title": "log-lik / day"
+              },
+              {
+                "field": "ratio",
+                "type": "quantitative",
+                "title": "vs Normal / day",
+                "format": "+.1%"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 4,
+            "fontSize": 11,
+            "color": "#6B7280"
+          },
+          "encoding": {
+            "y": {
+              "field": "dist",
+              "type": "nominal",
+              "title": null,
+              "sort": {
+                "field": "cv_ll",
+                "order": "descending"
+              },
+              "axis": {
+                "labelFontSize": 13
+              }
+            },
+            "x": {
+              "field": "cv_ll",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  3.0,
+                  3.4
+                ],
+                "nice": false
+              }
+            },
+            "text": {
+              "field": "cv_ll",
+              "type": "quantitative",
+              "format": ".3f"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "width": 170,
+      "height": 240,
+      "layer": [
+        {
+          "mark": {
+            "type": "bar",
+            "cornerRadiusEnd": 2
+          },
+          "encoding": {
+            "y": {
+              "field": "dist",
+              "type": "nominal",
+              "title": null,
+              "sort": {
+                "field": "cv_ll",
+                "order": "descending"
+              },
+              "axis": null
+            },
+            "x": {
+              "field": "ratio",
+              "type": "quantitative",
+              "title": "How much more likely per day than the Normal",
+              "axis": {
+                "format": "+.0%"
+              },
+              "scale": {
+                "domain": [
+                  0,
+                  0.094872
+                ],
+                "nice": false
+              }
+            },
+            "color": {
+              "condition": {
+                "test": "datum.is_best",
+                "value": "#2D6A4F"
+              },
+              "value": "#9CA3AF"
+            },
+            "tooltip": [
+              {
+                "field": "dist",
+                "type": "nominal",
+                "title": "distribution"
+              },
+              {
+                "field": "ratio",
+                "type": "quantitative",
+                "title": "vs Normal / day",
+                "format": "+.1%"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 4,
+            "fontSize": 11,
+            "color": "#6B7280"
+          },
+          "encoding": {
+            "y": {
+              "field": "dist",
+              "type": "nominal",
+              "title": null,
+              "sort": {
+                "field": "cv_ll",
+                "order": "descending"
+              },
+              "axis": null
+            },
+            "x": {
+              "field": "ratio",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  0,
+                  0.094872
+                ],
+                "nice": false
+              }
+            },
+            "text": {
+              "field": "ratio",
+              "type": "quantitative",
+              "format": "+.1%"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
