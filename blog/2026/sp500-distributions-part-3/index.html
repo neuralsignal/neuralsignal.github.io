@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Evolved Distributions for the S&amp;P 500 Returns (Part 3 of 3) | Matthias Christenson</title>
+    <meta name="author" content="Matthias Christenson">
+    <meta name="description" content="AI-generated distributions fit to S&amp;P 500 Returns (Part 3 of 3)">
+    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&amp;family=Fira+Sans:wght@400;500;600;700&amp;family=Material+Icons&amp;display=swap">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://neuralsignal.github.io/blog/2026/sp500-distributions-part-3/">
+    
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Matthias </span>Christenson</a>
+
+          <!-- Hamburger toggle (shown on narrow screens) -->
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav-menu" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="nav-menu">
+            <ul class="navbar-nav ml-auto site-nav">
+<li class="nav-item">
+                <a class="nav-link " href="/">about</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/projects/">projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/resume/">resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/blog/">blog</a>
+              </li>
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5 site-content">
+      <!-- _layouts/post.html -->
+
+<div class="blog-page">
+
+  <header class="post-header">
+    <div class="post-nav">
+      <a href="/blog">← all posts</a>
+    </div>
+    <h1 class="post-title">The Evolved Distributions for the S&amp;P 500 Returns (Part 3 of 3)</h1>
+    <p class="post-meta">
+      July 5, 2026</p>
+    <p class="post-tags">
+      <a href="/blog/2026">2026</a>
+        <a href="/blog/tag/distributions">#distributions</a>
+        <a href="/blog/tag/finance">#finance</a>
+        <a href="/blog/tag/evolutionary-ai">#evolutionary-ai</a>
+        
+    </p>
+  </header>
+
+  <article class="post-content">
+    <p>The search found something, but not a single winning distribution so far. In <a href="/blog/2026/sp500-distributions-part-2/">the last post</a> I worked on the evaluation scripts so that the evolutionary search could no longer cheat its way to a high score easily. Three evolutionary runs produced three variants. All of them descend from the seed kernel the search started from:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>seed(z) = exp(-|z|^alpha) / (1 + z^2)^(alpha/2),      z = (x - mu) / sigma
+
+Model 1 (4 params)   seed(z) with a different alpha on each side of zero;
+                     the two exponents are derived from the quartile skew
+
+Model 2 (4 params)   seed(z) * (1 + |z|)^(-beta) with a smooth directional
+                     tilt and a small contamination term
+
+Model 3 (5 params)   (1 - eps) * core(z) + eps * tail(z)
+                     core = exp(-|z|^alpha) * sech(z)^gamma * (1 + |z|)^(-c)
+                     tail = separate power law, mixed in at eps of about 5.6%
+                     both evaluated on z / s(z),  s(z) = 1 + delta * tanh(z/2)
+</code></pre></div></div>
+
+<p>The seed multiplies a stretched exponential by an algebraic damping term. The first factor appears in the generalized normal, the second in the Student-t.</p>
+
+<p>Model 1 changes the seed the least. It fits a location, a scale, and one tail exponent, and gets its asymmetry by deriving separate left and right exponents from the quartile skew of the data. Model 2 adds an explicit power-law damping and a directional tilt. As fitted, it spends that flexibility on the direction of moves, and its left tail comes out far heavier than its right.</p>
+
+<p>Model 3 is the search’s own top scorer and the furthest from the seed. It rebuilds the density as a contaminated mixture: a core that multiplies three decay terms handles the body, and a separate power-law kernel mixed in handles the outlier days. The asymmetry comes from smoothly rescaling <code class="language-plaintext highlighter-rouge">z</code> by <code class="language-plaintext highlighter-rouge">1 + delta*tanh(z/2)</code>, so unlike the skew-t from Part 1 there is no kink at the center. Every individual term shows up in some named family, but the combinations of the terms do not.</p>
+
+<div id="vis-overlay" style="width: 100%;"></div>
+
+<p>The chart above shows all three fitted to the returns, with the Johnson SU and the Normal for reference, on the log-density axis from Part 1. In the center the curves are nearly indistinguishable, but the differences are in the tails are large. Model 1 is the most generous for moves of 2-5%. Model 3 holds its mass back for the far tails: a Black Monday sized drop is about twenty times more probable under it than under the Johnson SU. Model 2 bets on direction instead: a 5% drop is about thirty times more probable under it than a 5% gain.</p>
+
+<p>Judged purely as a match to the histogram the Johnson SU still looks like the best curve in the chart. It tracks the bars closely over the whole range. Model 1 sits above the bars almost everywhere for median range changes in the index. Model 2 looks completely wrong at the right tail. It makes big up days far less probable than the bars say.</p>
+
+<div id="vis-bands" style="width: 100%;"></div>
+
+<p>So how do shapes like these score well? The chart above splits the score by the size of the daily move, relative to Johnson SU, with every model fit on the full history. The log-likelihood does punish Model 2’s tail on every event it gets wrong. The biggest up day in the history is about a hundred million times less probable under it than under the Johnson SU. The punishment just arrives too rarely to matter. The whole history contains 140 days beyond +4% against 12,270 days that move less than half a percent, and making each of those quiet days about 12% more probable buys the entire tail penalty back twice over.</p>
+
+<p>Model 1 runs the same trade in the other direction: it gives up about 13% per day in the 0.5-1% range and earns it back with a 60% edge on the 571 days between 3% and 6%. The average log-likelihood weights every error by how often it occurs. That is the correct behavior for a proper score, and it makes a rare-event mistake of several orders of magnitude cheap.</p>
+
+<p>To better handle this during the search, I would have to update the evaluation to either overweight the intermdiate and long tail events in the loss or choose a different loss function.</p>
+
+<div id="vis-baselines" style="width: 100%;"></div>
+
+<p>On the cross-validation, all three beat every distribution from Part 1. The best of the family is not the search’s top scorer but Model 1: the observed move on a typical day is about 4% more probable under it than under the Johnson SU, and almost 30% more probable than under the Normal. The other two add about 1% over the Johnson SU.</p>
+
+<div id="vis-params" style="width: 100%;"></div>
+
+<p>The scatter above plots the cross-validated score against the number of parameters (model complexity). The jump from the standard families to Model 1 is the whole gain, at the same four parameters the Johnson SU uses. The extra parameter of the bigger variant buys nothing on the cross-validation.</p>
+
+<h3 id="does-this-hold-up-on-new-returns">Does this hold up on new returns?</h3>
+
+<p>The cross-validation is not a clean test. The search never fit on the validation folds, but their scores fed back into which candidates survived, so the selection pressure pushed the winners toward those folds. The first half of 2026 carries no such feedback, because I only used data up to December 2025 for the optimization. As a held-out test, I fit every distribution on the full 1928-2025 history and scored it on the new returns (December 30, 2025 to July 2, 2026).</p>
+
+<div id="vis-holdout" style="width: 100%;"></div>
+
+<p>None of the evolved distributions win here. The top of the chart is a pile-up: the Laplace, Student-t, and Johnson SU land within a fraction of a percent of each other. Models 2 and 3 sit just below the Johnson SU. Model 1, the winner on cross-validation, does worst of the three: the typical new day is about 3% less probable under it than under the Johnson SU. The Normal keeps losing, making the typical day about 7% less probable.</p>
+
+<p>The quietness of the period is the clue (despite what one might think reading the news). The new returns have a daily standard deviation of 0.9% against the 1.2% historical figure (The biggest move in the period is a single 2.8% day). Almost all of the score comes from the body of the distribution, which is exactly where the evolved kernels gave probability away.</p>
+
+<h3 id="what-did-the-machine-optimize">What did the machine optimize?</h3>
+
+<p>A few patterns held throughout the search. The model always estimated its parameters with robust statistics: median for location, scaled median-absolute-deviation for scale, never the mean and standard deviation. For heavy-tailed data this is the right choice (one crash day distorts the mean but barely moves the median). The model also spent far more effort improving the fitting code than the math. The kernel shape stabilized early. A better fitting code tended to raise the score more reliably than a new density (that may fail to normalize). Again, this is a sign to improve the evaluation and potentially reward some exploration of kernel shapes.</p>
+
+<p>Overall, this exercise is closer to optimization than to discovery. I defined the objective, the data, and the interface. The search could only change the functional form. AlphaEvolve and FunSearch have produced real results in combinatorics and matrix multiplication with the same recipe [1], while ShinkaEvolve and the AI Scientist try to generate the research question itself [2, 3]. The failure modes seem to carry over to these larger systems. Sakana’s Darwin Godel Machine reportedly learned to delete its own hallucination checks to score better on a benchmark [4], which is the same move as the under-normalized distribution from Part 2.</p>
+
+<p>The evaluator deserves the same scrutiny as the candidates. The cross-validated log-likelihood is a proper score and the search optimized it honestly. It is just a measure or proxy of what we care about. A human fitting a distribution often thinks about multiple criteria to align on in a dynamic way instead of optimizing for a score: the curve should track the histograms, the tails should be plausible, the formulation should be relatively simple and straightforward, etc.</p>
+
+<p>Anyway, there are many ways to improve this little experiment. But for now I will keep it here as an “artifact” for people to read.</p>
+
+<h3 id="references">References</h3>
+
+<ol>
+  <li>Romera-Paredes, B. et al. (2024). “Mathematical discoveries from program search with large language models.” <em>Nature</em>, 625, 468-475. (FunSearch)</li>
+  <li>Sakana AI (2025). “ShinkaEvolve: Towards Open-Ended and Sample-Efficient Program Evolution.” <a href="https://arxiv.org/abs/2509.19349" rel="external nofollow noopener" target="_blank">arXiv:2509.19349</a>.</li>
+  <li>Yamada, Y. et al. (2025). “The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search.” <a href="https://arxiv.org/abs/2504.08066" rel="external nofollow noopener" target="_blank">arXiv:2504.08066</a>.</li>
+  <li>Zhang, J. et al. (2025). “Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents.” <a href="https://arxiv.org/abs/2505.22954" rel="external nofollow noopener" target="_blank">arXiv:2505.22954</a>.</li>
+</ol>
+
+  </article>
+
+</div>
+
+    </div>
+
+    <!-- Footer -->    <footer class="site-footer">
+      <div class="container">
+        <span>© 2026 Matthias Christenson</span>
+        <span class="footer-sep">·</span>
+        <span>Last updated in March 2026.
+</span>
+      </div>
+    </footer>
+
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Copy-to-clipboard buttons for code blocks -->
+<script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+<style>
+/* Dark mode overrides for Vega-Lite charts */
+html[data-theme='dark'] .vega-embed text {
+  fill: #E0E0E0 !important;
+}
+html[data-theme='dark'] .vega-embed .role-axis-domain line,
+html[data-theme='dark'] .vega-embed .role-axis-tick line {
+  stroke: #A0A0A0 !important;
+}
+html[data-theme='dark'] .vega-embed .role-axis-grid line {
+  stroke: rgba(160, 160, 160, 0.2) !important;
+}
+/* Remove Vega action links (export/source/editor) */
+.vega-embed .vega-actions {
+  display: none !important;
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+<script>
+(function() {
+  var baseUrl = '/assets/blog/distributions-discovery';
+  var charts = [
+    
+    { id: '#vis-overlay', file: 'evolved_overlay.json' },
+    
+    { id: '#vis-bands', file: 'band_decomposition.json' },
+    
+    { id: '#vis-baselines', file: 'baseline_with_evolved.json' },
+    
+    { id: '#vis-params', file: 'params_vs_fit.json' },
+    
+    { id: '#vis-holdout', file: 'holdout_eval.json' }
+    
+  ];
+  charts.forEach(function(c) {
+    fetch(baseUrl + '/' + c.file)
+      .then(function(r) { return r.json(); })
+      .then(function(spec) {
+        vegaEmbed(c.id, spec, { actions: false, renderer: 'svg' });
+      });
+  });
+})();
+</script>
+
+
+  </body>
+</html>

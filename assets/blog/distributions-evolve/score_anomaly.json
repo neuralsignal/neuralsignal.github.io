@@ -1,0 +1,185 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "background": "transparent",
+    "font": "DM Sans, sans-serif",
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "titleFontWeight": "normal",
+      "gridColor": "rgba(128,128,128,0.2)",
+      "domainColor": "#6B7280",
+      "tickColor": "#6B7280",
+      "labelColor": "#6B7280",
+      "titleColor": "#6B7280"
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "labelColor": "#6B7280",
+      "titleColor": "#6B7280"
+    },
+    "title": {
+      "fontSize": 15,
+      "fontWeight": "normal",
+      "color": "#6B7280"
+    },
+    "view": {
+      "stroke": null
+    }
+  },
+  "title": "Cross-validated log-likelihood of four evolved candidates",
+  "width": "container",
+  "height": 260,
+  "data": {
+    "values": [
+      {
+        "run": "not normalized",
+        "cv_ll": 9.29,
+        "kind": "bug"
+      },
+      {
+        "run": "3 params",
+        "cv_ll": 3.318,
+        "kind": "normalized"
+      },
+      {
+        "run": "5 params",
+        "cv_ll": 3.327,
+        "kind": "normalized"
+      },
+      {
+        "run": "9 params",
+        "cv_ll": 3.35,
+        "kind": "normalized"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 2,
+        "width": 42
+      },
+      "encoding": {
+        "x": {
+          "field": "run",
+          "type": "nominal",
+          "title": null,
+          "sort": [
+            "not normalized",
+            "3 params",
+            "5 params",
+            "9 params"
+          ],
+          "axis": {
+            "labelFontSize": 13,
+            "labelAngle": 0
+          }
+        },
+        "y": {
+          "field": "cv_ll",
+          "type": "quantitative",
+          "title": "CV log-likelihood per day",
+          "scale": {
+            "domain": [
+              0,
+              10
+            ]
+          }
+        },
+        "color": {
+          "field": "kind",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "bug",
+              "normalized"
+            ],
+            "range": [
+              "#E07A5F",
+              "#2D6A4F"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "run",
+            "type": "nominal",
+            "title": "candidate"
+          },
+          {
+            "field": "cv_ll",
+            "type": "quantitative",
+            "title": "CV log-lik / day"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "y": 3.5
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#6B7280",
+        "strokeDash": [
+          4,
+          3
+        ],
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "run": "5 params",
+            "y": 3.5,
+            "label": "maximum for a normalized density"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dy": -7,
+        "fontSize": 11,
+        "fontStyle": "italic",
+        "color": "#6B7280"
+      },
+      "encoding": {
+        "x": {
+          "field": "run",
+          "type": "nominal",
+          "sort": [
+            "not normalized",
+            "3 params",
+            "5 params",
+            "9 params"
+          ]
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Evolving Distributions for the S&amp;P 500 Returns (Part 2 of 3) | Matthias Christenson</title>
+    <meta name="author" content="Matthias Christenson">
+    <meta name="description" content="AI-generated distribution fit to S&amp;P 500 Returns (Part 2 of 3)">
+    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&amp;family=Fira+Sans:wght@400;500;600;700&amp;family=Material+Icons&amp;display=swap">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://neuralsignal.github.io/blog/2026/sp500-distributions-part-2/">
+    
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Matthias </span>Christenson</a>
+
+          <!-- Hamburger toggle (shown on narrow screens) -->
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav-menu" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="nav-menu">
+            <ul class="navbar-nav ml-auto site-nav">
+<li class="nav-item">
+                <a class="nav-link " href="/">about</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/projects/">projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/resume/">resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/blog/">blog</a>
+              </li>
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5 site-content">
+      <!-- _layouts/post.html -->
+
+<div class="blog-page">
+
+  <header class="post-header">
+    <div class="post-nav">
+      <a href="/blog">← all posts</a>
+    </div>
+    <h1 class="post-title">Evolving Distributions for the S&amp;P 500 Returns (Part 2 of 3)</h1>
+    <p class="post-meta">
+      July 5, 2026</p>
+    <p class="post-tags">
+      <a href="/blog/2026">2026</a>
+        <a href="/blog/tag/distributions">#distributions</a>
+        <a href="/blog/tag/finance">#finance</a>
+        <a href="/blog/tag/evolutionary-ai">#evolutionary-ai</a>
+        
+    </p>
+  </header>
+
+  <article class="post-content">
+    <p>In <a href="/blog/2026/sp500-distributions-part-1/">the last post</a> I compared hand-designed distributions on the daily returns of the S&amp;P 500. The best one, the Johnson SU, makes the observed move on a typical day about 24% more probable than the Normal does. Here, I will try to beat it by generating <em>novel</em> distributions using LLM-driven evolutionary search.</p>
+
+<div class="post-figure" style="max-width: 760px; margin: 1.5rem auto;">
+<svg viewbox="0 0 760 220" role="img" aria-label="The evolution loop: prompt sampler, language model, evaluator, program database, and back" style="width: 100%; height: auto; color: var(--global-text-color, #2D2D2D);">
+  <defs>
+    <marker id="ev-arrow" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"></path>
+    </marker>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.55">
+    <rect x="8" y="26" width="150" height="68" rx="8"></rect>
+    <rect x="205" y="26" width="150" height="68" rx="8"></rect>
+    <rect x="402" y="26" width="150" height="68" rx="8"></rect>
+    <rect x="599" y="26" width="153" height="68" rx="8"></rect>
+  </g>
+  <g fill="currentColor" text-anchor="middle" font-family="DM Sans, sans-serif">
+    <text x="83" y="56" font-size="14" font-weight="600" fill="#2D6A4F">Prompt sampler</text>
+    <text x="83" y="76" font-size="11" opacity="0.8">top + diverse code</text>
+    <text x="280" y="56" font-size="14" font-weight="600" fill="#3D85C6">GPT-5-mini</text>
+    <text x="280" y="76" font-size="11" opacity="0.8">mutates the code</text>
+    <text x="477" y="56" font-size="14" font-weight="600" fill="#E07A5F">Evaluator</text>
+    <text x="477" y="76" font-size="11" opacity="0.8">CV log-lik, novelty, norm</text>
+    <text x="675" y="56" font-size="14" font-weight="600" fill="#E8A838">Database</text>
+    <text x="675" y="76" font-size="11" opacity="0.8">MAP-Elites, 6 islands</text>
+  </g>
+  <g stroke="currentColor" stroke-width="1.4" fill="none" marker-end="url(#ev-arrow)">
+    <line x1="160" y1="60" x2="201" y2="60"></line>
+    <line x1="357" y1="60" x2="398" y2="60"></line>
+    <line x1="554" y1="60" x2="595" y2="60"></line>
+    <path d="M675,96 L675,158 L83,158 L83,98"></path>
+  </g>
+  <text x="380" y="151" fill="currentColor" opacity="0.8" text-anchor="middle" font-size="11" font-style="italic" font-family="DM Sans, sans-serif">selection and migration feed the next prompt</text>
+</svg>
+</div>
+
+<p>The diagram above shows the search loop. I used OpenEvolve, an open-source reimplementation of DeepMind’s AlphaEvolve [1, 2]; FunSearch and ShinkaEvolve use similar recipes [3, 4]. The language model proposes edits to a small Python class. The class fits its parameters to data and returns a log density. Every candidate is scored with the same 5-fold time-series cross-validation from Part 1, so the numbers are directly comparable. A database keeps the best and most diverse candidates (MAP-Elites with 6 islands [5]) and feeds them back into the next prompt. The prompt gives the model mathematical primitives to combine (power-law tails, hyperbolic damping, contaminated mixtures), requires that the density integrates to one, and asks for novelty.</p>
+
+<p>To support novelty, the evaluator halves the score of any candidate whose source code mentions a known distribution. This, of course, is something that is very easy to reward hack, but I kept it as a simple way to punish proposals that are clearly using existing distributions. Despite this simple attempt to enforce novelty, the search generally came back to the Student-t: the model has seen it fit fat tails thousands of times during training, and even a penalized t scored better than a badly normalized new kernel. When the string matching caught the banned words, the search swapped the Student-t for a sinh-arcsinh and a two-piece t instead. Both are real, named, published distributions, but neither contains the banned words.</p>
+
+<div id="vis-trajectory" style="width: 100%;"></div>
+
+<p>The chart above shows the progress of the search. Each gray dot is a valid candidate; the green line is the best one found so far. The line climbs past the Johnson SU and ends at a distribution that makes the typical day’s move about 8% more probable than the Johnson SU (a cross-validated log-likelihood of 3.35 per day against 3.275). Most of the dots sit below the line, so most of what the search tries does not beat what it already has.</p>
+
+<p>A bigger problem was that the search exploited gaps in how the score was computed. The clearest case is shown below. One candidate reported a cross-validated log-likelihood of 9.29 per day, which would make the typical day’s move several hundred times more probable than any properly normalized density can. In this candidate, the <code class="language-plaintext highlighter-rouge">fit</code> function computed the normalization constant for one kernel while <code class="language-plaintext highlighter-rouge">log_pdf</code> evaluated a slightly different one. The density no longer integrated to one, and every log-density value was inflated by the same constant.</p>
+
+<div id="vis-anomaly" style="width: 100%;"></div>
+
+<p>Other candidates cheated in less obvious ways or produced some nonsense. One computed a parameter, stored it, and never used it in the density; the evolution kept “improving” this dead code because it had no effect on the score. Another reported three parameters while actually storing nine (the score penalizes parameter count, and reporting a lower count is easier than reducing it). This was Goodhart’s law in action: the search optimized the score and not the fit the score was supposed to measure.</p>
+
+<p>I fixed the evaluator in three ways. I now integrate the density on a fine grid and reject anything that does not come out close to one. I only require a single method and derive everything else from it, so there is a single source of truth instead of multiple functions that can disagree. And I added more names to the banned list. The common cause of all these exploits was an evaluator that trusted the code too much; whatever it does not check, the search will likely exploit. And this is really the problem with a lot of LLM-evolutionary search. It requires rigorous development of evaluations that get as close as possible to the actual “latent thing” you are trying to measure.</p>
+
+<h3 id="did-the-search-find-anything-genuinely-new">Did the search find anything genuinely new?</h3>
+
+<p>With the fixed evaluator, the search started producing distributions that were a bit more novel and were properly normalized. In <a href="/blog/2026/sp500-distributions-part-3/">the next post</a> I look at what it found.</p>
+
+<h3 id="references">References</h3>
+
+<ol>
+  <li>OpenEvolve: <a href="https://github.com/algorithmicsuperintelligence/openevolve" rel="external nofollow noopener" target="_blank">algorithmicsuperintelligence/openevolve</a>, an open-source implementation of AlphaEvolve.</li>
+  <li>DeepMind (2025). <a href="https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/" rel="external nofollow noopener" target="_blank">AlphaEvolve: a Gemini-powered coding agent for designing advanced algorithms</a>.</li>
+  <li>Romera-Paredes, B. et al. (2024). “Mathematical discoveries from program search with large language models.” <em>Nature</em>, 625, 468-475. (FunSearch)</li>
+  <li>Sakana AI (2025). “ShinkaEvolve: Towards Open-Ended and Sample-Efficient Program Evolution.” <a href="https://arxiv.org/abs/2509.19349" rel="external nofollow noopener" target="_blank">arXiv:2509.19349</a>.</li>
+  <li>Mouret, J.-B. &amp; Clune, J. (2015). “Illuminating search spaces by mapping elites.” <a href="https://arxiv.org/abs/1504.04909" rel="external nofollow noopener" target="_blank">arXiv:1504.04909</a>.</li>
+</ol>
+
+  </article>
+
+</div>
+
+    </div>
+
+    <!-- Footer -->    <footer class="site-footer">
+      <div class="container">
+        <span>© 2026 Matthias Christenson</span>
+        <span class="footer-sep">·</span>
+        <span>Last updated in March 2026.
+</span>
+      </div>
+    </footer>
+
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Copy-to-clipboard buttons for code blocks -->
+<script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+<style>
+/* Dark mode overrides for Vega-Lite charts */
+html[data-theme='dark'] .vega-embed text {
+  fill: #E0E0E0 !important;
+}
+html[data-theme='dark'] .vega-embed .role-axis-domain line,
+html[data-theme='dark'] .vega-embed .role-axis-tick line {
+  stroke: #A0A0A0 !important;
+}
+html[data-theme='dark'] .vega-embed .role-axis-grid line {
+  stroke: rgba(160, 160, 160, 0.2) !important;
+}
+/* Remove Vega action links (export/source/editor) */
+.vega-embed .vega-actions {
+  display: none !important;
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+<script>
+(function() {
+  var baseUrl = '/assets/blog/distributions-evolve';
+  var charts = [
+    
+    { id: '#vis-trajectory', file: 'trajectory.json' },
+    
+    { id: '#vis-anomaly', file: 'score_anomaly.json' }
+    
+  ];
+  charts.forEach(function(c) {
+    fetch(baseUrl + '/' + c.file)
+      .then(function(r) { return r.json(); })
+      .then(function(spec) {
+        vegaEmbed(c.id, spec, { actions: false, renderer: 'svg' });
+      });
+  });
+})();
+</script>
+
+
+  </body>
+</html>

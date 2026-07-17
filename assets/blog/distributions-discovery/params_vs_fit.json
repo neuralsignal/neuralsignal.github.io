@@ -1,0 +1,192 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "background": "transparent",
+    "font": "DM Sans, sans-serif",
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "titleFontWeight": "normal",
+      "gridColor": "rgba(128,128,128,0.2)",
+      "domainColor": "#6B7280",
+      "tickColor": "#6B7280",
+      "labelColor": "#6B7280",
+      "titleColor": "#6B7280"
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "labelColor": "#6B7280",
+      "titleColor": "#6B7280"
+    },
+    "title": {
+      "fontSize": 15,
+      "fontWeight": "normal",
+      "color": "#6B7280"
+    },
+    "view": {
+      "stroke": null
+    }
+  },
+  "title": "Fit quality vs. number of parameters",
+  "width": "container",
+  "height": 300,
+  "data": {
+    "values": [
+      {
+        "label": "Normal",
+        "n_params": 2,
+        "cv_ll": 3.061,
+        "kind": "hand-designed",
+        "label_y": 3.061
+      },
+      {
+        "label": "Laplace",
+        "n_params": 2,
+        "cv_ll": 3.2573,
+        "kind": "hand-designed",
+        "label_y": 3.2573
+      },
+      {
+        "label": "Skew Normal",
+        "n_params": 3,
+        "cv_ll": 3.0731,
+        "kind": "hand-designed",
+        "label_y": 3.0731
+      },
+      {
+        "label": "Student t",
+        "n_params": 3,
+        "cv_ll": 3.2725,
+        "kind": "hand-designed",
+        "label_y": 3.2725
+      },
+      {
+        "label": "Johnson SU",
+        "n_params": 4,
+        "cv_ll": 3.2751,
+        "kind": "hand-designed",
+        "label_y": 3.2631
+      },
+      {
+        "label": "Model 1 (4 params)",
+        "n_params": 4,
+        "cv_ll": 3.3167,
+        "kind": "evolved",
+        "label_y": 3.3167
+      },
+      {
+        "label": "Model 2 (4 params)",
+        "n_params": 4,
+        "cv_ll": 3.2877,
+        "kind": "evolved",
+        "label_y": 3.2877
+      },
+      {
+        "label": "Model 3 (5 params)",
+        "n_params": 5,
+        "cv_ll": 3.285,
+        "kind": "evolved",
+        "label_y": 3.285
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 110
+      },
+      "encoding": {
+        "x": {
+          "field": "n_params",
+          "type": "quantitative",
+          "title": "Number of parameters",
+          "scale": {
+            "domain": [
+              1.5,
+              6.5
+            ]
+          },
+          "axis": {
+            "values": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          }
+        },
+        "y": {
+          "field": "cv_ll",
+          "type": "quantitative",
+          "title": "CV log-likelihood per day",
+          "scale": {
+            "domain": [
+              3.0,
+              3.4
+            ]
+          }
+        },
+        "color": {
+          "field": "kind",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "hand-designed",
+              "evolved"
+            ],
+            "range": [
+              "#9CA3AF",
+              "#2D6A4F"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "label",
+            "type": "nominal",
+            "title": "model"
+          },
+          {
+            "field": "n_params",
+            "type": "quantitative",
+            "title": "params"
+          },
+          {
+            "field": "cv_ll",
+            "type": "quantitative",
+            "title": "CV log-lik / day"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "dy": 0,
+        "fontSize": 10.5,
+        "color": "#6B7280"
+      },
+      "encoding": {
+        "x": {
+          "field": "n_params",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "label_y",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      }
+    }
+  ]
+}
